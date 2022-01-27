@@ -1,0 +1,233 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/03-matching_data-2022-01-08_1.log
+  log type:  text
+ opened on:   8 Jan 2022, 15:06:35
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Matching
+. ********************************************************************************
+. 
+. *** 2.1 Merge between GDP_WB and POP_WB
+.         use "${rawdata_3_1}/GDP_WB.dta", clear
+
+.         gen id=_n
+
+.         reshape long y, i(id) j(year)
+(j = 1960 1961 1962 1963 1964 1965 1966 1967 1968 1969 1970 1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988
+>  1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2
+> 018 2019 2020)
+
+Data                               Wide   ->   Long
+-----------------------------------------------------------------------------
+Number of observations              266   ->   16,226      
+Number of variables                  66   ->   7           
+j variable (61 values)                    ->   year
+xij variables:
+                  y1960 y1961 ... y2020   ->   y
+-----------------------------------------------------------------------------
+
+.         rename y NY_GDP_MKTP_CD
+
+.         drop id
+
+.         gen id=_n
+
+.         tempfile local_GDP_WB_data
+
+.         save `local_GDP_WB_data'
+file C:\Users\JOEL\AppData\Local\Temp\ST_3700_000001.tmp saved as .dta format
+
+. 
+.         use "${rawdata_3_1}/POP_WB.dta", clear
+
+.         gen id=_n
+
+.         reshape long y, i(id) j(year)
+(j = 1960 1961 1962 1963 1964 1965 1966 1967 1968 1969 1970 1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988
+>  1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2
+> 018 2019 2020)
+
+Data                               Wide   ->   Long
+-----------------------------------------------------------------------------
+Number of observations              266   ->   16,226      
+Number of variables                  66   ->   7           
+j variable (61 values)                    ->   year
+xij variables:
+                  y1960 y1961 ... y2020   ->   y
+-----------------------------------------------------------------------------
+
+.         rename y SP_POP_TOTL
+
+.         drop id
+
+.         gen id=_n
+
+.         
+.         merge 1:1 id using `local_GDP_WB_data'
+(variable IndicatorCode was str11, now str14 to accommodate using data's values)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                            16,226  (_merge==3)
+    -----------------------------------------
+
+.         drop _merge IndicatorName IndicatorCode
+
+.         order id year
+
+.         tempfile local_GDP_POP_data
+
+.         save `local_GDP_POP_data'
+file C:\Users\JOEL\AppData\Local\Temp\ST_3700_000002.tmp saved as .dta format
+
+. 
+. *** 2.2 Merge between GDP-POP and SPE
+.         use "${rawdata_3_1}/SPE_CEPAL.dta", clear
+
+.         gen id=_n
+
+.         reshape long y, i(id) j(year)
+(j = 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018
+>  2019)
+
+Data                               Wide   ->   Long
+-----------------------------------------------------------------------------
+Number of observations              196   ->   5,880       
+Number of variables                  33   ->   5           
+j variable (30 values)                    ->   year
+xij variables:
+                  y1990 y1991 ... y2019   ->   y
+-----------------------------------------------------------------------------
+
+.         rename y expenditure
+
+. 
+.         merge m:1 year country using `local_GDP_POP_data'
+(variable country was str25, now str52 to accommodate using data's values)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                        15,866
+        from master                       420  (_merge==1)
+        from using                     15,446  (_merge==2)
+
+    Matched                             5,460  (_merge==3)
+    -----------------------------------------
+
+.         order id year CountryCode
+
+. 
+.         sort country year
+
+.         drop _merge
+
+. 
+. *** 2.3 Cleaning
+.         local classi`" "Education", "Environmental Protection", "Health", "Housing and community services", "Recreational activities, culture and r
+> eligion", "Social expenditure", "Social protection" "'
+
+.         keep if inlist(classification, `classi')
+(15,446 observations deleted)
+
+.         drop id
+
+.         encode country, gen(country_id)
+
+. 
+. *** 2.4 Add IMF Contry code
+.         gen imf_code =.
+(5,880 missing values generated)
+
+. 
+.         local abbrevi `" "ARG" "BHS" "BOL" "BRA" "BRB" "CHL" "COL" "CRI" "DOM" "ECU" "GTM" "GUY" "HND" "HTI" "JAM" "MEX" "NIC" "PAN" "PER" "PRY" "S
+> LV" "TTO" "URY" "VEN" "CUB" "'
+
+.         local codeimf `" "213" "313" "218" "223" "316" "228" "233" "238" "243" "248" "258" "336" "268" "263" "343" "273" "278" "283" "293" "288" "2
+> 53" "369" "298" "299" "928" "'
+
+. 
+.         forval n = 1/25{
+  2.                 local a : word `n' of `abbrevi'
+  3.                 local b : word `n' of `codeimf'
+  4. 
+.                 replace imf_code = `b' if CountryCode == "`a'"
+  5.         }
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+
+. 
+.         sort country year
+
+.         order year country_id country
+
+.         order year imf_code CountryCode country_id country 
+
+. 
+. *** 2.5 Adding labels
+.         label var year "Years 1960-2020"
+
+.         label var CountryCode "Country codes"
+
+.         label var country "Countries"
+
+.         label var classification "Social Public Expenditure classification"
+
+.         label var expenditure "Social Public Expenditure classification (%GDP)"
+
+.         label var SP_POP_TOTL "Population 1960-2020"
+
+.         label var NY_GDP_MKTP_CD "Gross Domestic Product (current US$) 1960-2020"
+
+.         label var imf_code "IMF Country Code"
+
+. 
+. *** 2.6 Saving database
+.         save "${data_3_1}/GDP_POP_SPE.dta", replace
+file C:\Users\JOEL\Dropbox\Project_02\DataWork\A_Data/03-download_match_data/GDP_POP_SPE.dta saved
+
+.         saveold  "${data_3_1}/GDP_POP_SPE_stata13.dta", version(13) replace
+(saving in Stata 13 format)
+file C:\Users\JOEL\Dropbox\Project_02\DataWork\A_Data/03-download_match_data/GDP_POP_SPE_stata13.dta saved
+
+. 
+. ********************************************************************************
+. *** PART 4: Closing log file
+. ********************************************************************************
+.     log close
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/03-matching_data-2022-01-08_1.log
+  log type:  text
+ closed on:   8 Jan 2022, 15:06:36
+-----------------------------------------------------------------------------------------------------------------------------------------------------

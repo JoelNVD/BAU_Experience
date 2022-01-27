@@ -1,0 +1,14 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{introducción}{3}{0}{1}
+\beamer@sectionintoc {2}{¿Por qué estudiar series de tiempo?}{6}{0}{2}
+\beamer@sectionintoc {3}{Análisis de las series}{10}{0}{3}
+\beamer@sectionintoc {4}{¿Qués es una serie estacionaria?}{17}{0}{4}
+\beamer@sectionintoc {5}{Ruido Blnaco}{22}{0}{5}
+\beamer@sectionintoc {6}{Modelando el componente irregular}{29}{0}{6}
+\beamer@subsectionintoc {6}{1}{Modelos AR, MA y ARMA}{30}{0}{6}
+\beamer@subsubsectionintoc {6}{1}{1}{Proceso Autorregresivo (AR)}{31}{0}{6}
+\beamer@subsubsectionintoc {6}{1}{2}{Medias móviles (MA)}{34}{0}{6}
+\beamer@subsubsectionintoc {6}{1}{3}{Herramientas de identificación}{37}{0}{6}
+\beamer@subsubsectionintoc {6}{1}{4}{Promedios móviles autoregresivos (ARMA)}{39}{0}{6}
+\beamer@sectionintoc {7}{Elegir el modelo adecuado}{40}{0}{7}
+\beamer@sectionintoc {8}{Referencia}{43}{0}{8}

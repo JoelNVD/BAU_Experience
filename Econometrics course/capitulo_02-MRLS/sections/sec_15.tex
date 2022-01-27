@@ -1,0 +1,140 @@
+%===============================================================================
+\section{Valores esperados y varianzas de los estimadores de MCO}
+%===============================================================================
+
+%-------------------------------------------------------------------------------
+\subsection{Insesgadez del MCO}
+%-------------------------------------------------------------------------------
+\begin{frame}{Supuestos 1-4}
+	\begin{enumerate}
+		\item Linealidad de los parámetros
+		$$y=\beta_{0}+\beta_{1}x+\mu$$
+		\item Muestreo aleatorio
+		\item Variación muestral de la variable explicativa
+		\item Media condicional cero del error:
+		$$E(\mu / x) = E(\mu) = 0$$
+	\end{enumerate}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Supuestos 1-4}
+	Con los supuestos 1 a 4 se prueba que los estimadores son insesgados:
+	\begin{align*}
+		E(\hat{\beta}_{1}) &= \beta_{1}\\
+		E(\hat{\beta}_{0}) &= \beta_{0}
+	\end{align*}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Estimadores insesgados}
+	\begin{align*}
+		\widehat{\beta}_1 &= \frac{\sum (x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum (x_{i}-\overline{x})^2}\\
+		& = \frac{\sum (x_{i}-\overline{x})\{\beta_1(x_{i}-\overline{x})+u_i\}}{\sum (x_{i}-\overline{x})^2}\\
+		& = \beta_1\frac{\sum (x_{i}-\overline{x})^2}{\sum (x_{i}-\overline{x})^2} + \frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2}\\
+		& = \beta_1 + \frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2} \tag{2}
+	\end{align*}
+	Tomando el esperado y asumiendo que $X$ no es estocástico (¡por cierto, una suposición fuerte!)
+	\begin{align*}
+		E[\widehat{\beta}_1] & = \beta_1 + E\left[\frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2} \right]
+	\end{align*}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Estimadores insesgados}
+	Finalmente
+	\begin{align*}
+		E[\widehat{\beta}_1] & = \beta_1 + E\left[\frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2}\right]\\
+		& = \beta_1 + \frac{\sum (x_{i}-\overline{x})E[u_i]}{\sum (x_{i}-\overline{x})^2}\\
+		& = \beta_1
+	\end{align*}
+	Hemos demostrado que el estimador MCO es un estimador insesgado. Pero, todavía necesitamos la variación.
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Varianza de lo estimadores MCO}
+%-------------------------------------------------------------------------------
+\begin{frame}{Supuestos 5: Homocedasticidad}
+	Supuesto 5:
+	$$Var(\mu / x) = \sigma^{2}$$
+	Sabiendo que:
+	$$\hat{\beta}_{1} = \beta_{1} + \frac{\sum (x_{i}-\overline{x})\mu_{i}}{\sum (x_{i}-\overline{x})^2}$$
+	Se demuestra que:
+	$$Var(\hat{\beta}_{1})=\frac{\sigma^{2}}{\sum (x_{i}-\overline{x})^2}$$
+	$\sigma^{2}$ no es conocido, pero puede ser estimado a partir de los residuales $\epsilon$.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Estimadores eficientes}
+	Veamos detenidamente la expresión (2)
+	$$\widehat{\beta}_1 = \beta_1 + \frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2} \quad \rightarrow \quad \widehat{\beta}_1 - \beta_1 = \frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2} $$
+	llevando cuadrados a ambas expresiones
+	$$\left[ \widehat{\beta}_1 - \beta_1\right]^2 = \left[\frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2}\right]^2 $$
+	tomando el valor esperado
+	$$E\left[ \widehat{\beta}_1 - \beta_1\right]^2 = E\left[\frac{\sum (x_{i}-\overline{x})u_i}{\sum (x_{i}-\overline{x})^2}\right]^2 = \frac{\sum (x_{i}-\overline{x})^2E(u_i^2)}{\left[\sum (x_{i}-\overline{x})^2\right]^2}$$
+	\textit{Nota:} $E\left[ \widehat{\beta}_1 - \beta_1\right]^2 \equiv \widehat{\sigma}_{\widehat{\beta}_1}^{2}$
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Estimadores eficientes}
+	reescribiendo la expresión anterior y teniendo en cuenta la característica i.i.d de u
+	\begin{align*}
+		E\left[ \widehat{\beta}_1 - \beta_1\right]^2 & = \frac{\sum (x_{i}-\overline{x})^2E(u_i^2)}{\left[\sum (x_{i}-\overline{x})^2\right]^2}\\
+		& = \frac{\sum (x_{i}-\overline{x})^2E[u_i^2]}{\left[\sum (x_{i}-\overline{x})^2\right]^2}\\
+		& = E[u_i^2] \frac{\sum (x_{i}-\overline{x})^2}{\left[\sum (x_{i}-\overline{x})^2\right]^2} \tag{3}
+	\end{align*}
+	finalmente
+	$$E\left[ \widehat{\beta}_1 - \beta_1\right]^2 = \sigma^{2}\frac{1}{\sum (x_{i}-\overline{x})^2}$$
+	donde $E[u^2]=\sigma^{2} \equiv s_{u}^{2}$. Estamos asumiendo homocedasticidad.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Estimadores eficientes}
+	¡Casi ahí!. Solo lo que necesitamos saber es el error estándar del error (u). Sabemos que la desviación estándar de la estimación MCO -en el caso de un regresor- es
+	\begin{align*}
+		Var(\widehat{\beta}_1) = \sigma^{2}\frac{1}{\sum (x_{i}-\overline{x})^2} \tag{4}
+	\end{align*}
+	¿Qué es $\sigma^{2}$?. Necesitamos un estimador (insesgado) para $\sigma^{2}$. Entonces, tenemos la siguiente propuesta:
+	$$\widehat{\sigma}^{2} = \frac{\sum u^2}{(n-2)}$$
+	Entonces:
+	$$Var(\widehat{\beta}_1) = \widehat{\sigma}^{2}\frac{1}{\sum (x_{i}-\overline{x})^2}$$
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Estimador del error de la varianza}
+%-------------------------------------------------------------------------------
+\begin{frame}{Estimador de $\sigma^{2}$}
+	\begin{align}
+		\epsilon	& = y - \hat{y}\\
+		& = (\beta_{o}+\beta_{1}x+\mu) - (\hat{\beta}_{0}+\hat{\beta}_{1}x)\\
+		\epsilon	& = (\beta_{0} - \hat{\beta}_{0}) - (\hat{\beta}_{1} - \beta_{1}) + \mu\\
+		\overline{\epsilon}	& = (\beta_{0} - \hat{\beta}_{0}) - (\hat{\beta}_{1} - \beta_{1}) + \overline{\mu},\enskip \textcolor{red}{promedio\enskip (3)}\\
+		\epsilon - \overline{\epsilon}	& = (\mu - \overline{\mu}) - (\hat{\beta}_{1} - \beta_{1})(x - \overline{x}),\enskip \textcolor{red}{(3-4)} \\
+		\epsilon	& = (\mu - \overline{\mu})- (\hat{\beta}_{1} - \beta_{1})(x - \overline{x}),\enskip \textcolor{red}{Ec. Normal}
+	\end{align}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Estimador de $\sigma^{2}$}
+	Finalmente:
+	$$\epsilon^{2} = (\mu - \overline{\mu})^{2} + (\hat{\beta}_{1} - \beta_{1})^{2}(x - \overline{x})^{2}-2(\mu - \overline{\mu})(\hat{\beta}_{1} - \beta_{1})(x - \overline{x})$$
+	Aplicando sumatoria:
+	\begin{align*}
+		\sum\epsilon^2	& = \sum(\mu-\bar\mu)^2 \\
+		&  +(\hat\beta_1 -\beta_1)^2\sum(x-\bar x)^2\\
+		&  -2 (\mu-\bar\mu)(\hat\beta_1 -\beta_1)\sum(x-\bar x)
+	\end{align*}
+	Esperanza matemática:
+	\begin{align*}
+		E\left[\sum\epsilon^2\right]	&=\textcolor{red}{\sum E(\mu-\bar\mu)^2} \\
+		&+ \textcolor{blue}{E(\hat\beta_1 -\beta_1)^2\sum(x-\bar x)^2}\\
+		&-\textcolor{green}{2 E(\mu-\bar\mu)(\hat\beta_1 -\beta_1)\sum(x-\bar x)} 
+	\end{align*}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Estimador de $\sigma^{2}$}
+	Se puede probar que:
+	\begin{align*}
+		\textcolor{red}{\sum E (\mu-\bar\mu)^2} & = (n-1)\sigma^2 \\
+		\textcolor{blue}{E(\hat\beta_1 -\beta_1)^2\sum(x-\bar x)^2} & = \sigma^2 \\
+		\textcolor{green}{2 E(\mu-\bar\mu)(\hat\beta_1 -\beta_1)\sum(x-\bar x)} & =  2\sigma^2 
+	\end{align*}
+	Finalmente:
+	\begin{align*}
+		E\left[\sum\epsilon^2\right] &= (n-1)\sigma^2 +  \sigma^2 -2\sigma^2  \\
+		E\left[\sum\epsilon^2/(n-2) \right] &= \sigma^2 
+	\end{align*}
+	$\hat\sigma^2=\sum\epsilon^2/(n-2)$ es un estimador insesgado de $\sigma^2$.
+\end{frame}

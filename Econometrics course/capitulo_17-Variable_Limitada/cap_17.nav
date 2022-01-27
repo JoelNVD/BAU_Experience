@@ -1,0 +1,333 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Introducción}{3}{Introducción}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {1}{0}{2}{4/4}{}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{5}{Principio de máxima verosimilitud}}
+\headcommand {\slideentry {1}{1}{1}{5/5}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{1}{1}{6}{Definición}}
+\headcommand {\slideentry {1}{1}{2}{6/6}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\slideentry {1}{1}{3}{7/7}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{1}{2}{8}{Formalidad}}
+\headcommand {\slideentry {1}{1}{4}{8/8}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{1}{5}{9/9}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {1}{1}{6}{10/10}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {1}{1}{7}{11/11}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {1}{1}{8}{12/12}{Principio de máxima verosimilitud}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionpages {5}{12}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{13}{Pruebas asintóticas}}
+\headcommand {\slideentry {1}{2}{1}{13/13}{Pruebas asintóticas}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{2}{1}{14}{Test LR}}
+\headcommand {\slideentry {1}{2}{2}{14/14}{Pruebas asintóticas}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {1}{2}{3}{15/15}{Pruebas asintóticas}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{2}{2}{16}{Test de Wald}}
+\headcommand {\slideentry {1}{2}{4}{16/16}{Pruebas asintóticas}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{2}{3}{17}{Test Multiplicadores de Lagrange (LM)}}
+\headcommand {\slideentry {1}{2}{5}{17/17}{Pruebas asintóticas}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@subsectionpages {13}{17}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{18}{MCO Vs MV}}
+\headcommand {\slideentry {1}{3}{1}{18/18}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{3}{1}{19}{Modelo de regresión lineal simple}}
+\headcommand {\slideentry {1}{3}{2}{19/19}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {1}{3}{3}{20/20}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {1}{3}{4}{21/21}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {1}{3}{5}{22/22}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {1}{3}{6}{23/23}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {1}{3}{7}{24/24}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{3}{2}{25}{Comparación}}
+\headcommand {\slideentry {1}{3}{8}{25/25}{MCO Vs MV}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@sectionpages {3}{25}}
+\headcommand {\beamer@subsectionpages {18}{25}}
+\headcommand {\sectionentry {2}{Logit y Probit}{26}{Modelos logit y probit para respuesta binaria}{0}}
+\headcommand {\slideentry {2}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{0}{1}{27}{Logro de la sesión}}
+\headcommand {\slideentry {2}{0}{2}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{0}{2}{28}{Motivación}}
+\headcommand {\slideentry {2}{0}{3}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@subsectionpages {26}{28}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{29}{Problema Binomial}}
+\headcommand {\slideentry {2}{1}{1}{29/29}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{1}{1}{30}{Modelo de probabilidad lineal}}
+\headcommand {\slideentry {2}{1}{2}{30/30}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{1}{2}{31}{Modelos no lineales}}
+\headcommand {\slideentry {2}{1}{3}{31/31}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {2}{1}{4}{32/32}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {2}{1}{5}{33/33}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {2}{1}{6}{34/34}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{1}{3}{35}{Interpretación}}
+\headcommand {\slideentry {2}{1}{7}{35/35}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {2}{1}{8}{36/36}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {2}{1}{9}{37/37}{Problema Binomial}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@subsectionpages {29}{37}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{38}{Estimación}}
+\headcommand {\slideentry {2}{2}{1}{38/38}{Estimación}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {2}{2}{2}{39/39}{Estimación}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{2}{1}{40}{Logit nulo, ingenuo o baseline}}
+\headcommand {\slideentry {2}{2}{3}{40/40}{Estimación}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{2}{2}{41}{Generalización}}
+\headcommand {\slideentry {2}{2}{4}{41/41}{Estimación}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {2}{2}{5}{42/42}{Estimación}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\beamer@subsectionpages {38}{42}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{43}{Curvas ROC}}
+\headcommand {\slideentry {2}{3}{1}{43/43}{Curvas ROC}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {2}{3}{2}{44/44}{Curvas ROC}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\slideentry {2}{3}{3}{45/45}{Curvas ROC}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {2}{3}{4}{46/46}{Curvas ROC}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {2}{3}{5}{47/47}{Curvas ROC}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {2}{3}{6}{48/48}{Curvas ROC}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{1}{49}{Evaluación del modelo}}
+\headcommand {\slideentry {2}{3}{7}{49/49}{Curvas ROC}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\beamer@sectionpages {26}{49}}
+\headcommand {\beamer@subsectionpages {43}{49}}
+\headcommand {\sectionentry {3}{Tobit}{50}{El modelo Tobit para las respuestas de la solución Corner}{0}}
+\headcommand {\slideentry {3}{0}{1}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@subsectionpages {50}{50}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{51}{Motivación}}
+\headcommand {\slideentry {3}{1}{1}{51/51}{Motivación}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {3}{1}{2}{52/52}{Motivación}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\beamer@subsectionpages {51}{52}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{53}{Algunas propiedades}}
+\headcommand {\slideentry {3}{2}{1}{53/53}{Algunas propiedades}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {3}{2}{2}{54/59}{Algunas propiedades}{0}}
+\headcommand {\beamer@framepages {54}{59}}
+\headcommand {\slideentry {3}{2}{3}{60/60}{Algunas propiedades}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {3}{2}{4}{61/61}{Algunas propiedades}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\beamer@subsectionpages {53}{61}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{62}{El modelo de regresión truncado}}
+\headcommand {\slideentry {3}{3}{1}{62/62}{El modelo de regresión truncado}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{3}{1}{63}{Definición}}
+\headcommand {\slideentry {3}{3}{2}{63/64}{El modelo de regresión truncado}{0}}
+\headcommand {\beamer@framepages {63}{64}}
+\headcommand {\slideentry {3}{3}{3}{65/70}{El modelo de regresión truncado}{0}}
+\headcommand {\beamer@framepages {65}{70}}
+\headcommand {\slideentry {3}{3}{4}{71/71}{El modelo de regresión truncado}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\slideentry {3}{3}{5}{72/72}{El modelo de regresión truncado}{0}}
+\headcommand {\beamer@framepages {72}{72}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{3}{2}{73}{Efectos marginales}}
+\headcommand {\slideentry {3}{3}{6}{73/73}{El modelo de regresión truncado}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{3}{3}{74}{Estimación}}
+\headcommand {\slideentry {3}{3}{7}{74/74}{El modelo de regresión truncado}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\beamer@subsectionpages {62}{74}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{75}{El modelo de regresión censurado}}
+\headcommand {\slideentry {3}{4}{1}{75/75}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {75}{75}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{4}{1}{76}{Definición}}
+\headcommand {\slideentry {3}{4}{2}{76/76}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\slideentry {3}{4}{3}{77/77}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {77}{77}}
+\headcommand {\slideentry {3}{4}{4}{78/78}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {78}{78}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{4}{2}{79}{Efectos marginales}}
+\headcommand {\slideentry {3}{4}{5}{79/79}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\slideentry {3}{4}{6}{80/80}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {80}{80}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{4}{3}{81}{Estimación}}
+\headcommand {\slideentry {3}{4}{7}{81/81}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\slideentry {3}{4}{8}{82/82}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {82}{82}}
+\headcommand {\slideentry {3}{4}{9}{83/83}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {83}{83}}
+\headcommand {\slideentry {3}{4}{10}{84/84}{El modelo de regresión censurado}{0}}
+\headcommand {\beamer@framepages {84}{84}}
+\headcommand {\beamer@subsectionpages {75}{84}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{85}{Modelo de Heckman (Heckit)}}
+\headcommand {\slideentry {3}{5}{1}{85/85}{Modelo de Heckman (Heckit)}{0}}
+\headcommand {\beamer@framepages {85}{85}}
+\headcommand {\slideentry {3}{5}{2}{86/86}{Modelo de Heckman (Heckit)}{0}}
+\headcommand {\beamer@framepages {86}{86}}
+\headcommand {\slideentry {3}{5}{3}{87/87}{Modelo de Heckman (Heckit)}{0}}
+\headcommand {\beamer@framepages {87}{87}}
+\headcommand {\beamer@subsectionpages {85}{87}}
+\headcommand {\beamer@subsectionentry {0}{3}{6}{88}{Supuestos}}
+\headcommand {\slideentry {3}{6}{1}{88/88}{Supuestos}{0}}
+\headcommand {\beamer@framepages {88}{88}}
+\headcommand {\slideentry {3}{6}{2}{89/89}{Supuestos}{0}}
+\headcommand {\beamer@framepages {89}{89}}
+\headcommand {\beamer@subsectionpages {88}{89}}
+\headcommand {\beamer@subsectionentry {0}{3}{7}{90}{Problema}}
+\headcommand {\slideentry {3}{7}{1}{90/90}{Problema}{0}}
+\headcommand {\beamer@framepages {90}{90}}
+\headcommand {\slideentry {3}{7}{2}{91/91}{Problema}{0}}
+\headcommand {\beamer@framepages {91}{91}}
+\headcommand {\beamer@subsectionpages {90}{91}}
+\headcommand {\beamer@subsectionentry {0}{3}{8}{92}{Solución}}
+\headcommand {\slideentry {3}{8}{1}{92/92}{Solución}{0}}
+\headcommand {\beamer@framepages {92}{92}}
+\headcommand {\slideentry {3}{8}{2}{93/93}{Solución}{0}}
+\headcommand {\beamer@framepages {93}{93}}
+\headcommand {\slideentry {3}{8}{3}{94/94}{Solución}{0}}
+\headcommand {\beamer@framepages {94}{94}}
+\headcommand {\slideentry {3}{8}{4}{95/95}{Solución}{0}}
+\headcommand {\beamer@framepages {95}{95}}
+\headcommand {\slideentry {3}{8}{5}{96/96}{Solución}{0}}
+\headcommand {\beamer@framepages {96}{96}}
+\headcommand {\slideentry {3}{8}{6}{97/97}{Solución}{0}}
+\headcommand {\beamer@framepages {97}{97}}
+\headcommand {\slideentry {3}{8}{7}{98/98}{Solución}{0}}
+\headcommand {\beamer@framepages {98}{98}}
+\headcommand {\beamer@sectionpages {50}{98}}
+\headcommand {\beamer@subsectionpages {92}{98}}
+\headcommand {\sectionentry {4}{Poisson}{99}{El modelo de regresión de Poisson}{0}}
+\headcommand {\slideentry {4}{0}{1}{99/99}{}{0}}
+\headcommand {\beamer@framepages {99}{99}}
+\headcommand {\slideentry {4}{0}{2}{100/100}{}{0}}
+\headcommand {\beamer@framepages {100}{100}}
+\headcommand {\slideentry {4}{0}{3}{101/101}{}{0}}
+\headcommand {\beamer@framepages {101}{101}}
+\headcommand {\slideentry {4}{0}{4}{102/102}{}{0}}
+\headcommand {\beamer@framepages {102}{102}}
+\headcommand {\slideentry {4}{0}{5}{103/103}{}{0}}
+\headcommand {\beamer@framepages {103}{103}}
+\headcommand {\slideentry {4}{0}{6}{104/104}{}{0}}
+\headcommand {\beamer@framepages {104}{104}}
+\headcommand {\slideentry {4}{0}{7}{105/105}{}{0}}
+\headcommand {\beamer@framepages {105}{105}}
+\headcommand {\slideentry {4}{0}{8}{106/106}{}{0}}
+\headcommand {\beamer@framepages {106}{106}}
+\headcommand {\slideentry {4}{0}{9}{107/107}{}{0}}
+\headcommand {\beamer@framepages {107}{107}}
+\headcommand {\beamer@sectionpages {99}{107}}
+\headcommand {\beamer@subsectionpages {99}{107}}
+\headcommand {\sectionentry {5}{Censurado y truncado}{108}{Modelos de regresión censurados y truncados}{0}}
+\headcommand {\slideentry {5}{0}{1}{108/108}{}{0}}
+\headcommand {\beamer@framepages {108}{108}}
+\headcommand {\slideentry {5}{0}{2}{109/109}{}{0}}
+\headcommand {\beamer@framepages {109}{109}}
+\headcommand {\slideentry {5}{0}{3}{110/110}{}{0}}
+\headcommand {\beamer@framepages {110}{110}}
+\headcommand {\slideentry {5}{0}{4}{111/111}{}{0}}
+\headcommand {\beamer@framepages {111}{111}}
+\headcommand {\slideentry {5}{0}{5}{112/112}{}{0}}
+\headcommand {\beamer@framepages {112}{112}}
+\headcommand {\slideentry {5}{0}{6}{113/113}{}{0}}
+\headcommand {\beamer@framepages {113}{113}}
+\headcommand {\slideentry {5}{0}{7}{114/114}{}{0}}
+\headcommand {\beamer@framepages {114}{114}}
+\headcommand {\slideentry {5}{0}{8}{115/115}{}{0}}
+\headcommand {\beamer@framepages {115}{115}}
+\headcommand {\slideentry {5}{0}{9}{116/116}{}{0}}
+\headcommand {\beamer@framepages {116}{116}}
+\headcommand {\slideentry {5}{0}{10}{117/117}{}{0}}
+\headcommand {\beamer@framepages {117}{117}}
+\headcommand {\slideentry {5}{0}{11}{118/118}{}{0}}
+\headcommand {\beamer@framepages {118}{118}}
+\headcommand {\slideentry {5}{0}{12}{119/119}{}{0}}
+\headcommand {\beamer@framepages {119}{119}}
+\headcommand {\slideentry {5}{0}{13}{120/120}{}{0}}
+\headcommand {\beamer@framepages {120}{120}}
+\headcommand {\slideentry {5}{0}{14}{121/121}{}{0}}
+\headcommand {\beamer@framepages {121}{121}}
+\headcommand {\beamer@sectionpages {108}{121}}
+\headcommand {\beamer@subsectionpages {108}{121}}
+\headcommand {\sectionentry {6}{La muestra}{122}{Correcciones de selección de muestra}{0}}
+\headcommand {\slideentry {6}{0}{1}{122/122}{}{0}}
+\headcommand {\beamer@framepages {122}{122}}
+\headcommand {\slideentry {6}{0}{2}{123/123}{}{0}}
+\headcommand {\beamer@framepages {123}{123}}
+\headcommand {\slideentry {6}{0}{3}{124/124}{}{0}}
+\headcommand {\beamer@framepages {124}{124}}
+\headcommand {\beamer@subsectionpages {122}{124}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{125}{?`Cuando OLS en la muestra es consistente?}}
+\headcommand {\slideentry {6}{1}{1}{125/125}{?`Cuando OLS en la muestra es consistente?}{0}}
+\headcommand {\beamer@framepages {125}{125}}
+\headcommand {\slideentry {6}{1}{2}{126/126}{?`Cuando OLS en la muestra es consistente?}{0}}
+\headcommand {\beamer@framepages {126}{126}}
+\headcommand {\slideentry {6}{1}{3}{127/127}{?`Cuando OLS en la muestra es consistente?}{0}}
+\headcommand {\beamer@framepages {127}{127}}
+\headcommand {\slideentry {6}{1}{4}{128/128}{?`Cuando OLS en la muestra es consistente?}{0}}
+\headcommand {\beamer@framepages {128}{128}}
+\headcommand {\beamer@subsectionpages {125}{128}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{129}{?`Cuando OLS en una muestra es inconsistente?}}
+\headcommand {\slideentry {6}{2}{1}{129/129}{?`Cuando OLS en una muestra es inconsistente?}{0}}
+\headcommand {\beamer@framepages {129}{129}}
+\headcommand {\slideentry {6}{2}{2}{130/130}{?`Cuando OLS en una muestra es inconsistente?}{0}}
+\headcommand {\beamer@framepages {130}{130}}
+\headcommand {\beamer@subsectionpages {129}{130}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{131}{Incidental truncation}}
+\headcommand {\slideentry {6}{3}{1}{131/131}{Incidental truncation}{0}}
+\headcommand {\beamer@framepages {131}{131}}
+\headcommand {\slideentry {6}{3}{2}{132/132}{Incidental truncation}{0}}
+\headcommand {\beamer@framepages {132}{132}}
+\headcommand {\slideentry {6}{3}{3}{133/133}{Incidental truncation}{0}}
+\headcommand {\beamer@framepages {133}{133}}
+\headcommand {\slideentry {6}{3}{4}{134/134}{Incidental truncation}{0}}
+\headcommand {\beamer@framepages {134}{134}}
+\headcommand {\beamer@sectionpages {122}{134}}
+\headcommand {\beamer@subsectionpages {131}{134}}
+\headcommand {\sectionentry {7}{Referencias}{135}{Referencias}{0}}
+\headcommand {\slideentry {7}{0}{1}{135/135}{}{0}}
+\headcommand {\beamer@framepages {135}{135}}
+\headcommand {\slideentry {7}{0}{2}{136/136}{}{0}}
+\headcommand {\beamer@framepages {136}{136}}
+\headcommand {\slideentry {7}{0}{3}{138/138}{}{0}}
+\headcommand {\beamer@framepages {138}{138}}
+\headcommand {\beamer@partpages {1}{138}}
+\headcommand {\beamer@subsectionpages {135}{138}}
+\headcommand {\beamer@sectionpages {135}{138}}
+\headcommand {\beamer@documentpages {138}}
+\headcommand {\gdef \inserttotalframenumber {126}}

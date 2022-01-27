@@ -1,0 +1,382 @@
+%====================================================================================
+\section{Introducción}
+%====================================================================================
+\begin{frame}[fragile]
+	\frametitle{Lógica}
+	\begin{itemize}
+		\item El método de MV estima $\mu$ bajo la siguiente lógica:
+		
+		\begin{enumerate}
+			\item Los datos fueron generados con $N(\mu,\sigma^2=1)$
+			\item Con los datos disponibles ¿cuál es el valor de $\mu$ que hace más probable que $(1)$ sea cierto? 
+		\end{enumerate}
+		
+		\item Notar que típicamente se conoce $\mu$ y la distribución, y con esos datos se generan los número seudoaleatorios.
+		\item En este caso es al revés, primero conocemos los datos, y con estos buscamos cuál fue el $\mu$ que los pudo haber generado.
+		\item Máxima verosimilitud $=$ Máxima compatibilidad entre el modelo y los datos.
+	\end{itemize}
+\end{frame}
+
+\subsection{Principio de máxima verosimilitud}
+
+\subsubsection{Definición}
+
+\begin{frame}[fragile]
+	\frametitle{Máxima verosimilitud}
+	\begin{itemize}
+		\item Dado un conjunto de datos, el objetivo es estimar los
+		parámetros de tal manera que la muestra se parezca lo más
+		posible al universo.
+		\item El universo queda definido por la función de distribución que se asume tienen los datos (normal,
+		exponencial, lognormal, etc)
+		\item El logarítmo de la verosimilitud (log likelihood) es una transformación
+		monotónica, por lo tanto...
+		\item Mientras la verosimilitud (`l') $\epsilon$ $[0,1]$ el log likelihood (`ll') $ \epsilon ...$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Likelihood Vs Log-Likelihood}
+	\begin{figure}[H]
+		\begin{centering}
+			\includegraphics[scale=.7]{fig/mv.eps}
+		\end{centering}
+	\end{figure}
+\end{frame}
+
+\subsubsection{Formalidad}
+
+\begin{frame}
+	\frametitle{Estimación bajo MV}
+	\begin{itemize}
+		\item Se trata de construir la función de probabilidad
+		conjunta (o función de verosimilitud) de $y_1$, $y_2$,...,
+		$y_n$ suponiendo que las observaciones son independientes y
+		están idénticamente distribuidas (iid)
+		
+		$$L(\theta)=f(y_1... y_n; \theta)=\Pi_{i=1}^n f(y_i;\theta)$$
+		
+		$$LL(\theta)=ln(f(y_1... y_n; \theta))=\sum_{i=1}^n ln f(y_i;\theta)$$
+		
+		\item `Si para un determinado valor de $\theta$, la
+		verosimilitud es \emph{pequeña}, es poco probable que $\theta$ sea el valor correcto que ha generado los
+		datos que observamos'
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estimación bajo MV}
+	\begin{itemize}
+		\item Por tanto tenemos que elegir $\theta$ que maximice
+		$L(\theta)$. Es decir, el estimador MV satisface la CPO:
+		
+		$$\frac{\partial L(\theta)}{\partial \theta}|_{\theta=\hat\theta}=0$$
+		
+		\item o lo que es lo mismo
+		
+		$$\frac{\partial log (L(\theta))}{\partial
+			\theta}|_{\theta=\hat\theta}=0$$
+		
+		\item Y la condición de segundo orden...
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Matrices relacionadas a la función Log( L)}
+	\begin{itemize}
+		\item \textbf{Hessiana (H):} Es una matriz cuadrada (k x k) de
+		las segundas derivadas de $log(L(\theta;y))$ con respecto a
+		$\theta$: 
+		
+		$$H(\theta)=\frac{\partial ^2 Log(L(\theta;y))}{\partial \theta \partial \theta'}$$
+		
+		\item \textbf{Score (S):} Es una gradiente de (k x 1) de $log(L(\theta;y))$ con respecto a $\theta$: 
+		$$S(\theta)=\frac{\partial Log(L(\theta;y))}{\partial \theta}$$
+		
+		Notar que cuando $\theta=\theta_{MV}$ $\Longrightarrow$ $S(\theta_{MV})=0$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item \textbf{Matriz de información $I(\theta)$:} Indica el
+		grado de curvatura
+		\begin{eqnarray*}
+			I(\theta) &=& E[-\frac{\partial^2 Log(L)}{\partial \theta \partial
+				\theta'}]
+		\end{eqnarray*}
+		
+		Notar que mientras menos curvatura tenga la función de
+		verosimilitud (el caso extremo es una línea recta) existirá
+		mayor varianza en el estimador analizado pues:
+		
+		\begin{eqnarray*}
+			Var(\theta)&=&[I(\theta)]^{-1}
+		\end{eqnarray*}
+		
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Ventajas y desventajas}
+	\begin{itemize}
+		\item \textbf{Ventaja:} El estimador MV (ML=maximum likelihood) tiene
+		propiedades asintóticas óptimas entre todos los estimadores
+		consistentes y normales asintóticamente.
+		\item \textbf{Desventajas:}
+		\begin{itemize}
+			\item El estimador
+			ML depende de forma importante de los supuestos sobre la
+			distribución.
+			\item El estimador MV tiene propiedades mediocres en
+			muestras pequeñas.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Pruebas asintóticas}
+
+\subsubsection{Test LR}
+
+\begin{frame}
+	\frametitle{Pruebas asintóticas}
+	\begin{itemize}
+		\item En econometría a menudo se plantean restricciones al modelo
+		respecto a uno o más parámetros con el fin de indagar si el modelo
+		es consistente con la restricción. 
+		\item Por ejemplo $\beta_0=1$ o
+		$\alpha+\beta=1$ en el contexto de una función de producción del
+		tipo Cobb-Douglas (Retorno a escala constante). 
+		\item El modelo que se
+		estima imponiendo la restricción precisamente se conoce como
+		modelo restringido. 
+	\end{itemize}
+	
+	En lo que sigue se discuten tres pruebas
+	asintóticas equivalentes que evalúan con procedimientos distintos
+	la consistencia de una restricción.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Likelihood Ratio Test (LR)}
+	Por sus siglas en inglés también se conoce como el ``test LR''. En
+	este tipo de pruebas se requiere la estimación restringida y sin
+	restringir:
+	\begin{itemize}
+		\item Modelo restringido: $y=\beta_0$
+		\item Modelo no restringido: $y=\alpha_0+\alpha_1 x_1+\alpha_2 x_2$
+		\item ambos se estiman por MV donde lo que se quiere analizar
+		es si la hipótesis nula conjunta de que los coeficientes de
+		las variables que acompañan a las variables son iguales a
+		cero...
+	\end{itemize}
+	\begin{eqnarray*}
+		LRT &=& 2[Log L(\hat\theta^nr)-Log L(\theta^{r})] \sim \chi^2_q
+	\end{eqnarray*}
+	
+	Para su estimación requiere tanto de los estimadores restringidos
+	como no restringidos.
+\end{frame}
+
+
+\subsubsection{Test de Wald}
+
+\begin{frame}
+	\frametitle{Test de Wald}
+	
+	Piense en la siguiente restricción matricial: $R\beta=r$ donde $R$
+	es una matriz de m x k y $\beta$ es una matriz de k x 1. Sea
+	$g(\beta)=R\beta-r$, si se sabe que $g(\hat\beta^R)=0$, lo que se
+	pregunta el test de Wald es ¿$g(\hat\beta_{MV})=0$? es decir, se
+	reemplazan los $\hat\beta_{MV}$ en la restricción:
+	
+	\begin{itemize}
+		\item Si $g(\hat\beta_{MV})$ tiende a $0$ se acepta la
+		restricción.
+		\item Si $g(\hat\beta_{MV})$ no tiende a $0$ no se acepta la
+		restricción.
+	\end{itemize}
+	
+	El estadístico necesario para la prueba es:
+	
+	\begin{eqnarray*}
+		W &=& (R\hat\beta_{MV}-r)'\{ Var (R\hat\beta_{MV}-r) \}^{-1} (R\hat\beta_{MV}-r) \\
+		W &=& g(\hat\beta_{MV})'\{ \frac{\partial g}{\partial \beta} [I(\theta)]^{-1}  \frac{\partial g}{\partial \beta} \}^{-1} g(\hat\beta_{MV}) \sim \chi^2_q
+	\end{eqnarray*}
+	
+	Para su estimación requiere sólo de los estimadores no
+	restringidos.
+	
+\end{frame}
+
+\subsubsection{Test Multiplicadores de Lagrange (LM)}
+
+\begin{frame}
+	\frametitle{Test de Multiplicadores de Lagrange}
+	
+	Se basa en la matriz score eficiencia $(S(\theta))$, si se sabe
+	que $S(\hat\beta_{MV})=0$, lo que se pregunta el test LM es
+	¿$S(\hat\beta^R)=0$? es decir, se reemplazan los $\hat\beta^R$ en
+	el score:
+	
+	\begin{itemize}
+		\item Si $S(\hat\beta^R)$ tiende a $0$ se acepta la
+		restricción.
+		\item Si $g(\hat\beta^R)$ no tiende a $0$ no se acepta la
+		restricción.
+	\end{itemize}
+	
+	\begin{eqnarray*}
+		LM &=& S(\hat\theta^R)'[I(\theta)]^{-1} S(\hat\theta^R) \sim \chi^2_q
+	\end{eqnarray*}
+	
+	Para su estimación requiere sólo de los estimadores restringidos.
+\end{frame}
+
+\subsection{MCO Vs MV}
+
+\subsubsection{Modelo de regresión lineal simple}
+
+\begin{frame}
+	\frametitle{MRS usando MV}
+	
+	Sea el siguiente modelo de regresión lineal simple, en su versión
+	poblacional:
+	
+	\begin{eqnarray}
+		Y_i &=& \beta_0+\beta_1 X_i+\mu_i
+	\end{eqnarray}
+	
+	Donde $\mu_i \sim N(0,\sigma^2)$, por lo tanto, la probabilidad de
+	que el error $\mu_i$ provenga de la distribución normal es:
+	
+	\begin{eqnarray}
+		f(\mu_i,\beta_0,\beta_1,\sigma) &=&
+		\frac{1}{\sqrt{\sigma^2\pi}}\exp^{-\frac{1}{2}(\frac{\mu_i}{\sigma})^2}
+	\end{eqnarray}
+\end{frame}
+
+\begin{frame}
+	
+	Probabilidad conjunta
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{c|c}
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			N° de Observación & f \\
+			\hline
+			1 & $f(\mu_1,\beta_0,\beta_1,\sigma)$ \\
+			2 & $f(\mu_2,\beta_0,\beta_1,\sigma)$ \\
+			. & . \\
+			. & . \\
+			. & . \\
+			n & $f(\mu_n,\beta_0,\beta_1,\sigma)$ \\
+			\hline \\
+			Prob. Conjunta & $\pi_i^n f(\mu_i,\beta_0,\beta_1,\sigma)$ \\
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	En una muestra de tamaño $n$ la probabilidad individual de que
+	cada observación provenga de una distribución normal son mostrados
+	en la tabla 1. La probabilidad conjunta, asumiendo independencia,
+	es la productoria de todas las probabilidades:
+	
+	\begin{eqnarray}
+		\pi_i^n f(\mu_i,\beta_0,\beta_1,\sigma) &=&L=
+		\frac{1}{\sigma^n}\frac{1}{(\sqrt{2\pi})^n}\exp^{-\frac{1}{2\sigma^2}\sum_{i=1}^n\mu_i^2}
+	\end{eqnarray}
+	
+	Con lo cual el logaritmo de la verosimilitud (LL) queda definido
+	como:
+	
+	\begin{eqnarray*}
+		LL &=&
+		Ln(1)-Ln(\sigma)^n-Ln(\sqrt{2\pi})^n-\frac{1}{2\sigma^2}\sum\mu_i^2
+	\end{eqnarray*}
+	
+	Maximizar la expresión anterior es lo mismo que maximizar la
+	siguiente función:
+	
+	\begin{eqnarray}
+		LL &=&-n Log(\sigma)-\frac{1}{2\sigma^2}\sum\mu_i^2
+	\end{eqnarray}
+\end{frame}
+
+\begin{frame}
+	\emph{La CPO} de la función es dado por el siguiente arreglo:
+	
+	\[ S(\theta) = \left( \begin{array}{cc}
+		\frac{\partial LL}{\partial \beta_0}  \\
+		\frac{\partial LL}{\partial \beta_1}  \\
+		\frac{\partial LL}{\partial \sigma} \end{array} \right)=\left( \begin{array}{cc}
+		\frac{1}{\sigma^2}\sum(Y_i-\beta_0-\beta_1 X_i)  \\
+		\frac{1}{\sigma^2}\sum(Y_i-\beta_0-\beta_1 X_i)X_i  \\
+		\frac{-n}{\sigma}+\frac{1}{\sigma^3}\sum\mu_i^2 \end{array} \right)=\left( \begin{array}{cc}
+		0  \\
+		0  \\
+		0 \end{array} \right).\]
+\end{frame}
+
+\begin{frame}
+	Nótese que los ecuaciones que se obtienen de las primeras dos
+	filas de los vectores son las mismas ecuaciones normales que se
+	obtienen cuando se resuelve el problema de MCO, por tanto los
+	$\beta$s que resuelven el problema de MV son los mismos que los
+	que se obtienen bajo MCO. La tercera fila del vector $S(\theta)$,
+	permite conocer la dispersión de $\mu_i$:
+	
+	\begin{eqnarray*}
+		\sigma^2_{MV} &=& \frac{\sum \hat{\mu_i}^2}{n}
+	\end{eqnarray*}
+	
+	Que como se sabe es un estimador sesgado de la
+	varianza\footnote{El estimador insesgado es: $\frac{\sum
+			\hat{\mu_i}^2}{n-k}$, donde $k$ son todos los parámetros de la
+		regresión a estimar incluyendo al intercepto}, aunque el sesgo se
+	disipa cuando la muestra ($n$) es grande.
+	\bigskip
+	
+	La solución al problema todavía esta incompleto, falta demostrar
+	que la Hessiana es una matriz definida negativa.
+\end{frame}
+
+\begin{frame}
+	Los resultados anteriores pueden ser generalizados para el caso de
+	más de un regresor o covariado, la estimación en este caso viene
+	dado por:
+	
+	\begin{eqnarray*}
+		\hat{\beta} &=& (X'X)^{-1}(X'Y) \\
+		\hat{\sigma}^2 &=& n^{-1}\hat{\mu}'\hat{\mu}
+	\end{eqnarray*}
+	
+	que se obtienen luego de maximizar la función log-likelihood:
+	
+	\begin{eqnarray}
+		LL(\theta; Y|X) &=&
+		-\frac{n}{2}ln(2\pi)-\frac{n}{2}ln(\sigma^2)-\frac{1}{2\sigma^2}(Y-XB)'(Y-XB)
+	\end{eqnarray}
+\end{frame}
+
+\subsubsection{Comparación}
+\begin{frame}{Comparación}
+	
+	\begin{tabular}{|l|l|}
+		\hline
+		% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+		\textbf{MCO} & \textbf{MV} \\
+		\hline
+		Función a optimizar:........... & Función a optimizar:........... \\
+		Criterio de optimización:........... & Criterio de optimización:........... \\
+		Rest. Vs No Rest:........... & Rest. Vs No Rest:........... \\
+		Estadístico:...........& Estadístico:........... \\
+		Interp. Est:........... & Interp. Est:........... \\
+		P-Value:........... & P-Value:........... \\
+		Bondad de ajuste:............. & Bondad de ajuste:........... \\
+		\hline
+	\end{tabular}
+\end{frame}

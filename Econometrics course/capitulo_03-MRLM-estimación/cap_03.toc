@@ -1,0 +1,25 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Motivación para la regresión múltiple}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{El modelo con dos variables independientes}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{El modelo con k variables independientes}{6}{0}{1}
+\beamer@sectionintoc {2}{Mecánica e interpretación de mínimos cuadrados ordinarios}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Obtención de las estimaciones de MCO}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{Interpretación de la ecuación de regresión de MCO}{13}{0}{2}
+\beamer@subsectionintoc {2}{3}{Sobre el significado de "mantener otros factores fijos" en regresión múltiple}{15}{0}{2}
+\beamer@subsectionintoc {2}{4}{Cambiar más de una variable independiente simultáneamente}{16}{0}{2}
+\beamer@subsectionintoc {2}{5}{Valores ajustados y residuales de MCO}{17}{0}{2}
+\beamer@subsectionintoc {2}{6}{Una interpretación "parcializada" de la regresión múltiple}{19}{0}{2}
+\beamer@subsectionintoc {2}{7}{Comparación de estimaciones de regresión simple y múltiple}{23}{0}{2}
+\beamer@subsectionintoc {2}{8}{Bondad de ajuste}{25}{0}{2}
+\beamer@subsectionintoc {2}{9}{Regresión por el origen}{28}{0}{2}
+\beamer@sectionintoc {3}{El valor esperado de los estimadores de MCO}{29}{0}{3}
+\beamer@subsectionintoc {3}{1}{Incluir variables irrelevantes en un modelo de regresión}{31}{0}{3}
+\beamer@subsectionintoc {3}{2}{Sesgo variable omitido: el caso simple}{32}{0}{3}
+\beamer@subsectionintoc {3}{3}{Sesgo variable omitido: casos más generales}{33}{0}{3}
+\beamer@sectionintoc {4}{La varianza de los estimadores de MCO}{34}{0}{4}
+\beamer@subsectionintoc {4}{1}{Los componentes de las varianzas de MCO: multicolinealidad}{37}{0}{4}
+\beamer@subsectionintoc {4}{2}{Varianzas en modelos mal especificados}{38}{0}{4}
+\beamer@subsectionintoc {4}{3}{Estimación de s2: errores estándar de los estimadores de MCO}{39}{0}{4}
+\beamer@sectionintoc {5}{Eficiencia de MCO: el teorema de Gauss-Markov}{40}{0}{5}
+\beamer@sectionintoc {6}{Algunos comentarios sobre el lenguaje del análisis de regresión múltiple}{42}{0}{6}
+\beamer@sectionintoc {7}{Referencias}{43}{0}{7}

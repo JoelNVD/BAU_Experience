@@ -1,0 +1,314 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/05-SS_data-2022-01-07_1.log
+  log type:  text
+ opened on:   7 Jan 2022, 19:49:31
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Sudden Stops
+. ********************************************************************************
+. 
+. *** 2.1 Cleaning
+.         use "${rawdata_2_1}/main-data_all-countries_15Oct2020 165731.dta", clear
+
+.         keep country year
+
+. 
+. *** 2.2 SS1 var
+.         gen dum_ss1_old=0
+
+.                 local name1o `" "Brazil" "Croatia" "Czech Republic" "Guatemala" "Hungary" "India" "Indonesia" "Israel" "Jordan" "Korea, Rep." "Latvia" "Malaysia" "Mexico"
+>  "Pakistan" "Peru" "Philippines" "Poland" "Romania" "South Africa" "Thailand" "Turkey" "Venezuela, RB" "'
+
+.                 local year1o `" "1998" "2011" "2008" "2008" "1996" "2008" "1997" "2011" "2003" "1997" "2008" "2008" "1994" "1998" "1998" "1997" "2008" "2008" "2000" "1997
+> " "1994" "2006" "'
+
+.                 local name2o `" "Jordan" "Korea, Rep." "Pakistan" "Russian Federation" "South Africa" "Thailand" "Turkey" "Ukraine" "'
+
+.                 local year2o `" "2003" "2008" "1999" "2008" "2008" "2008" "2000" "2014" "'
+
+.                 local name3o `" "Russian Federation" "Turkey" "'
+
+.                 local year3o `" "2014" "2008" "'
+
+. 
+.                 qui forval n=1/22{
+
+. 
+.         gen dum_ss1_new=dum_ss1_old
+
+.                 local name1n `" "Brazil" "Czech Republic" "Guatemala" "India" "Indonesia" "Israel" "Korea, Rep." "Latvia" "Mexico" "Peru" "Philippines" "Poland" "Romania"
+>  "South Africa" "Thailand" "'
+
+.                 local year1n `" "1999" "2009" "2009" "2009" "1998" "2012" "1998" "2009" "1995" "1999" "1998" "2009" "2009" "2001" "1998" "'
+
+.                 local name2n `" "Jordan" "Pakistan" "Russian Federation" "Thailand" "Turkey" "'
+
+.                 local year2n `" "2004" "2000" "2009" "2009" "2001" "'
+
+.                 local name3n `" "Russian Federation" "Turkey" "'
+
+.                 local year3n `" "2015" "2009" "'
+
+. 
+.                 qui forval n=1/15{
+
+. 
+.         label var dum_ss1_old  "SS1 Start date, Duration in quarters"
+
+.         label var dum_ss1_new  "SS1 Start date to ahead, Duration in quarters"
+
+. 
+. *** 2.2 SS2 var
+.         gen dum_ss2_old=0
+
+.                 local name1o `" "Brazil" "Croatia" "Czech Republic" "Guatemala" "Hungary" "India" "Indonesia" "Israel" "Jordan" "Korea, Rep." "Latvia" "Malaysia" "Mexico"
+>  "Pakistan" "Peru" "Philippines" "Poland" "Romania" "South Africa" "Thailand" "Turkey" "Venezuela, RB" "'
+
+.                 local year1o `" "1998" "2011" "2008" "2008" "1996" "2008" "1997" "2011" "2003" "1997" "2008" "2008" "1994" "1998" "1998" "1997" "2008" "2008" "2000" "1997
+> " "1994" "2006" "'
+
+.                 local name2o `" "Korea, Rep." "Russian Federation" "South Africa" "Thailand" "Turkey" "Ukraine" "'
+
+.                 local year2o `" "2008" "2008" "2008" "2008" "2000" "2014" "'
+
+.                 local name3o `" "Russian Federation" "Turkey" "'
+
+.                 local year3o `" "2014" "2008" "'
+
+. 
+.                 qui forval n=1/22{
+
+. 
+. 
+.         gen dum_ss2_new=dum_ss2_old
+
+.                 local name1n `" "Brazil" "Croatia" "Czech Republic" "Guatemala" "India" "Indonesia" "Israel" "Jordan" "Korea, Rep." "Latvia" "Malaysia" "Mexico" "Pakistan
+> " "Peru" "Philippines" "Poland" "Romania" "Russian Federation" "South Africa" "Thailand" "Turkey" "'
+
+.                 local year1n `" "1999" "2012" "2009" "2009" "2009" "1998" "2012" "2004" "1998" "2009" "2009"  "1995" "1999" "1999" "1998" "2009" "2009" "2009" "2001" "199
+> 8" "1995" "'
+
+.                 local name2n `" "Brazil" "Croatia" "Indonesia" "Korea, Rep." "Korea, Rep." "Pakistan" "Peru" "Russian Federation" "Russian Federation" "South Africa" "Sou
+> th Africa" "Thailand" "Thailand" "Turkey" "Turkey" "'
+
+.                 local year2n `" "2000" "2013" "1999" "1999" "2009" "2000" "2000" "2010" "2015" "2002" "2009" "1999" "2009" "2001" "2009" "'
+
+.                 local name3n `" "Pakistan" "Peru" "Russian Federation" "South Africa" "Thailand" "Turkey" "Turkey" "'
+
+.                 local year3n `" "2001" "2001" "2011" "2003" "2000" "2002" "2010" "'
+
+. 
+.                 qui forval n=1/21{
+
+. 
+.         label var dum_ss2_old  "SS 2 Start date, Duration in quarters"
+
+.         label var dum_ss2_new  "SS 2 Start date to ahead, Duration in quarters"
+
+. 
+. *** 2.3 SS1 M var
+.         gen dum_ss1m_old=0
+
+.                 local name1o `" "Argentina" "Belarus" "Brazil" "Chile" "Croatia" "Czech Republic" "Guatemala" "Hungary" "India" "Indonesia" "Israel" "Jordan" "Kazakhstan"
+>  "Korea, Rep." "Latvia" "Lithuania" "Malaysia" "Mexico" "Pakistan" "Peru" "Philippines" "Poland" "Romania" "Russian Federation" "South Africa"  "Sri Lanka" "Thailand" "Tu
+> rkey" "Ukraine" "Venezuela, RB" "'
+
+.                 local year1o `" "1998"  "2012" "1998" "2008" "2011" "2008" "2008" "1996" "2008" "1997" "2011" "1993" "2007" "1997" "2008" "2008" "2008" "1994" "1998" "199
+> 8" "1997" "2008" "2008" "1998" "2000" "2001" "1997" "1994" "2008" "2006" "'
+
+.                 local name2o `" "Brazil" "Hungary" "Jordan" "Korea, Rep." "Peru" "Philippines" "Russian Federation" "South Africa" "Thailand" "Turkey" "Ukraine" "'
+
+.                 local year2o `" "2008" "2011" "2003" "2008" "2008" "2008" "2008" "2008" "2008" "2000" "2014" "'
+
+.                 local name3o `" "Jordan" "Russian Federation" "Turkey" "'
+
+.                 local year3o `" "2007" "2014" "2008" "'
+
+. 
+.                 qui forval n=1/30{
+
+. 
+.         gen dum_ss1m_new=dum_ss1m_old
+
+.                 local name1n `" "Argentina" "Brazil" "Chile" "Czech Republic" "Guatemala" "India" "Indonesia" "Israel" "Jordan" "Kazakhstan" "Korea, Rep." "Latvia" "Lithu
+> ania" "Malaysia" "Mexico" "Pakistan" "Peru" "Philippines" "Poland" "Romania" "Russian Federation" "South Africa" "Sri Lanka" "Thailand" "Ukraine" "'
+
+.                 local year1n `" "1999" "1999" "2009" "2009" "2009" "2009" "1998" "2012" "1994" "2008" "1998" "2009" "2009" "2009" "1995" "1999" "1999" "1998" "2009" "2009
+> " "1999" "2001" "2002" "1998" "2009" "'
+
+.                 local name2n `" "Brazil" "Hungary" "Jordan" "Kazakhstan" "Pakistan" "Peru" "Russian Federation" "Russian Federation" "Thailand" "Turkey" "'
+
+.                 local year2n `" "2009" "2012" "2004" "2009" "2000" "2009" "2000" "2009" "2009" "2001" "'
+
+.                 local name3n `" "Jordan" "Kazakhstan" "Russian Federation" "Turkey" "'
+
+.                 local year3n `" "2008" "2010" "2015" "2009" "'
+
+. 
+.                 qui forval n=1/25{
+
+.         label var dum_ss1m_old "SS1 Modified Start date, Duration in quarters"
+
+.         label var dum_ss1m_new "SS1 Modified Start date to ahead, Duration in quarters"
+
+. 
+. *** 2.4 SS2 M var
+.         gen dum_ss2m_old=0
+
+.                 local name1o `" "Argentina" "Belarus" "Brazil" "Chile" "Croatia" "Czech Republic" "Guatemala" "Hungary" "India" "Indonesia" "Israel" "Jordan" "Kazakhstan"
+>  "Korea, Rep." "Latvia" "Lithuania" "Malaysia" "Mexico" "Pakistan" "Peru" "Philippines" "Poland" "Romania" "Russian Federation" "South Africa" "Sri Lanka" "Thailand" "Tur
+> key" "Ukraine" "Venezuela, RB" "'
+
+.                 local year1o `" "1998" "2012" "1998" "2008" "2011" "2008" "2008" "1996" "2008" "1997" "2011" "1993" "2007" "1997" "2008" "2008" "2008" "1994" "1998" "1998
+> " "2008" "2008" "2008" "1998" "2000" "2001" "1997" "1994" "2008" "2006" "'
+
+.                 local name2o `" "Brazil" "Hungary" "Jordan" "Korea, Rep." "Peru" "Russian Federation" "South Africa" "Thailand" "Turkey" "Ukraine" "'
+
+.                 local year2o `" "2008" "2011" "2003" "2008" "2008" "2008" "2008" "2008" "2000" "2014" "'
+
+.                 local name3o `" "Jordan" "Russian Federation" "Turkey" "'
+
+.                 local year3o `" "2007" "2014" "2008" "'
+
+. 
+.                 qui forval n=1/30{
+
+. 
+.         gen dum_ss2m_new=dum_ss2m_old
+
+.                 local name1n `" "Argentina" "Belarus" "Brazil" "Chile" "Croatia" "Czech Republic" "Guatemala" "India" "Indonesia" "Israel" "Jordan" "Kazakhstan" "Korea, R
+> ep." "Latvia" "Lithuania" "Malaysia" "Mexico" "Pakistan" "Peru" "Philippines" "Poland" "Romania" "Russian Federation" "South Africa" "Sri Lanka" "Thailand" "Turkey" "Ukra
+> ine" "'
+
+.                 local year1n `" "1999" "2013" "1999" "2009" "2012" "2009" "2009" "2009" "1998" "2012" "1994" "2008" "1998" "2009" "2009" "2009" "1995" "1999" "1999" "2009
+> " "2009" "2009" "1999" "2001" "2002" "1998" "1995" "2009" "'
+
+.                 local name2n `" "Brazil" "Brazil" "Croatia" "Hungary" "Indonesia" "Jordan" "Kazakhstan" "Pakistan" "Peru" "Russian Federation" "Russian Federation" "South
+>  Africa" "South Africa" "Thailand" "Thailand" "Turkey" "Turkey" "'
+
+.                 local year2n `" "2000" "2009" "2013" "2012" "1999" "2004" "2009" "2000" "2009" "2000" "2009" "2002" "2009" "1999" "2009" "2001" "2009" "'
+
+.                 local name3n `" "Jordan" "Kazakhstan" "Pakistan" "Russian Federation" "South Africa" "Thailand" "Turkey" "Turkey" "'
+
+.                 local year3n `" "2008" "2010" "2001" "2015" "2003" "2000" "2002" "2010" "'
+
+. 
+.                 qui forval n=1/28{
+
+.         label var dum_ss2m_old "SS2 Modified Start date, Duration in quarters"
+
+.         label var dum_ss2m_new "SS2 Modified Start date to ahead, Duration in quarters"
+
+. 
+.         tab country if dum_ss2m_old==1
+
+                           Country Name |      Freq.     Percent        Cum.
+----------------------------------------+-----------------------------------
+                              Argentina |          1        2.33        2.33
+                                Belarus |          1        2.33        4.65
+                                 Brazil |          2        4.65        9.30
+                                  Chile |          1        2.33       11.63
+                                Croatia |          1        2.33       13.95
+                         Czech Republic |          1        2.33       16.28
+                              Guatemala |          1        2.33       18.60
+                                Hungary |          2        4.65       23.26
+                                  India |          1        2.33       25.58
+                              Indonesia |          1        2.33       27.91
+                                 Israel |          1        2.33       30.23
+                                 Jordan |          3        6.98       37.21
+                             Kazakhstan |          1        2.33       39.53
+                            Korea, Rep. |          2        4.65       44.19
+                                 Latvia |          1        2.33       46.51
+                              Lithuania |          1        2.33       48.84
+                               Malaysia |          1        2.33       51.16
+                                 Mexico |          1        2.33       53.49
+                               Pakistan |          1        2.33       55.81
+                                   Peru |          2        4.65       60.47
+                            Philippines |          1        2.33       62.79
+                                 Poland |          1        2.33       65.12
+                                Romania |          1        2.33       67.44
+                     Russian Federation |          3        6.98       74.42
+                           South Africa |          2        4.65       79.07
+                              Sri Lanka |          1        2.33       81.40
+                               Thailand |          2        4.65       86.05
+                                 Turkey |          3        6.98       93.02
+                                Ukraine |          2        4.65       97.67
+                          Venezuela, RB |          1        2.33      100.00
+----------------------------------------+-----------------------------------
+                                  Total |         43      100.00
+
+.         tab country if dum_ss2m_new==1
+
+                           Country Name |      Freq.     Percent        Cum.
+----------------------------------------+-----------------------------------
+                              Argentina |          2        2.08        2.08
+                                Belarus |          2        2.08        4.17
+                                 Brazil |          5        5.21        9.38
+                                  Chile |          2        2.08       11.46
+                                Croatia |          3        3.13       14.58
+                         Czech Republic |          2        2.08       16.67
+                              Guatemala |          2        2.08       18.75
+                                Hungary |          3        3.13       21.88
+                                  India |          2        2.08       23.96
+                              Indonesia |          3        3.13       27.08
+                                 Israel |          2        2.08       29.17
+                                 Jordan |          6        6.25       35.42
+                             Kazakhstan |          4        4.17       39.58
+                            Korea, Rep. |          3        3.13       42.71
+                                 Latvia |          2        2.08       44.79
+                              Lithuania |          2        2.08       46.88
+                               Malaysia |          2        2.08       48.96
+                                 Mexico |          2        2.08       51.04
+                               Pakistan |          4        4.17       55.21
+                                   Peru |          4        4.17       59.38
+                            Philippines |          2        2.08       61.46
+                                 Poland |          2        2.08       63.54
+                                Romania |          2        2.08       65.63
+                     Russian Federation |          7        7.29       72.92
+                           South Africa |          6        6.25       79.17
+                              Sri Lanka |          2        2.08       81.25
+                               Thailand |          6        6.25       87.50
+                                 Turkey |          8        8.33       95.83
+                                Ukraine |          3        3.13       98.96
+                          Venezuela, RB |          1        1.04      100.00
+----------------------------------------+-----------------------------------
+                                  Total |         96      100.00
+
+.         a
+command a is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "c:\users\joel\appdata\local\temp\st_stata_temp.tmp"
+
+. /*=====================================================================================================
+> * PROJECT NAME
+> * Principal:        Freddy Rojas Cama
+> * Assistant:        Joel Nestor Vicencio Damian
+> * STATA Version:    17
+> *======================================================================================================
+> ********************************************************************************
+> Note: These DO file was created to make a analyze in Freddy's database
+> ********************************************************************************
+> 
+> ********************************************************************************
+> *** PART 1: Introduction
+> *******************************************************************************/
+. 
+. *** 1.1 Globals
+.         global dofilename "04-45º_line_index"
+
+. 
+. *** 1.2 Strucuture of te log file name 
+.         cap log close

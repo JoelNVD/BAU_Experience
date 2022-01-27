@@ -1,0 +1,34 @@
+\begin{tikzpicture}[
+	declare function = {
+		weibullpdf(\x,\a,\b) = (\b/\a)*(\x/\a)^(\b-1)*exp(-(\x/\a)^(\b));
+	},
+	declare function={
+		normalpdf(\x,\mu,\sigma)=
+		(2*3.1415*\sigma^2)^(-0.5)*exp(-(\x-\mu)^2/(2*\sigma^2));
+	},
+	hplot/.style={ycomb, mark=o, dashed}]
+	\begin{axis}[scale=0.7,
+		title style={at={(0.5,0)},anchor=north,yshift=3.5cm},
+		title = Variance of the estimator,
+		legend style={at={(0.5,-0.1)},anchor=north, yshift=-3mm},
+		domain=-3:3, width=10cm, height=6cm, samples=100,
+		xlabel style={at={(1,0)}, anchor=north west},
+		ylabel style={rotate=-90, at={(0,1)}, anchor=south east},
+		axis x line*=bottom, axis y line*=left,
+		xmin = -4, xmax = 4, ymax = 0.8, ymin = -0.05,
+		xtick={-4, -2, 0, 2, 4}, ytick={0, .2, .4, .6, .8},
+		ymajorgrids=true]
+		
+		% Curvas
+		\addplot [very thick, redblack] {normalpdf(x,0,1)};
+		\addplot [very thick, orangeblack] {normalpdf(x,0,0.6)};
+		
+		% A´reas coloreadas
+		\addplot[domain = -5:-2, fill = red, fill opacity = 0.5, draw = none, thick]{normalpdf(x,0,1)} \closedcycle;
+		\addplot[domain = 2:5, fill = red, fill opacity = 0.5, draw = none, thick] {normalpdf(x,0,1)} \closedcycle;
+		
+		% Leyenda: el orden que graficas es el orden de colores
+		\addlegendentry{\tiny OLS with Heteroskedasticity}
+		\addlegendentry{\tiny \hspace{-1.4cm} Wrong Variance}
+	\end{axis}
+\end{tikzpicture}

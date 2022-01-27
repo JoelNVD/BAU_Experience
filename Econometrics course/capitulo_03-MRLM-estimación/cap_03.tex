@@ -1,0 +1,119 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt]{beamer}
+
+% Essential Packages
+\input{packages/packs}
+
+% Stata PACK
+\input{packages/stata}
+
+% Apartado de configuración del Beamer
+\mode<presentation> {
+	\usetheme{Frankfurt}
+	\setbeameroption{show notes}
+	\setbeamercolor{item projected}{fg=white,bg=red}
+	\setbeamertemplate{footline}[frame number]
+	\usefonttheme[onlylarge]{structuresmallcapsserif}
+	\usefonttheme[onlysmall]{structurebold}
+	\usecolortheme{beaver}
+	\setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{blocks}[rounded][shadow=true]
+}
+	
+	% Apartado transparencia de contenido
+	\AtBeginSection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	\AtBeginSubsection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	
+	% Apartado de logo
+	\logo{\includegraphics[scale=.06]{fig/logo-USAT.png}}
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\title[Capítulo 03]{Econometría Básica}
+
+\subtitle{Capítulo 03: Modelo de Regresión Lineal Múltiple-Estimación}
+
+\author[José Valderrama \& Freddy Rojas]{José Valderrama \& Freddy Rojas \\
+	\texttt{jtvalderrama@gmail.com \& frojasca@gmail.com} \faIcon{envelope}\\
+	Universidad Católica Santo Toribio de Mogrovejo}
+
+\date[Septiembre de 2021]{Septiembre de 2021}
+
+%------------------------------------------------------------------------------------
+% Open
+%---------
+\begin{document}
+	\rmfamily
+		\begin{frame}
+			\maketitle
+		\end{frame}
+%------------------------------------------------------------------------------------
+% Sections
+%---------
+	\begin{frame}{Contenido}
+		\tableofcontents
+	\end{frame}
+
+%%1) Modelo de regresión lineal simple --------------
+%	\include{sections/sec_01}
+%%2) Modelo de regresión lineal múltiple ------------
+%	\include{sections/sec_02}
+%%3) Interpretación ---------------------------------
+%	\include{sections/sec_03}
+%%4) MCO múltiple: Alternativa de estimación --------
+%	\include{sections/sec_04}
+%%5) Recuento de los supuestos del modelo de MCO ----
+%	\include{sections/sec_05}
+%%6) Varianza de los estimadores --------------------
+%	\include{sections/sec_06}
+%%7) Teorema de Gauss-Markov ------------------------
+%	\include{sections/sec_07}
+%%X) Referencias ------------------------------------
+%	\include{sections/sec}
+
+%1) Motivación para la regresión múltiple -----------
+	\include{sections/sec_11}
+%2) Mecánica e interpretación de mínimos cuadrados
+%	ordinarios --------------------------------------
+	\include{sections/sec_12}
+%3) El valor esperado de los estimadores de MCO -----
+	\include{sections/sec_13}
+%4) La varianza de los estimadores de MCO -----------
+	\include{sections/sec_14}
+%5) Eficiencia de OLS: el teorema de Gauss-Markov ---
+	\include{sections/sec_15}
+%6) Algunos comentarios sobre el lenguaje del análisis
+%	de regresión múltiple ----------------------------
+	\include{sections/sec_16}
+%X) Referencias ------------------------------------
+	\include{sections/sec}
+%---------------------------------------------------	
+\note[itemize]{
+	\item Agregar alguna nota
+}
+	
+%------------------------------------------------------------------------------------
+% End
+%----
+\begin{frame}
+	\maketitle
+\end{frame}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

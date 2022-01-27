@@ -1,0 +1,18 @@
+\frametitle{Stata}
+	
+	\begin{itemize}
+		\item Cálculo directo
+		\begin{itemize}
+			\item generate d = (y < .)
+			\item heckman y x1, select(d x2)
+			\item heckman y x1, select(d x2) twostep
+		\end{itemize}
+		\item A mano
+		\begin{itemize}
+			\item generate d = (y < .)
+			\item probit d x2
+			\item predict xb, xb
+			\item generate lambda=normalden(xb)/normal(xb)
+			\item reg y x1 lambda if d==1
+		\end{itemize}	
+	\end{itemize}		

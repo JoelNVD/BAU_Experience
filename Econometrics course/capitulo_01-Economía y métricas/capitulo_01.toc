@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{¿Qué es Econometría}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Econometría}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{La caja negra}{10}{0}{1}
+\beamer@sectionintoc {2}{Pasos en el análisis económico empírico}{21}{0}{2}
+\beamer@subsectionintoc {2}{1}{Experimentación}{22}{0}{2}
+\beamer@subsectionintoc {2}{2}{Datos experimentales y observacionales}{28}{0}{2}
+\beamer@sectionintoc {3}{La estructura de los datos económicos}{34}{0}{3}
+\beamer@subsectionintoc {3}{1}{Datos en serie de tiempo}{35}{0}{3}
+\beamer@subsectionintoc {3}{2}{Datos de corte transversal}{38}{0}{3}
+\beamer@subsectionintoc {3}{3}{Datos panel}{41}{0}{3}
+\beamer@sectionintoc {4}{La causalidad y la noción de ceteris paribus en el análisis econométrico}{44}{0}{4}
+\beamer@subsectionintoc {4}{1}{Coeficiente de correlación}{45}{0}{4}

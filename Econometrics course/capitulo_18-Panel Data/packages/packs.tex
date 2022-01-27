@@ -1,0 +1,114 @@
+% Apartado de letras
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Aparatdo matemático
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Apartado tipò de letra
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Aparatdo  de lista: cambiar la enumeración
+\usepackage{enumitem}
+
+% Apartado tablas, figuras, y otros
+\usepackage{multirow,booktabs,setspace,caption,multicol}
+\captionsetup{skip=0pt}
+	% Apartado Tablas y Figuras en APA
+	\DeclareCaptionLabelSeparator*{spaced}{\\[1ex]}
+	\captionsetup[table]{name = Tabla, textfont=it,format=plain,justification=justified,
+		singlelinecheck=false,labelsep=spaced,skip=0pt}
+	\captionsetup[figure]{name = Figura, labelsep=period,labelfont=it,justification=justified,
+		singlelinecheck=false,font=doublespacing}
+	% Para hacer tablas APA más fácil
+	\usepackage[flushleft]{threeparttable}
+
+% Apartado hyperres
+\usepackage{hyperref}
+
+% Apartado Tikz
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{positioning,calc}
+
+% Apartado de colores
+\usepackage{xcolor}
+\definecolor{greencool}{RGB}{30, 52, 56}
+
+% Apartado de íconos
+\usepackage{fontawesome5}
+\definecolor{twit}{RGB}{29, 161, 242}
+
+%Creación de entornos matemáticas
+\newtheorem{defi}{Definición}[section]
+\newtheorem{lema}{Lema}[section]
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{coro}{Corolario}[section]
+
+% Diversos
+\usefonttheme[onlymath]{serif}
+\usepackage{remreset}
+\usepackage{makecell}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{subfig}
+% \graphicspath{{./fig/}} es para definir una ruta es como esl cd de stata
+
+% Apartado justificación de textos
+\usepackage{ragged2e}
+\justifying
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+
+% Apartado miniframe
+\makeatletter
+\let\beamer@writeslidentry@miniframeson=\beamer@writeslidentry
+\def\beamer@writeslidentry@miniframesoff{%
+	\expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+	{%else
+		% removed \addtocontents commands
+		\clearpage\beamer@notesactions%
+	}
+}
+\newcommand*{\miniframeson}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson}
+\newcommand*{\miniframesoff}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff}
+\beamer@compresstrue
+\makeatother
+
+% Apartado de Stata
+\usepackage{listings}
+\definecolor{codeblue}{rgb}{0.29296875, 0.51953125, 0.68359375}
+\definecolor{codegreen}{rgb}{0.47265625, 0.62890625, 0.40234375}
+\definecolor{codegray}{rgb}{0.95703125, 0.95703125, 0.95703125}
+\definecolor{codecrimson}{rgb}{0.87109375,0.3984375,0.3984375}
+
+\lstset{frame=tb,
+	backgroundcolor=\color{codegray},
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\ttfamily},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{codeblue},
+	commentstyle=\color{codegreen},
+	stringstyle=\color{codecrimson},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4,
+	numbers=left,                    
+	numbersep=5pt,
+	frame=tlbr,framesep=4pt,framerule=0pt
+}
+
+% Apartado de block_colores
+	% Some examples
+	\setbeamercolor{block title}{fg=black,bg=red!20!white}
+	\setbeamercolor{block body}{fg=black, bg=red!5!white}
+	
+	% STATA code
+	\setbeamercolor{block title example}{fg=black, bg=gray!15!white}
+	\setbeamercolor{block body example}{bg=codegray}

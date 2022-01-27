@@ -1,0 +1,23 @@
+%===============================================================================
+\section{Varianza de los estimadores}
+%===============================================================================
+\begin{frame}{Varianza de los estimadores}
+	\begin{itemize}
+		\item \textcolor{red}{Suposición RLM5} Homocedasticidad: $Var(u/x_{1},x_{2},...,x_{k})=\sigma^{2} \Leftrightarrow Var(y/x)=\sigma^{2}$
+		
+		\item Los cinco supuestos hasta ahora mencionados son conocidos como los supuestos de
+		\textcolor{red}{Gauss-Markov}
+		
+		\item $Var(\hat{\beta_{j}})=\frac{\sigma^{2}}{SC_{j}(1-R_{j}^{2})}$, donde
+		\item $SC_{j}=\sum(x_{ij}-\overline{x_{j}})$ y $R_{j}^{2}$ es el $R^{2}$ de regresionar $x_{j}$ sobre todos los otros $x's$
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Varianza de los estimadores}
+	\begin{itemize}
+		\item Sin embargo, no conocemos $\sigma^{2}$ porque no observamos los errores poblacionales $u_{i}$
+		\item Lo que se conoce son los residuos o errores muestrales de la estimación $\hat{u}_{i}$
+		\item Entonces el $\sigma^{2}$ se estima a partir de los errores:\\ $\hat{\sigma}^{2}=\sum(\hat u_{i}^{2})/(n-k-1)=SRC/GL$
+		\item GL (Grados de libertad) es el número de observaciones menos el número de parámetros estimados (constante más $k$ pendientes)
+	\end{itemize}
+\end{frame}

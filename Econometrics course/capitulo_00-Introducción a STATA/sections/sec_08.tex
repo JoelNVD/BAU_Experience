@@ -1,0 +1,24 @@
+%====================================================================================
+\section{El comando \texttt{regress}}
+%====================================================================================
+
+\begin{frame}[fragile]{Sintaxis del comando de regresión}
+	La sintaxis del comando de regresión de Stata describe las reglas del lenguaje de programación Stata para la regresión.
+			$$\cdot\enskip \textup{\texttt{regress} \enskip \textcolor{blue}{\textit{\texttt{depvar}}} \enskip [\textcolor{blue}{\textit{\texttt{indpvars}}}] \enskip [\textcolor{blue}{\textit{\texttt{if}}}] \enskip [\textcolor{blue}{\textit{\texttt{in}}}] \enskip [\textcolor{blue}{,\enskip \textit{\texttt{options}}}]}$$
+	algunos ejemplos
+\begin{lstlisting}[language=Stata, numbers=none]
+use "http://www.ats.ucla.edu/stat/stata/dae/crime", clear
+regress crime poverty single
+\end{lstlisting}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}[fragile]{Sintaxis del comando de regresión}
+\begin{lstlisting}[language=Stata, numbers=none]
+use "http://www.ats.ucla.edu/stat/stata/dae/crime", clear
+regress crime poverty single
+\end{lstlisting}
+	\begin{figure}
+		\centering
+		\includegraphics[width = 0.75\linewidth]{fig/regression.png}
+	\end{figure}
+\end{frame}

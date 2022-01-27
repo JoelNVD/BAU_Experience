@@ -1,0 +1,95 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt]{beamer}
+
+% Essential Packages
+\input{packages/packs}
+
+% Stata PACK
+\input{packages/stata}
+
+% Apartado de configuración del Beamer
+\mode<presentation> {
+	\usetheme{Frankfurt}
+	\setbeameroption{show notes}
+	\setbeamercolor{item projected}{fg=white,bg=red}
+	\setbeamertemplate{footline}[frame number]
+	\usefonttheme[onlylarge]{structuresmallcapsserif}
+	\usefonttheme[onlysmall]{structurebold}
+	\usecolortheme{beaver}
+	\setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{blocks}[rounded][shadow=true]
+}
+
+% Apartado transparencia de contenido
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>{Contenido}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+\AtBeginSubsection[]
+{
+	\begin{frame}<beamer>{Contenido}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+
+% Apartado de logo
+\logo{\includegraphics[scale=.06]{fig/logo-USAT.png}}
+
+% Apartado cambio como por punto
+\decimalpoint
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\title[Capítulo 07]{Econometría Básica}
+
+\subtitle{Capítulo 07: Dummys}
+
+\author[José Valderrama \& Freddy Rojas]{José Valderrama \& Freddy Rojas \\
+	\texttt{jtvalderrama@gmail.com \& frojasca@gmail.com} \faIcon{envelope}\\
+	Universidad Católica Santo Toribio de Mogrovejo}
+
+\date[Septiembre de 2021]{Septiembre de 2021}
+
+%------------------------------------------------------------------------------------
+% Open
+%---------
+\begin{document}
+	\rmfamily
+	\begin{frame}
+		\maketitle
+	\end{frame}
+%------------------------------------------------------------------------------------
+% Sections
+%---------
+	\begin{frame}{Contenido}
+		\tableofcontents
+	\end{frame}
+
+%1) Variables Dummy ------------------------------------
+	\include{sections/sec_01}
+%2) Modelo de probabilidad lineal ----------------------
+	\include{sections/sec_02}
+%3) Referencia -----------------------------------------
+	\include{sections/sec_03}
+%---------------------------------------------------
+	\note[itemize]{
+		\item Agregar alguna nota
+	}
+
+%------------------------------------------------------------------------------------
+% End
+%----
+	\begin{frame}
+		\maketitle
+	\end{frame}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

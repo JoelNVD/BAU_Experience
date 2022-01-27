@@ -1,0 +1,164 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/03-matching_data-2022-01-11_1.log
+  log type:  text
+ opened on:  11 Jan 2022, 10:30:21
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Matching
+. ********************************************************************************
+. 
+. *** 2.1 Merge between GDP_WB and POP_WB
+.         use "${rawdata_3_1}/SP_POP_TOTL.dta", clear
+
+. 
+.         merge 1:1 id using "NY_GDP_MKTP_CD.dta"
+(variable IndicatorCode was str11, now str14 to accommodate using data's values)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                            16,226  (_merge==3)
+    -----------------------------------------
+
+.         drop _merge IndicatorName IndicatorCode
+
+.         order id year
+
+.         tempfile local_GDP_POP_data
+
+.         save `local_GDP_POP_data'
+file C:\Users\JOEL\AppData\Local\Temp\ST_2208_000001.tmp saved as .dta format
+
+. 
+. *** 2.2 Merge between GDP-POP and SPE
+.         use "${rawdata_3_1}/SPE_CEPAL.dta", clear
+
+. 
+.         merge m:1 year country using `local_GDP_POP_data'
+(variable country was str25, now str52 to accommodate using data's values)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                        15,866
+        from master                       420  (_merge==1)
+        from using                     15,446  (_merge==2)
+
+    Matched                             5,460  (_merge==3)
+    -----------------------------------------
+
+.         order id year CountryCode
+
+. 
+.         sort country year
+
+.         drop _merge
+
+. 
+. *** 2.3 Cleaning
+.         local classi`" "Education", "Environmental Protection", "Health", "Housing and community services", "Recreational activities, culture and r
+> eligion", "Social expenditure", "Social protection" "'
+
+.         keep if inlist(classification, `classi')
+(15,446 observations deleted)
+
+.         drop id
+
+.         encode country, gen(country_id)
+
+. 
+. *** 2.4 Add IMF Contry code
+.         gen imf_code =.
+(5,880 missing values generated)
+
+. 
+.         local abbrevi `" "ARG" "BHS" "BOL" "BRA" "BRB" "CHL" "COL" "CRI" "DOM" "ECU" "GTM" "GUY" "HND" "HTI" "JAM" "MEX" "NIC" "PAN" "PER" "PRY" "S
+> LV" "TTO" "URY" "VEN" "CUB" "'
+
+.         local codeimf `" "213" "313" "218" "223" "316" "228" "233" "238" "243" "248" "258" "336" "268" "263" "343" "273" "278" "283" "293" "288" "2
+> 53" "369" "298" "299" "928" "'
+
+. 
+.         forval n = 1/25{
+  2.                 local a : word `n' of `abbrevi'
+  3.                 local b : word `n' of `codeimf'
+  4. 
+.                 replace imf_code = `b' if CountryCode == "`a'"
+  5.         }
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+(210 real changes made)
+
+. 
+.         sort country year
+
+.         order year country_id country
+
+.         order year imf_code CountryCode country_id country 
+
+. 
+. *** 2.5 Adding labels
+.         label var year "Years 1960-2020"
+
+.         label var CountryCode "Country codes"
+
+.         label var country "Countries"
+
+.         label var classification "Social Public Expenditure classification"
+
+.         label var expenditure "Social Public Expenditure classification (%GDP)"
+
+.         label var SP_POP_TOTL "Population 1960-2020"
+
+.         label var NY_GDP_MKTP_CD "Gross Domestic Product (current US$) 1960-2020"
+
+.         label var imf_code "IMF Country Code"
+
+. 
+. *** 2.6 Saving database
+.         save "${data_3_1}/GDP_POP_SPE.dta", replace
+file C:\Users\JOEL\Dropbox\Project_02\DataWork\A_Data/03-download_match_data/GDP_POP_SPE.dta saved
+
+.         saveold  "${data_3_1}/GDP_POP_SPE_stata13.dta", version(13) replace
+(saving in Stata 13 format)
+file C:\Users\JOEL\Dropbox\Project_02\DataWork\A_Data/03-download_match_data/GDP_POP_SPE_stata13.dta saved
+
+. 
+. ********************************************************************************
+. *** PART 4: Closing log file
+. ********************************************************************************
+.     log close
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/03-matching_data-2022-01-11_1.log
+  log type:  text
+ closed on:  11 Jan 2022, 10:30:21
+-----------------------------------------------------------------------------------------------------------------------------------------------------

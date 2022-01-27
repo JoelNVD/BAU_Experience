@@ -1,0 +1,101 @@
+%===============================================================================
+\section{La estructura de los datos económicos}
+%===============================================================================
+
+%-------------------------------------------------------------------------------
+\subsection{Datos en serie de tiempo}
+%-------------------------------------------------------------------------------
+\begin{frame}{Datos en serie de tiempo}
+	Es información recolectada en un instante en el tiempo a un conjunto de agentes que pueden ser personas, empresas, países. Ejemplos de este tipo
+	de datos son las encuestas de opinión política, la ENAHO, variables macroeconómicas por países en un momento en el tiempo, etc. ``Muchas unidades de observación en un mismo momento en el tiempo''.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Datos en serie de tiempo - Ejemplo}
+	\centering
+	{\small Desempleo en la zona euro}\\
+	{\tiny (Ratios)} \\
+	\smallskip
+	\begin{tabular}{ ccc } 
+		\hline
+		Años & Desempleo & Desempleo juvenil \\
+		\hline\hline
+		2000 & 8.5 	& n.a  \\
+		2001 & 8.1 	& n.a  \\
+		2002 & 8.4 	& n.a  \\
+		2003 & 8.8 	& n.a  \\
+		2004 & 9.0 	& n.a  \\
+		2005 & 9.1 	& n.a  \\
+		2006 & 8.5 	& n.a  \\
+		2007 & 7.6 	& n.a  \\
+		2008 & 7.6 	& n.a  \\
+		2009 & 9.6 	& 20.2 \\
+		2010 & 10.1 & 20.9 \\
+		2011 & 10.2 & 20.8 \\
+		\hline
+	\end{tabular}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Datos de corte transversal}
+%-------------------------------------------------------------------------------
+\begin{frame}{Datos de corte transversal}
+	Este tipo de información es recolectada a un solo agente en un lapso de tiempo, como por ejemplo el PBI percápita y el gasto del gobierno de 1970 al 2007 de Perú, las ventas de la empresa X durante los últimos 20 años, etc. ``Una unidad de observación en varios momentos en el tiempo''.
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Datos de corte transversal - Ejemplo}
+	\centering
+	{\small Índice de Corrupción 2006} \\
+	\smallskip
+	\begin{tabular}{ ccc } 
+		\hline
+		Individuo & País & IPC puntaje \\
+		\hline\hline
+		1 & Finlandia & 9.6 \\
+		2 & Islandia  & 9.6 \\
+		3 & Dinamarca & 9.5 \\
+		4 & Chile	  & 7.3 \\
+		5 & USA		  & 7.3 \\
+		6 & España	  & 6.8 \\
+		7 & Perú	  & 3.3 \\
+		8 & Ecuador	  & 2.3 \\
+		9 & India	  & 3.3 \\
+		\vdots & \vdots & \vdots \\
+		\hline
+	\end{tabular}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Datos panel}
+%-------------------------------------------------------------------------------
+\begin{frame}{Datos panel}
+	\begin{description}
+		\item[Pool data] Es así como se suele conocer a la unión de datos de corte transversal. En la práctica es el proceso de poner `una base sobre
+		otra' y entre sus principales ventajas están las de incrementar el tamaño de la muestra y poder estudiar los efectos de determinado
+		acontecimiento u política ocurrido en el momento intermedio del suceso: Encuesta en 1990 + Suceso + Encuesta en 1995
+		\item[Datos de panel o longitudinales] En este caso las encuestas son aplicadas a los mismos individuos. Así se puede seguir el comportamiento en cuanto a ingresos
+		y gastos de varias familias por dos o mas años o también la información macroeconómica de un conjunto de países por un determinado numero de años.
+	\end{description}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Datos panel - Ejemplo}
+	\centering
+	{\small Desempeño Económico} \\
+	{\tiny (Ratios de crecimiento)}\\
+	\smallskip
+	\begin{tabular}{ cccc } 
+		\hline
+		Individuo & Año &País & PBI percápita \\
+		\hline\hline
+		1 & 1990 & USA & 2.32  \\
+		1 & 1991 & USA & 0.12  \\
+		1 & 1992 & USA & -2.04 \\
+		2 & 1990 & ARG & -8.75 \\
+		2 & 1991 & ARG & -3.66 \\
+		2 & 1992 & ARG & 11.19 \\
+		\vdots & \vdots & \vdots & \vdots \\
+		2 & 1999 & ARG & -4.67 \\
+		3 & 1991 & SPA & 3.56  \\
+		\vdots & \vdots & \vdots & \\
+		\hline
+	\end{tabular}
+\end{frame}

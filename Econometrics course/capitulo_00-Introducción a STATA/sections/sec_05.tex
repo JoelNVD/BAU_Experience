@@ -1,0 +1,31 @@
+%====================================================================================
+\section{Sintaxis de comandos}
+%====================================================================================
+
+\begin{frame}[fragile]{Sintaxis comandos}
+	La sintaxis de comandos básica en \textcolor{red}{STATA} es la siguiente
+			$$\cdot \textup{\texttt{\textcolor{blue}{\textit{command}} [\textcolor{blue}{\textit{varlist}}] [\textcolor{blue}{\textit{if}}] [\textcolor{blue}{\textit{in}}] [, \textcolor{blue}{\textit{options}}]}}$$
+	Las declaraciones entre paréntesis significan que son opciones. Las letras en \textit{cursiva} significan que debe reemplazar esa palabra con algún argumento válido. Por ejemplo, en el caso de hacer un histograma, usamos el comando \colorbox{codegray}{\textcolor{codeblue}{ \texttt{histogram}}} en la variable \colorbox{codegray}{\texttt{fred1}} en una muestra restringida cuando \colorbox{codegray}{\texttt{fred2}} es igual a 1 (el condicional).
+		\begin{center}
+			\colorbox{codegray}{\texttt{\textcolor{codeblue}{histogram} fred1  \textcolor{codeblue}{if} fred2 == 1}}
+		\end{center}
+	si queremos saber más sobre las opcione de este comando, debemos escribir \colorbox{codegray}{\texttt{help histogram}} en la barra de comandos.
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Algunos ejemplos de sintaxis de comandos}
+	Aquí algunos ejemplos de cómo leer la sintaxis de los comandos relacionados con la descripción de los datos y la estimación de MCO (\colorbox{codegray}{\texttt{help import}})
+		\begin{center}
+			\texttt{$\cdot$ \underline{hist}ogram \textcolor{blue}{\textit{varname}} [\textcolor{blue}{\textit{if}}] [\textcolor{blue}{\textit{in}}] [\textcolor{blue}{\textit{weight}}]}\\
+			\texttt{[, [\textcolor{blue}{\textit{continuous\_opts}} | \textcolor{blue}{\textit{discrete\_opts}}] \textcolor{blue}{\textit{options}}]}
+			
+			\vspace{0.5cm}
+			\texttt{$\cdot$ \underline{summ}arize \textcolor{blue}{\textit{varlist}} [\textcolor{blue}{\textit{if}}] [\textcolor{blue}{\textit{in}}] [\textcolor{blue}{\textit{weight}}] [, \textcolor{blue}{\textit{options}}]}
+			
+			\vspace{0.5cm}
+			\texttt{$\cdot$ \underline{d}s [, alpha]}
+			
+			\vspace{0.5cm}
+			\texttt{$\cdot$ \underline{reg}ress \textcolor{blue}{\textit{depvar}} [\textcolor{blue}{\textit{indepvars}}] [\textcolor{blue}{\textit{if}}] [\textcolor{blue}{\textit{in}}] [\textcolor{blue}{\textit{options}}]}
+		\end{center}
+	
+\end{frame}

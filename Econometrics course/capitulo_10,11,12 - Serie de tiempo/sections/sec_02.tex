@@ -1,0 +1,38 @@
+%====================================================================================
+\section{¿Por qué estudiar series de tiempo?}
+%====================================================================================
+
+\begin{frame}{Porqué estudiar series de tiempo?}
+	\begin{itemize}
+		\item Para pronosticar
+			\begin{itemize}
+				\item ¿Cuánto será la inflación el próximo año?
+				\item ¿Cuánto será el volumen de ventas de una empresa X?
+			\end{itemize}
+		\item Para estimar efectos causales dinámicos
+			\begin{itemize}
+				\item Si el banco central incrementa la tasa de interés, cuál será el impacto inmediato y el efecto sobre la inflación después de dos meses?
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Ejemplos de modelos de series de tiempo}
+	\begin{itemize}
+		\item Modelo estático que relaciona variables contemporáneas:
+			$$c_t = \beta_0 + \beta_1PBI_t + u_t$$
+		\item Modelos que permiten que una o más variables afecten a y con rezagos:
+			$$c_t = \alpha_0 + \delta_0 PBI_t + \delta_1 PBI_{t-1} + \delta_2 PBI_{t-2} + u_t$$
+		\item \textcolor{red}{Modelos Univariados:}
+			$$\textcolor{red}{c_t = \alpha_0 + \delta_0 c_{t-1} + \delta_2 c_{t-2} + \ldots + u_t}$$
+		\item En general:
+			$$c_t = \alpha_0 + \delta_0 PBI_t + \delta_1 PBI_{t-1} + \delta_2 c_{t-1} + u_t$$
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Ejemplos de modelos de series de tiempo}
+	\begin{itemize}
+		\item En lo que queda de clases nos vamos a concentrar en la predicción basado en el pasado de la variable que queremos predecir:
+		\item \textcolor{red}{Modelos Univariados:}
+			$$\textcolor{red}{c_t = \alpha_0 + \delta_0 c_{t-1} + \delta_2 c_{t-2} + \ldots + u_t}$$
+	\end{itemize}
+\end{frame}

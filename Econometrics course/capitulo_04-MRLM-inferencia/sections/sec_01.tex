@@ -1,0 +1,12 @@
+%====================================================================================
+\section{Distribuciones muestrales de los estimadores MCO}
+%====================================================================================
+\begin{frame}{Supuesto para la inferencia}
+	\begin{itemize}
+		\item \textcolor{blue}{Suposición RLM6:} Normalidad. Con el fin de probar hipótesis se necesita agregar un supuesto adicional a los cinco supuestos ya vistos: $u \thicksim N(o,\sigma^2)$ El error poblacional se distribuye como un  normal con media cero y varianza $\sigma^2$ \pause
+		\item Lo anterior implica que \pause
+			$$y/x \thicksim N(\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+...+\beta_{k}x_{k},\sigma^2)$$ \pause
+		\item También $\hat{\beta}_{j}=N(\beta_{j},Var(\hat{\beta}_{j}))$, por lo que estandarizando se tiene: \pause
+			$$\frac{\hat{\beta}_{j}-\beta_{j}}{Es(\hat{\beta}_{j})} \thicksim N(0,1)$$
+	\end{itemize}
+\end{frame}

@@ -1,0 +1,124 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Definición del modelo de regresión simple}{3}{Definición del modelo de regresión simple}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Terminología}}
+\headcommand {\slideentry {1}{1}{1}{4/4}{Terminología}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {1}{1}{2}{5/10}{Terminología}{0}}
+\headcommand {\beamer@framepages {5}{10}}
+\headcommand {\slideentry {1}{1}{3}{11/11}{Terminología}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@sectionpages {3}{11}}
+\headcommand {\beamer@subsectionpages {4}{11}}
+\headcommand {\sectionentry {2}{Derivación de estimaciones de mínimos cuadrados ordinarios}{12}{Derivación de estimaciones de mínimos cuadrados ordinarios}{0}}
+\headcommand {\slideentry {2}{0}{1}{12/12}{}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{13}{Estimación: Mínimos cuadrados ordinarios (MCO)}}
+\headcommand {\slideentry {2}{1}{1}{13/13}{Estimación: Mínimos cuadrados ordinarios (MCO)}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {2}{1}{2}{14/14}{Estimación: Mínimos cuadrados ordinarios (MCO)}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {2}{1}{3}{15/15}{Estimación: Mínimos cuadrados ordinarios (MCO)}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {2}{1}{4}{16/16}{Estimación: Mínimos cuadrados ordinarios (MCO)}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {2}{1}{5}{17/17}{Estimación: Mínimos cuadrados ordinarios (MCO)}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {2}{1}{6}{18/18}{Estimación: Mínimos cuadrados ordinarios (MCO)}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {2}{1}{7}{19/19}{Estimación: Mínimos cuadrados ordinarios (MCO)}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@sectionpages {12}{19}}
+\headcommand {\beamer@subsectionpages {13}{19}}
+\headcommand {\sectionentry {3}{Derivación de estimaciones de mínimos cuadrados ordinarios}{20}{Derivación de estimaciones de mínimos cuadrados ordinarios}{0}}
+\headcommand {\slideentry {3}{0}{1}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{21}{Valores ajustados y residuales}}
+\headcommand {\slideentry {3}{1}{1}{21/21}{Valores ajustados y residuales}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {3}{1}{2}{22/22}{Valores ajustados y residuales}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionpages {21}{22}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{23}{Propiedades algebraicas de las estadísticas MCO}}
+\headcommand {\slideentry {3}{2}{1}{23/23}{Propiedades algebraicas de las estadísticas MCO}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {3}{2}{2}{24/24}{Propiedades algebraicas de las estadísticas MCO}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {3}{2}{3}{25/25}{Propiedades algebraicas de las estadísticas MCO}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@sectionpages {20}{25}}
+\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\sectionentry {4}{Unidades de medida y forma funcional}{26}{Unidades de medida y forma funcional}{0}}
+\headcommand {\slideentry {4}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {4}{0}{2}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@sectionpages {26}{27}}
+\headcommand {\beamer@subsectionpages {26}{27}}
+\headcommand {\sectionentry {5}{Valores esperados y varianzas de los estimadores de MCO}{28}{Valores esperados y varianzas de los estimadores de MCO}{0}}
+\headcommand {\slideentry {5}{0}{1}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{29}{Insesgadez del MCO}}
+\headcommand {\slideentry {5}{1}{1}{29/29}{Insesgadez del MCO}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {5}{1}{2}{30/30}{Insesgadez del MCO}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {5}{1}{3}{31/31}{Insesgadez del MCO}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {5}{1}{4}{32/32}{Insesgadez del MCO}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {5}{1}{5}{33/33}{Insesgadez del MCO}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsectionpages {29}{33}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{34}{Varianza de lo estimadores MCO}}
+\headcommand {\slideentry {5}{2}{1}{34/34}{Varianza de lo estimadores MCO}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {5}{2}{2}{35/35}{Varianza de lo estimadores MCO}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {5}{2}{3}{36/36}{Varianza de lo estimadores MCO}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {5}{2}{4}{37/37}{Varianza de lo estimadores MCO}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {5}{2}{5}{38/38}{Varianza de lo estimadores MCO}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@subsectionpages {34}{38}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{39}{Estimador del error de la varianza}}
+\headcommand {\slideentry {5}{3}{1}{39/39}{Estimador del error de la varianza}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {5}{3}{2}{40/40}{Estimador del error de la varianza}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {5}{3}{3}{41/41}{Estimador del error de la varianza}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {5}{3}{4}{42/42}{Estimador del error de la varianza}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\beamer@sectionpages {28}{42}}
+\headcommand {\beamer@subsectionpages {39}{42}}
+\headcommand {\sectionentry {6}{Regresión por el origen y Regresión sobre una constante}{43}{Regresión por el origen y Regresión sobre una constante}{0}}
+\headcommand {\slideentry {6}{0}{1}{43/43}{}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {6}{0}{2}{44/44}{}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@sectionpages {43}{44}}
+\headcommand {\beamer@subsectionpages {43}{44}}
+\headcommand {\sectionentry {7}{Referencias}{45}{Referencias}{0}}
+\headcommand {\slideentry {7}{0}{1}{45/45}{}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {7}{0}{2}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {7}{0}{3}{48/48}{}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@partpages {1}{48}}
+\headcommand {\beamer@subsectionpages {45}{48}}
+\headcommand {\beamer@sectionpages {45}{48}}
+\headcommand {\beamer@documentpages {48}}
+\headcommand {\gdef \inserttotalframenumber {42}}

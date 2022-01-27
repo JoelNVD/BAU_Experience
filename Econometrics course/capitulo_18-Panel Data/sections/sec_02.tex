@@ -1,0 +1,25 @@
+%====================================================================================
+\section{Error component model}
+%====================================================================================
+\begin{frame}{Error component model}
+	\begin{itemize}
+		\item Fixed effects or within-grup estimator
+		\item Random effects estimator
+			\begin{itemize}
+				\item Feasible GLS estimation
+				\item Maximum Likelihood Estimation.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Error component model}
+	In the model
+		\begin{align}
+			y_{it} & = \alpha +\beta ^{\prime }X_{it}+u_{it} \\
+			u_{it} & = \mu _{i}+\nu _{it}  \notag
+		\end{align}
+	\begin{itemize}
+		\item In Fixed effects or within-grup estimator the moments to match are $E\left(X_{it}^{\prime}\nu_{it}\right)=0$, there is no restriction on $E\left(X_{it}^{\prime}\mu_{i}\right).$
+		\item In Random effects estimator, the moments to match are $E\left(X_{it}^{\prime}\nu_{it}\right) = 0$ and $E\left( X_{it}^{\prime}\mu_{i}\right)=0.$
+	\end{itemize}
+\end{frame}

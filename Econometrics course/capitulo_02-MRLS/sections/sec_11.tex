@@ -1,0 +1,45 @@
+%===============================================================================
+\section{Definición del modelo de regresión simple}
+%===============================================================================
+
+%-------------------------------------------------------------------------------
+\subsection{Terminología}
+%-------------------------------------------------------------------------------
+\begin{frame}{Terminología}
+	\begin{description}
+		\item[El modelo] $y=\beta_{0}+\beta_{1}x+u$
+		\pause
+		\item[$y$] Variable dependiente, variable explicada.
+		\pause
+		\item[$x$] Variable independiente, regresor, variable explicativa, variable de control o covariado.
+		\pause
+		\item[$u$] Término de error poblacional.
+		\pause
+		\item[$\beta_{0}$] Intercepto, constante o coeficiente no asociado con variables.
+		\pause
+		\item[$\beta_{1}$] Pendiente o coeficiente relacionado a $x$.
+	\end{description}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Terminología}
+	El MRLS es {\large $$ Y_{i} = \beta_{0} + \beta_{1}X_{i}+u_{i}$$}El subíndice $i$ va desde $i = 1$ a $i = n$ (última observación). $Y$ es la variable dependiente; $X$ es la variable dependiente; $\beta_{0}$ es el intercepto, constante o coeficiente no asociado con variables; $\beta_{1}$ es la pendiente o el coeficiente relacionado a $X_{i}$ y $u_{i}$ es el témino error. $Y$ y $X$ son datos.\\
+	
+	También, podemos denotar $\bar{Y}$ y $\bar{X}$ como el promedio muestral de las variables $Y$ y $X$ respectivamente. En término matriciales, tenemos
+	$$ \underrightarrow{Y} = \left [ \begin{array}{c}
+		50		\\
+		30		\\
+		20		\\
+		\vdots	\\
+		100
+	\end{array}
+	\right] 
+	\quad \textup{y} \quad
+	\underrightarrow{X} = \left [ \begin{array}{c}
+		2		\\
+		4		\\
+		1		\\
+		\vdots	\\
+		6
+	\end{array}
+	\right]$$
+\end{frame}

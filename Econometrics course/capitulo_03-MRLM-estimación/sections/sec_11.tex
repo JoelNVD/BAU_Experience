@@ -1,0 +1,29 @@
+%===============================================================================
+\section{Motivación para la regresión múltiple}
+%===============================================================================
+
+%-------------------------------------------------------------------------------
+\subsection{El modelo con dos variables independientes}
+%-------------------------------------------------------------------------------
+\begin{frame}{Regresión múltiple}
+	Tenemos el siguiente modelo (o PGD) con una constante y más de un regresor, en el caso de 2 regresores
+	$$y_i = \beta_{0} + \beta_{1}x_{1}+\beta_{2}x_{2}+u$$
+	el subíndice $i$ va de $i = 1$ a $i = n$ (última observación). $y$
+	es la variable dependiente; $x_1$ y $x_2$ son la variable independiente; $\beta_{0}$ es el intercepto, constante o coeficiente no asociado con variables; $\beta_{1}$ es la pendiente o coeficiente relacionado con $x_{1}$, $\beta_{2}$ es la pendiente o coeficiente relacionado con $x_{2}$ y $u$ es el término de error.
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{El modelo con k variables independientes}
+%-------------------------------------------------------------------------------
+\begin{frame}{Regresión múltiple}
+	Es la generalización del modelo de regresión simple:
+	$$y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+...+\beta_{k}x_{k}+u$$
+	Donde:
+	\begin{itemize}
+		\item $\beta_{0}$ es el intercepto.
+		\item $\beta_{1}$ a $\beta_{k}$ se suelen llamar pendientes.
+		\item $u$ es el término de error que se supone $E(u/x_{1},x_{2}..x_{k})=0$.
+		\item El criterio de optimización es el mismo sólo que ahora se tienen $k+1$ condiciones de primer orden.
+	\end{itemize}
+\end{frame}
+

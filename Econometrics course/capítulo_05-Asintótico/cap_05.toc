@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Consistencia}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Supuesto para la inferencia}{4}{0}{1}
+\beamer@sectionintoc {2}{Normalidad asintótica e inferencia de muestras grandes}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Ley de los grandes numeros}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Teorema central del límite}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Teorema de Slutsky}{11}{0}{2}
+\beamer@sectionintoc {3}{Eficiencia asintótica de MCO}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{Estimador MCO}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{Distribución asintótica de MCO}{18}{0}{3}
+\beamer@sectionintoc {4}{Referencia}{22}{0}{4}

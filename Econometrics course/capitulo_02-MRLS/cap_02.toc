@@ -1,0 +1,15 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Definición del modelo de regresión simple}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Terminología}{4}{0}{1}
+\beamer@sectionintoc {2}{Derivación de estimaciones de mínimos cuadrados ordinarios}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Estimación: Mínimos cuadrados ordinarios (MCO)}{13}{0}{2}
+\beamer@sectionintoc {3}{Derivación de estimaciones de mínimos cuadrados ordinarios}{20}{0}{3}
+\beamer@subsectionintoc {3}{1}{Valores ajustados y residuales}{21}{0}{3}
+\beamer@subsectionintoc {3}{2}{Propiedades algebraicas de las estadísticas MCO}{23}{0}{3}
+\beamer@sectionintoc {4}{Unidades de medida y forma funcional}{26}{0}{4}
+\beamer@sectionintoc {5}{Valores esperados y varianzas de los estimadores de MCO}{28}{0}{5}
+\beamer@subsectionintoc {5}{1}{Insesgadez del MCO}{29}{0}{5}
+\beamer@subsectionintoc {5}{2}{Varianza de lo estimadores MCO}{34}{0}{5}
+\beamer@subsectionintoc {5}{3}{Estimador del error de la varianza}{39}{0}{5}
+\beamer@sectionintoc {6}{Regresión por el origen y Regresión sobre una constante}{43}{0}{6}
+\beamer@sectionintoc {7}{Referencias}{45}{0}{7}

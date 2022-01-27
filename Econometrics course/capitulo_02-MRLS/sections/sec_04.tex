@@ -1,0 +1,43 @@
+%===============================================================================
+\section{Teorema de Gauss-Markov}
+%===============================================================================
+
+\begin{frame}{Teorema de Gauss-Markov}
+	Las condiciones de Gauss-Markov implican 3 supuestos del MCO
+		\begin{enumerate}
+			\item $E(u_i|X)=0$
+			\item $E(u_i^2|X)=\sigma^2$
+			\item $E(u_iu_j|X)=0$ para todo $i \neq j$
+		\end{enumerate}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Supuesto \#1}
+	Supuesto \#1: La distribución doncidional de $u_i$ dado $X_i$ tienen una media igual a cero.\\
+	\medskip
+	Eso es
+		$$E(u_i|X)=0$$
+	Eso implica ($\Longrightarrow$) que la línea de regresión poblacional es la media condicional de $Y_i$ dado $X_i$.
+		\begin{align*}
+			E(Y_i|X_i) & = E(\beta_0 + \beta_1 X_i + u_i|X_i)\\
+					   & = \beta_0 + \beta_1 X_i
+		\end{align*}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Supuesto \#2}
+	Supuesto \#2: $(X_i, Y_i), i=1, \ldots , n$. Son independientemente e idénticamente distribuidas.\\
+	\medskip
+	Asumimos que todas las realizaciones tienen la misma varianza y no están conrrelacionadas una con otra. Formalmente.
+		\begin{gather*}
+			Var(X_i) = \sigma_{X}^{2}\\
+			E(Y_i - \mu_Y)(Y_j - \mu_Y) = 0 \textup{ para todo } i \neq j
+		\end{gather*}
+	una notación corta para este supuesto es "$i.i.d$". Asumismo ($\Longrightarrow$) lo siguiente
+		$$E(u_iu_j|X) = 0 \textup{ para todo } i \neq j$$
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Supuesto \#3}
+	Supuesto \#3: Los valores atípicos grandes son poco probables\\
+	\medskip
+	EL mensaje es que $(X_i, Y_i)$ tiene cuatro momentos finitos distintos de cero (Un coeficiente acotado de curtosis; es decir, $K<\infty$)
+\end{frame}

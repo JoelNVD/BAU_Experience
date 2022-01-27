@@ -1,0 +1,77 @@
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[accumulated]{beamerseminar}
+\usepackage{graphicx}
+
+% Apartadode Texto
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% Apartado Matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% Aparatado Tikz y pgfplots
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\definecolor{orangeblack}{RGB}{228, 131, 10}
+\definecolor{redblack}{RGB}{156, 75, 79}
+\definecolor{redred}{RGB}{255, 51, 51}
+
+% Apartado de íconos
+\usepackage{fontawesome5}
+
+% Apartado de Justificación del texto
+\usepackage{ragged2e}
+\justifying
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+
+% Apartado de colores
+\usepackage{xcolor}
+
+% Apartado Stata
+\usepackage{listings}
+
+\definecolor{codeblue}{rgb}{0.29296875, 0.51953125, 0.68359375}
+\definecolor{codegreen}{rgb}{0.47265625, 0.62890625, 0.40234375}
+\definecolor{codegray}{rgb}{0.95703125, 0.95703125, 0.95703125}
+\definecolor{codecrimson}{rgb}{0.87109375,0.3984375,0.3984375}
+
+\lstset{frame=tb,
+	backgroundcolor=\color{codegray},
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\ttfamily},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{codeblue},
+	commentstyle=\color{codegreen},
+	stringstyle=\color{codecrimson},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4,
+	numbers=left,                    
+	numbersep=5pt,
+	frame=tlbr,framesep=2pt,framerule=0pt
+}
+
+% Apartado de block_colores
+	% STATA code
+	\newenvironment<>{Stata code}[1]{%
+		\begin{actionenv}#2%
+			\def\insertblocktitle{#1}%
+			\par%
+			\mode<presentation>{%
+				\setbeamercolor{block title}{fg=black,bg=gray!15!white}
+				\setbeamercolor{block body}{bg=codegray}
+			}%
+			\usebeamertemplate{block begin}}
+		{\par\usebeamertemplate{block end}\end{actionenv}}

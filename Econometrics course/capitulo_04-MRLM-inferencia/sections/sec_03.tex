@@ -1,0 +1,29 @@
+%====================================================================================
+\section{Intervalos de confianza}
+%====================================================================================
+\begin{frame}{Intervalos de confianza}
+	\begin{itemize}
+		\item Otra forma de de probar una hipótesis es construyendo intervalos de confianza usando el mismo valor crítico empleado para la prueba
+		\item $\hat{\beta_{j}}\pm Crit*Se(\hat{\beta_{j}})$,
+		\item Donde $Crit$ es el percentil $(1-\frac{\alpha}{2})$ en una distribución $t_{n-k-1}$ bilateral
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Un intertvalo de confianza}
+	\begin{itemize}
+		\item Se construye un intervalo de confianza alrededor de la estimación $\widehat{\beta}$ y ese conjunto indica todos los valores posibles donde se encuentra el valor real de la media poblacional o del parámetro (o estimación insesgada); por supuesto con alguna probabilidad de ocurrencia.
+		\item Las probabilidades estándar son 99, 95 y 90\%.
+		\item Un intervalo de confianza no significa precisión, significa confianza donde se encuentra el verdadero parámetro.
+		\item Un enunciado "\textit{Un 95\% de intervalo de confianza bilateral para $\beta$ es un intervalo construido de modo que contenga el valor verdadero de $\beta$ en el 95\% de \underline{todas las muestras aleatorias posibles}}".
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Una notación alternativa para intervalos de confianza}
+	Aquí una alternativa y asumiendo normalidad
+		\begin{align*}
+			& 90\% \textup{ I.C. para} \beta_2 =[\widehat{\beta}_2 \pm t_{gl, 0.10/2} \cdot \widehat{\sigma}_{\widehat{\beta}_2}] \equiv [\overline{\beta_2}; \underline{\beta_2}]_{90\%}\\
+			& 95\% \textup{ I.C. para} \beta_2 =[\widehat{\beta}_2 \pm t_{gl, 0.05/2} \cdot \widehat{\sigma}_{\widehat{\beta}_2}] \equiv [\overline{\beta_2}; \underline{\beta_2}]_{95\%}\\
+			& 99\% \textup{ I.C. para} \beta_2 =[\widehat{\beta}_2 \pm t_{gl, 0.01/2} \cdot \widehat{\sigma}_{\widehat{\beta}_2}] \equiv [\overline{\beta_2}; \underline{\beta_2}]_{99\%}
+		\end{align*}
+	Consulte \href{http://verso.mat.uam.es/~pablo.fernandez/tablas_ProbI_2007-2008.pdf}{\textcolor{red}{aquí}} las tablas estadísticas. Tenga en cuenta que necesitamos tener los grados de libertad para el cálculo de los intervalos de confianza $(gl = N - k)$
+\end{frame}

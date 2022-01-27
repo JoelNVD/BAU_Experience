@@ -1,0 +1,32 @@
+%====================================================================================
+\section[¿Qué es?]{¿Qué es la heterocedasticidad?}
+%====================================================================================
+
+\begin{frame}{¿Qué supuesto no se cumple?}
+	Tenemos el siguiente modelo (o PGD) con una constante y más de un regresos. En el caso de 2 regresares
+			$$y_i = \beta_0+\beta_1x_{1i}+\beta_2x_{2i} + u_i$$
+	Donde el término error tiene las siguientes propiedades
+			\begin{align*}
+				E(u_i|x) & = 0 \\
+				E(u_{i}^{2}|x) & = \sigma_{i}^{2}\\
+				E(u_{i}u_{j}|x) & = 0, \enskip i \neq j
+			\end{align*}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{¿Qué supuesto no se cumple?}
+	Debes notar que el estimador es aún insesgado pero no eficiente. Aquí surgen algunas preguntas
+	\begin{itemize}
+		\item ¿Qué significa eso? Respuesta: Aquí existe otro estimador insesgado, el cual tiene la más baja varianza.
+		\item ¿Por qué es importante? $\ldots$
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{¿Qué es la heterocedasticidad?}
+	\begin{itemize}
+		\item Recordando, el supuesto de homocedasticidad consiste en que condicionado a las variables explicativas, la varianza del error poblacional es constante: $var(u/x)=\sigma^{2}$
+		\pause
+		\item Si ello no es cierto, esto es si la varianza de $u$ es diferente para valores diferentes de las $x's$, entonces los errores son heterocedásticos
+		\pause
+		\item Un ejemplo típico de lo anterior es lo que ocurre entre los ingresos y los años de educación. Si bien aumentos de la educación aumentan los ingresos, la dispersión de los no observables $(u)$ aumenta con los años de educación (es decir, es posible encontrar gente muy educada ganando muy bien pero también otro grupo ganando muy poco)
+	\end{itemize}
+\end{frame}

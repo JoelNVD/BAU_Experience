@@ -1,0 +1,634 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/02-data_countries_01-2022-01-18_1.log
+  log type:  text
+ opened on:  18 Jan 2022, 15:26:12
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Introduction
+. ********************************************************************************
+. 
+.         *--------------------------------------------------
+.     * 2.1 Using website database
+.     *--------------------------------------------------
+.                 use "${rawdata_2_1}/main-data_all-countries_15Oct2020 165731.dta", clear
+
+. 
+.                 describe
+
+Contains data from C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\B_RawData/02-data-countries/main-data_all-countries_15Oct2020 165731.dt
+> a
+ Observations:        13,570                  
+    Variables:           265                  15 Oct 2020 16:57
+                                              (_dta has notes)
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+country         str52   %52s                  Country Name
+year            double  %9.0g                 year
+ABG_GSR_NFSV_~S double  %5.4f                 Trade in services (% of GDP)
+AFD_AST_PRVT_~S double  %5.4f                 Domestic credit to private sector by banks (% of GDP)
+AFS_AST_PRVT_~S double  %5.4f                 Domestic credit to private sector (% of GDP)
+AGC_DOD_TOTL_~S double  %5.4f                 Central government debt, total (% of GDP)
+AGC_TAX_TOTL_CN double  %20.2gc               Tax revenue (current LCU)
+AGC_TAX_TOTL_~S double  %6.4fc                Tax revenue (% of GDP)
+AGC_XPN_TOTL_~S double  %5.4f                 Expense (% of GDP)
+ANE_TRD_GNFS_ZS double  %20.4gc               Trade (% of GDP)
+ANY_GDP_MKTP_KN double  %20.2gc               GDP (constant LCU)
+ANY_GDP_PCAP_KD double  %15.2gc               GDP per capita (constant 2010 US$)
+gdppgrowth      double  %5.4f                 GDP per capita growth (annual %)
+ANY_GDP_P~PP_KD double  %15.2gc               GDP per capita, PPP (constant 2017 international $)
+ASL_UEM_TO~E_ZS double  %5.4f                 Unemployment, total (% of total labor force) (national estimate)
+ASL_UEM_TOTL_ZS double  %5.4f                 Unemployment, total (% of total labor force) (modeled ILO estimate)
+ASP_POP_TOTL    double  %20.2gc               Population, total
+country_code    double  %9.0g                 IMF country code
+SH_XPD_CHEX_G~S double  %5.4f                 Current health expenditure (% of GDP)
+macropr         double  %9.0g                 capital requirements over risky-weighted assets, source: World Bank
+MPI             byte    %8.0g                 Number of macroprudential tools; Eugenio Cerutti, Stijn Claessens and Luc Laeven
+cum_sscb_res    byte    %10.0g                Cerutti16; Cumulative change in sector specific capital buffer: Real estate cred
+cum_sscb_cons   byte    %10.0g                Cerutti16; Cumulative change in sector specific capital buffer: Consumer credit
+cum_sscb_oth    byte    %10.0g                Cerutti16; Cumulative change in sector specific capital buffer: Other sectors
+cum_sscb        byte    %10.0g                Cerutti16; Cumulative change in the aggregate sector-specific capital buffer ins
+cum_cap_req     byte    %10.0g                Cerutti16; Cumulative change in capital requirements
+cum_concrat     byte    %10.0g                Cerutti16; Cumulative change in concentration limit
+cum_ibex        byte    %10.0g                Cerutti16; Cumulative change in interbank exposure limit
+cum_ltv_cap     byte    %10.0g                Cerutti16; Cumulative change in the loan-to-value cap
+cum_rr_foreign  byte    %10.0g                Cerutti16; Cumulative change in reserve requirements on foreign currency-denomin
+cum_rr_local    byte    %10.0g                Cerutti16; Cumulative change in reserve requirements on local currency-denominat
+cum_PruC        byte    %10.0g                Cerutti16; Sum of the cumulative version of the 9 instruments by country c and t
+cum_PruC2       byte    %10.0g                Cerutti16; Sum of the cumulative version of the 9 instruments by country c and t
+ACC_EST         double  %10.0g                Control of Corruption: Estimate
+AGE_EST         double  %10.0g                Government Effectiveness: Estimate
+APV_EST         double  %10.0g                Political instability and absence of violence: Estimate
+ARL_EST         double  %10.0g                Rule of Law: Estimate
+ARQ_EST         double  %10.0g                Regulatory Quality: Estimate
+AVA_EST         double  %10.0g                Voice and Accountability: Estimate
+NY_GDP_MKTP_CD  double  %22.2gc               GDP (current US$)
+AFP_CPI_TOTL_ZG double  %5.4f                 Inflation, consumer prices (annual %)
+ANY_GDP_DEFL_~G double  %5.4f                 Inflation, GDP deflator (annual %)
+ATT_PRI_MRCH_~D double  %5.4f                 Net barter terms of trade index (2000 = 100)
+ADT_ODA_ODAT_~S double  %5.4f                 Net ODA received (% of central government expense)
+AFM_AST_CGOV_~3 double  %5.4f                 Claims on central government (annual growth as % of broad money)
+AFS_AST_CGOV_~S double  %5.4f                 Claims on central government, etc. (% GDP)
+AGC_DOD_TOTL_CN double  %20.2gc               Central government debt, total (current LCU)
+AGF_XPD_BUDG_ZS double  %5.4f                 Primary government expenditures as a proportion of original approved budget (%)
+AIC_GOV_DURS_ZS double  %5.4f                 Time spent dealing with the requirements of government regulations (% of senior
+AMS_MIL_XPND_ZS double  %5.4f                 Military expenditure (% of general government expenditure)
+ANE_CON_GOVT_CD double  %20.4gc               General government final consumption expenditure (current US$)
+ANE_CON_GOVT_CN double  %20.4gc               General government final consumption expenditure (current LCU)
+ANE_CON_GOVT_KD double  %20.4gc               General government final consumption expenditure (constant 2010 US$)
+ANE_CON_GOVT_~G double  %4.2f                 General government final consumption expenditure (annual % growth)
+ANE_CON_GOVT_KN double  %20.4gc               General government final consumption expenditure (constant LCU)
+ANE_CON_GOVT_ZS double  %4.2f                 General government final consumption expenditure (% of GDP)
+ASE_XPD_PR~C_ZS double  %5.4f                 Government expenditure per student, primary (% of GDP per capita)
+ASE_XPD_PRIM_ZS double  %5.4f                 Expenditure on primary education (% of government expenditure on education)
+ASE_XPD_SE~C_ZS double  %5.4f                 Government expenditure per student, secondary (% of GDP per capita)
+ASE_XPD_SECO_ZS double  %5.4f                 Expenditure on secondary education (% of government expenditure on education)
+ASE_XPD_TE~C_ZS double  %5.4f                 Government expenditure per student, tertiary (% of GDP per capita)
+ASE_XPD_TERT_ZS double  %5.4f                 Expenditure on tertiary education (% of government expenditure on education)
+ASE_XPD_TO~B_ZS double  %5.4f                 Government expenditure on education, total (% of government expenditure)
+ASE_XPD_TO~D_ZS double  %5.4f                 Government expenditure on education, total (% of GDP)
+ASH_XPD_GH~H_ZS double  %5.4f                 Domestic general government health expenditure (% of current health expenditure)
+ASH_XPD_GH~D_ZS double  %5.4f                 Domestic general government health expenditure (% of GDP)
+ASH_XPD_GH~E_ZS double  %5.4f                 Domestic general government health expenditure (% of general government expendit
+ASH_XPD_GH~C_CD double  %5.4f                 Domestic general government health expenditure per capita (current US$)
+ASH_XPD_GH~P_CD double  %5.4f                 Domestic general government health expenditure per capita, PPP (current internat
+sfi             byte    %10.0g                State fragility Index, polityV
+effect          byte    %10.0g                Effectiveness Score, polityV
+legit           byte    %10.0g                Legitimacy Score, polityV
+seceff          byte    %10.0g                Security Effectiveness, polityV
+secleg          byte    %10.0g                Security Legitimacy, polityV
+poleff          byte    %10.0g                Political Effectiveness, polityV
+polleg          byte    %10.0g                Political Legitimacy, polityV
+ecoeff          byte    %10.0g                Economic Effectiveness, polityV
+ecoleg          byte    %10.0g                Economic Legitimacy, polityV
+soceff          byte    %10.0g                Social Effectiveness, polityV
+socleg          byte    %10.0g                Social Legitimacy, polityV
+civwar          byte    %10.0g                Magnitude score of episode(s) of civil warfare involving that state in that year
+WEOS1990ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1990
+WEOF1990ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1990
+WEOS1991ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1991
+WEOF1991ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1991
+WEOS1992ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1992
+WEOF1992ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1992
+WEOS1993ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1993
+WEOF1993ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1993
+WEOS1994ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1994
+WEOF1994ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1994
+WEOS1995ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1995
+WEOF1995ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1995
+WEOS1996ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1996
+WEOF1996ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1996
+WEOS1997ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1997
+WEOF1997ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1997
+WEOS1998ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1998
+WEOF1998ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1998
+WEOS1999ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S1999
+WEOF1999ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F1999
+WEOS2000ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2000
+WEOF2000ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2000
+WEOS2001ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2001
+WEOF2001ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2001
+WEOS2002ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2002
+WEOF2002ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2002
+WEOS2003ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2003
+WEOF2003ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2003
+WEOS2004ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2004
+WEOF2004ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2004
+WEOS2005ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2005
+WEOF2005ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2005
+WEOS2006ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2006
+WEOF2006ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2006
+WEOS2007ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2007
+WEOF2007ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2007
+WEOS2008ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2008
+WEOF2008ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2008
+WEOS2009ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2009
+WEOF2009ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2009
+WEOS2010ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2010
+WEOF2010ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2010
+WEOS2011ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2011
+WEOF2011ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2011
+WEOS2012ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2012
+WEOF2012ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2012
+WEOS2013ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2013
+WEOF2013ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2013
+WEOS2014ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2014
+WEOF2014ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2014
+WEOS2015ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2015
+WEOF2015ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2015
+WEOS2016ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2016
+WEOF2016ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2016
+WEOS2017ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2017
+WEOF2017ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2017
+WEOS2018ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2018
+WEOF2018ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2018
+WEOS2019ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2019
+WEOF2019ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of F2019
+WEOS2020ngdp_~h double  %5.2fc                WEO forecast at Fall/Summer of S2020
+comm_exp        byte    %10.0g                UNCTAD 0 non-comm exp; 1 Dependence on exports of agricultural products; 2 Depen
+LTV_average     double  %5.2fc                The simple average of the regulatory limits on the LTV ratios of all categories
+sum_tightpol    byte    %5.1fc                Macroprudential action. Each tightening/lossening coded as a +1/-1. sum_tightpol
+AFI_RES_TOTL_MO double  %5.4f                 Total reserves in months of imports
+AFI_RES_TOTL_~S double  %5.4f                 Total reserves (% of total external debt)
+AFB_AST_NPER_ZS double  %5.4f                 Bank nonperforming loans to total gross loans (%)
+AFI_RES_XGLD_CD double  %5.4f                 Total reserves minus gold (current US$)
+AFI_RES_TOTL_CD double  %5.4f                 Total reserves (includes gold, current US$)
+AFM_LBL_BMNY_ZG double  %5.4f                 Broad money growth (annual %)
+ABM_KLT_DINV_~D double  %22.0gc               Foreign direct investment, net outflows (BoP, current US$)
+netfdiout_gdp   double  %10.0g                Foreign direct investment, net outflows (% of GDP)
+ABN_KLT_DINV_CD double  %22.0gc               Foreign direct investment, net (BoP, current US$)
+ABX_KLT_DINV_~D double  %22.0gc               Foreign direct investment, net inflows (BoP, current US$)
+netfdiin_gdp    double  %10.0g                Foreign direct investment, net inflows (% of GDP)
+remittances_gdp double  %4.3f                 Personal remittances, received (% of GDP) World Bank staff estimates based on IM
+vulnemploy      double  %4.3f                 Vulnerable employment, total (% of total employment) (modeled ILO estimate)
+rrindex         byte    %4.1f                 Reinhart and Rogoff Index
+kaopen          double  %10.0g                kaopen
+hdi             double  %10.0g                Humand development Index, UN: http://hdr.undp.org/en/indicators/137506#
+prbalan_gdp     double  %10.0g                Government primary balance as percentage of GDP, UN: mappler IMF
+prbalan_pgdp    double  %10.0g                Cyclically adjusted primary balance (% of Potential GDP), UN: mappler IMF
+SDG_A831_SEX_RT double  %10.0g                 Proportion of informal employment in nonagricultural employment (%)
+SDG_0861_SEX_RT double  %10.0g                 Proportion of youth (aged 1524 years) not in education, employment or training
+SDG_0922_NOC_RT double  %10.0g                 Manufacturing employment as a proportion of total employment (%)
+MHADULT_Y15_24  double  %10.0g                Unemployment Age (Youth, adults): 15-24
+MHADULT_Y15_64  double  %10.0g                Unemployment Age (Youth, adults): 15-64
+MHADULT_YGE15   double  %10.0g                Unemployment Age (Youth, adults): 15+
+MHADULT_YGE25   double  %10.0g                Unemployment Age (Youth, adults): 25+
+Ownaccountwor~r double  %10.0g                Own account workers %Employment distribution by status in employment (by sex and
+MEO_COV_NAT     double  %10.0g                Employment to Population ratio National Age (10-year bands): Total
+MEO_COV_RUR     double  %10.0g                Employment to Population ratio Rural Age (10-year bands): Total
+MEO_COV_URB     double  %10.0g                Employment to Population ratio Urban Age (10-year bands): Total
+SDG_B831_SEX_RT double  %10.0g                 Proportion of informal employment in nonagricultural employment Harmonized seri
+v_c             double  %18.4fc               Household consumption at current national prices PWT
+v_i             double  %18.4fc               Investment at current national prices PWT
+v_g             double  %18.4fc               Government consumption at current national prices PWT
+v_x             double  %18.4fc               Exports at current national prices PWT
+v_m             double  %18.4fc               Imports at current national prices PWT
+v_gdp           double  %18.4fc               GDP at current national prices PWT
+q_c             double  %18.4fc               Household consumption at constant national 2011 prices PWT
+q_i             double  %18.4fc               Investment at constant national 2011 prices PWT
+q_g             double  %18.4fc               Government consumption at constant national 2011 prices PWT
+q_x             double  %18.4fc               Exports at constant national 2011 prices PWT
+q_m             double  %18.4fc               Imports at constant national 2011 prices PWT
+q_gdp           double  %18.4fc               GDP at constant national 2011 prices PWT
+pop             double  %18.4fc               Population PWT
+xr              double  %18.4fc               Exchange rate, national currency/USD (market) PWT
+xr2             double  %18.4fc               Exchange rate, national currency/USD (market+estimated) PWT
+v_gfcf          double  %18.4fc               Gross fixed capital formation at current national prices PWT
+q_gfcf          double  %18.4fc               Gross fixed capital formation at constant national prices PWT
+emp             double  %18.4fc               Number of persons engaged PWT
+avh             double  %10.0g                Average annual hours worked by persons engaged PWT
+hc              double  %10.0g                Human capital index, based on years of schooling and returns to education; see H
+rtfpna          double  %10.0g                TFP at constant national prices (2011=1)
+Subregion       str25   %25s                  Subregion
+LeastDevelope~C str1    %9s                   Least Developed Countries (LDC)
+LandLockedDev~s str1    %9s                   Land Locked Developing Countries (LLDC)
+SmallIslandDe~S str1    %9s                   Small Island Developing States (SIDS)
+Region          str26   %26s                  Region
+Incomegroup     str19   %19s                  Incomegroup
+gini_disp       float   %9.0g                 gini (household) disposable income, (post-tax, post-transfer); swiid 8.3
+gini_mkt        float   %9.0g                 gini (household) market income, (pre-tax, pre-transfer); swiid 8.3
+dum_usa         float   %9.0g                 1 if NBER recession indicators>=5. NBER based Recession Indicators for the Unite
+Informalsector  double  %10.0g                Shadow Economies Around the World: What Did We Learn Over the Last 20 Years, Lea
+sars_mr         byte    %10.0g                severity sars mortality rate; if 0 no deaths
+dum_sars        float   %9.0g                 dummy sars event source: MA etal; starting year
+sars_sample     float   %9.0g                 sample of countries affected by sars; mortality rate>0
+h1n1_mr         byte    %10.0g                severity h1n1 mortality rate; if 0 no deaths
+dum_h1n1        float   %9.0g                 dummy h1n1 event source: MA etal; starting year
+h1n1_sample     float   %9.0g                 sample of countries affected by h1n1; mortality rate>0
+mers_mr         byte    %10.0g                severity mers mortality rate; if 0 no deaths
+dum_mers        float   %9.0g                 dummy mers event source: MA etal; starting year
+mers_sample     float   %9.0g                 sample of countries affected by mers; mortality rate>0
+ebola_mr        byte    %10.0g                severity ebola mortality rate; if 0 no deaths
+dum_ebola       float   %9.0g                 dummy ebola event source: MA etal; starting year
+ebola_sample    float   %9.0g                 sample of countries affected by ebola; mortality rate>0
+zika_mr         byte    %10.0g                severity zika mortality rate; if 0 no deaths
+dum_zika        float   %9.0g                 dummy zika event source: MA etal; starting year
+zika_sample     float   %9.0g                 sample of countries affected by zika; mortality rate>0
+flu_mr          byte    %10.0g                severity flu mortality rate; if 0 no deaths
+dum_flu         float   %9.0g                 dummy flu event source: MA etal; starting year
+flu_sample      float   %9.0g                 sample of countries affected by flu; mortality rate>0
+dum_bankcrises  float   %9.0g                 dummy banking crisis; Laevan+Valencia 2018
+bankcrises_sa~e float   %9.0g                 sample of countries that experiencied banking crisis
+dum_curr_cris~_ float   %9.0g                 dummy currency crisis; Laevan+Valencia 2018
+curr_crisis__~e float   %9.0g                 sample of countries that experiencied currency crisis
+dum_SS          float   %9.0g                 dummy Sudden Stop (SS); Eichgreen+Gupta 2016
+SS_sample       float   %9.0g                 sample of countries that experiencied SS
+dum_sobdet_cr~_ float   %9.0g                 dummy sovereign debt crisis+restructuring; Laevan+Valencia 2018
+sobdet_crisis~e float   %9.0g                 sample of countries that experiencied sovereign debt crisis
+dum_naturaldis  float   %9.0g                 dummy natural disasters; EMDAT
+naturaldis_sa~e float   %9.0g                 sample of countries affected by natural disasters; all disasters but epidemics
+dum_natu~s_clim float   %9.0g                 dummy climate disasters; EMDAT
+naturaldis_sa~m float   %9.0g                 sample of countries affected by climate disasters
+dum_natur~s_geo float   %9.0g                 dummy geophysical disasters; EMDAT
+naturaldis_sa~o float   %9.0g                 sample of countries affected by geophysical disasters
+ins_dama_gdp    float   %9.0g                 insured damages on GDP current dollars
+dama_gdp        float   %9.0g                 Total damages on GDP current dollars
+totalaffec_pop  float   %9.0g                 total affected people per million of people
+dum_naturaldi~f float   %9.0g                 dummy natural disasters REF; Own definition
+naturaldis_re~e float   %9.0g                 sample of countries affected by natural disasters REF; all disasters but epidemi
+ins_dama_gdp_~m float   %9.0g                 insured clim damages on GDP current dollars
+dama_gdp_clim   float   %9.0g                 Total clim damages on GDP current dollars
+totalaffec_po~m float   %9.0g                 clim event total affected people per million of people
+dum_natu~f_clim float   %9.0g                 dummy natural clim disasters REF; Own definition
+naturaldis_re~m float   %9.0g                 sample of countries affected by natural xss' disasters REF
+ins_dama_gdp_~o float   %9.0g                 insured geo damages on GDP current dollars
+dama_gdp_geo    float   %9.0g                 Total geo damages on GDP current dollars
+totalaffec_po~o float   %9.0g                 geo event total affected people per million of people
+dum_natur~f_geo float   %9.0g                 dummy natural geo disasters REF; Own definition
+naturaldis_re~o float   %9.0g                 sample of countries affected by natural xss' disasters REF
+tot2010         double  %4.2f                 Index Base 2010
+ch_tot_2        float   %9.0g                 annual change of terms of trade index
+dum_tot_2       float   %9.0g                 dummy TOT shock, 25p; UN+WBANK
+dum_tot_ref_2   float   %9.0g                 dummy TOT shock by group of commodity-intensive exporter, 25p; UN+WBANK
+ch_tot          float   %4.2f                 MA annual change of terms of trade index, Funkeetal(2008)
+dum_tot         float   %9.0g                 dummy TOT shock, variation-Funkeetal(2008); UN+WBANK
+dum_tot_ref     float   %9.0g                 dummy TOT shock by group of commodity-intensive exporter, variation-Funkeetal(20
+dum_tot_3       float   %9.0g                 dummy TOT shock, Funkeetal(2008); UN+WBANK
+dum_smallc      float   %9.0g                 dummy for small country, population<1e6
+cgrowth         float   %9.0g                 Consumption annual change
+igrowth         float   %9.0g                 Investment annual change
+tfpgrowth       float   %9.0g                 TFP annual change
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: country_code  year
+
+.                 summarize
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+     country |          0
+        year |     13,570    1991.823     18.6749       1960       2024
+ABG_GSR_NF~S |      6,451    23.26199    24.32306   1.164507   304.2761
+AFD_AST_PR~S |      7,828    35.07679    33.97447   .1861522   308.9784
+AFS_AST_PR~S |      6,540    39.06245    38.35125   .0077258   308.9784
+-------------+---------------------------------------------------------
+AGC_DOD_TO~S |      1,278    56.84298    81.03547   .0183978    2002.51
+AGC_TAX_TO~N |      4,038    6.09e+12    5.92e+13   .0009667   1.52e+15
+AGC_TAX_TO~S |      3,989    17.05858    7.994786   .0434947   149.2834
+AGC_XPN_TO~S |      3,777    26.69168    12.69562   2.806068   210.2051
+ANE_TRD_GN~S |      8,429    78.31375    53.29406          0      860.8
+-------------+---------------------------------------------------------
+ANY_GDP_MK~N |      9,652    6.31e+13    4.93e+14   2.10e+07   1.09e+16
+ANY_GD~AP_KD |      9,427    11901.77    18759.88   132.0748   196061.4
+  gdppgrowth |      9,440     2.07949    6.019087  -64.99237   140.3708
+ANY_GD~PP_KD |      5,464    17436.39    19904.79   436.7189   161938.7
+ASL_UEM~E_ZS |      4,317    8.162178     6.15263        .05         57
+-------------+---------------------------------------------------------
+ASL_UEM~L_ZS |      5,365    8.103504    6.211931       .091     37.976
+ASP_POP_TOTL |     12,529    2.50e+07    1.04e+08       4375   1.40e+09
+country_code |     13,570    551.4753    264.7324        111        968
+SH_XPD_CHE~S |      3,332    6.282475    2.786882   1.025159   25.47506
+     macropr |      2,096    16.61564    5.389556    1.75475       48.6
+-------------+---------------------------------------------------------
+         MPI |      2,808    1.892806     1.70591          0         10
+cum_sscb_res |        930    .1322581    .6777506         -3          4
+cum_sscb_c~s |        930    .0365591    .2759795         -1          2
+cum_sscb_oth |        930    .0784946    .3460836         -1          2
+    cum_sscb |        930    .2473118    .9638896         -3          5
+-------------+---------------------------------------------------------
+ cum_cap_req |        825    .2775758    .5906175          0          2
+ cum_concrat |        531    .4274953    .7914145         -1          4
+    cum_ibex |        282    .5921986    .8480726         -1          4
+ cum_ltv_cap |        326    .5766871    1.802206         -3          8
+cum_rr_for~n |        930    .2086022    1.302284         -6         11
+-------------+---------------------------------------------------------
+cum_rr_local |        930   -.4516129    2.075622         -7         12
+    cum_PruC |        930    .8763441    3.734282         -8         24
+   cum_PruC2 |        930    .8376344    4.061752        -15         24
+     ACC_EST |      3,920   -.0116341    1.000308  -1.868714   2.469991
+     AGE_EST |      3,912   -.0111658    .9901926  -2.445876   2.436975
+-------------+---------------------------------------------------------
+     APV_EST |      3,941   -.0129524    1.001224  -3.314937   1.965062
+     ARL_EST |      3,979   -.0121385    .9955021  -2.606445   2.100273
+     ARQ_EST |      3,913   -.0128269    .9863206  -2.645041   2.260543
+     AVA_EST |      3,969   -.0024703      .99364  -2.259159   1.800992
+NY_GDP_MKT~D |      9,845    1.75e+11    9.29e+11    8824448   2.14e+13
+-------------+---------------------------------------------------------
+AFP_CPI_TO~G |      7,815    23.21763    336.1867   -60.4964   23773.13
+ANY_GDP_DE~G |      9,418    30.55629    414.7443  -98.70383   26765.86
+ATT_PRI_MR~D |      5,412    114.8863    42.36214   21.39672   721.0526
+ADT_ODA_OD~S |      2,264    24.56845    50.40551  -11.93118   1065.649
+AFM_AST_CG~3 |      7,549    8.976431    129.8895  -5379.351   4453.697
+-------------+---------------------------------------------------------
+AFS_AST_CG~S |      7,763    7.582717    20.03937   -162.592   272.6972
+AGC_DOD_TO~N |      1,279    4.00e+13    2.42e+14    64.8972   3.89e+15
+AGF_XPD_BU~S |      1,140    97.31681    14.21766    .872239   172.2147
+AIC_GOV_DU~S |        370    8.649189    6.593465         .1       46.5
+AMS_MIL_XP~S |      3,856    7.751024    6.988385          0   138.1158
+-------------+---------------------------------------------------------
+ANE_CON_G~CD |      7,801    3.57e+10    1.60e+11          0   2.90e+12
+ANE_CON_G~CN |      7,850    5.36e+12    5.91e+13          0   2.06e+15
+ANE_CON_G~KD |      6,204    6.01e+10    2.05e+11   757138.3   2.51e+12
+ANE_CON_GO~G |      6,232    4.596678    13.95401  -71.46359   565.5388
+ANE_CON_G~KN |      6,431    1.00e+13    6.27e+13          0   8.56e+14
+-------------+---------------------------------------------------------
+ANE_CON_GO~S |      7,850    16.14851    8.082546          0   147.7334
+ASE_~M_PC_ZS |      1,592    15.71813    7.119434     .23507   65.10102
+ASE_XPD~M_ZS |      2,861    36.85785    12.93223     .65782   98.66846
+ASE_~O_PC_ZS |      1,432    20.88448    10.29035          0    125.033
+ASE_XPD~O_ZS |      2,860    34.08706    10.71284          0   79.39564
+-------------+---------------------------------------------------------
+ASE_~T_PC_ZS |      1,454    66.56596    154.4872          0   2489.753
+ASE_XPD~T_ZS |      3,256    19.31038    8.479716          0   68.13506
+ASE_XPD~B_ZS |      2,694    14.82389    5.113518          0   47.27874
+ASE_XPD~D_ZS |      3,779    4.348189    1.918366          0   44.33398
+ASH_XPD~H_ZS |      3,332     50.1722    21.99053   .8914238   99.46162
+-------------+---------------------------------------------------------
+ASH_XPD~D_ZS |      3,350    3.246413    2.267032    .062362   24.11335
+ASH_XPD~E_ZS |      3,349    9.702799    4.657329   .6534481   42.05201
+ASH_XPD~C_CD |      3,350    570.4715    1086.436   .1448523   7857.195
+ASH_XPD~P_CD |      3,347    675.5603    970.7618   .2832512   5571.879
+         sfi |      3,822    9.108059    6.445966          0         25
+-------------+---------------------------------------------------------
+      effect |      3,822    4.602041    3.667469          0         13
+       legit |      3,822    4.506018    3.170764          0         12
+      seceff |      3,822    .5599163      .92591          0          3
+      secleg |      3,822    .9897959    .9358657          0          3
+      poleff |      3,822    1.110937    1.052279          0          3
+-------------+---------------------------------------------------------
+      polleg |      3,822    1.174778    1.108513          0          3
+      ecoeff |      3,822    1.784406    1.452407          0          4
+      ecoleg |      3,822     1.25798    1.291734          0          3
+      soceff |      3,822    1.146782    1.109623          0          3
+      socleg |      3,822    1.083464     1.12946          0          3
+-------------+---------------------------------------------------------
+      civwar |      8,159     .212526    .9557172          0          7
+WEOS1990ng~h |      1,168    3.723962    2.375937  -19.20001   12.55964
+WEOF1990ng~h |      1,168    3.611845    2.602111  -19.20001   12.55964
+WEOS1991ng~h |      1,167    3.618382    4.878834  -51.97373   100.0186
+WEOF1991ng~h |      1,176    3.650735    6.250598  -65.79102   122.5943
+-------------+---------------------------------------------------------
+WEOS1992ng~h |      1,176    3.838622     8.51858  -61.28171   233.1612
+WEOF1992ng~h |      1,176    3.687064    6.984582  -70.64599   171.7543
+WEOS1993ng~h |      1,328     3.10797    7.312713  -70.64599   171.7543
+WEOF1993ng~h |      1,336    3.055248      6.6684  -61.28171   134.5286
+WEOS1994ng~h |      1,399    3.175845    5.572459        -52       94.6
+-------------+---------------------------------------------------------
+WEOF1994ng~h |      1,404    3.017836    5.902592  -52.39997       94.6
+WEOS1995ng~h |      1,424    3.418181    4.776122        -50       33.6
+WEOF1995ng~h |      1,424    3.389253    4.894697        -50   34.19761
+WEOS1996ng~h |      1,424    3.938057    4.115036  -55.97499   46.22567
+WEOF1996ng~h |      1,424    3.928983    3.855642   -48.9527   26.24793
+-------------+---------------------------------------------------------
+WEOS1997ng~h |      1,424    4.382978      3.5478      -12.5   77.60001
+WEOF1997ng~h |      1,432     4.33158    4.030028      -18.5   99.94589
+WEOS1998ng~h |      1,432    4.544337    4.187931      -25.9   98.43269
+WEOF1998ng~h |      1,432    4.319387    4.661252      -25.9   98.65834
+WEOS1999ng~h |      1,440    4.166896     4.71489      -25.9   98.65834
+-------------+---------------------------------------------------------
+WEOF1999ng~h |      1,440    4.042859    3.925739  -28.06834   71.18807
+WEOS2000ng~h |      1,440    4.110171    3.120192  -28.06817   54.19284
+WEOF2000ng~h |      1,440     4.16093    3.116348  -28.06817       44.4
+WEOS2001ng~h |      1,440    4.360663    3.230703   -14.0376   48.17044
+WEOF2001ng~h |      1,440    4.341348    3.401479      -10.4   52.66393
+-------------+---------------------------------------------------------
+WEOS2002ng~h |      1,416    4.241194    3.746808        -14   58.90619
+WEOF2002ng~h |      1,416     4.16379    4.094142  -15.95605   65.03672
+WEOS2003ng~h |      1,424    4.121361    3.995111  -17.03105   67.97843
+WEOF2003ng~h |      1,424    3.973656    3.913349  -16.70706   57.41383
+WEOS2004ng~h |      1,432    4.109329    3.080434  -13.20642   46.54966
+-------------+---------------------------------------------------------
+WEOF2004ng~h |      1,432    4.249934    3.316692  -12.67379   48.05192
+WEOS2005ng~h |      1,432    4.505829    3.409717    -10.045         47
+WEOF2005ng~h |      1,432    4.502553    3.189873  -10.36283   32.77567
+WEOS2006ng~h |      1,432    4.682527    2.898151  -6.522294   32.35739
+WEOF2006ng~h |      1,432    4.866289    3.262708  -6.742797   46.52825
+-------------+---------------------------------------------------------
+WEOS2007ng~h |      1,432    5.225912    8.280968  -5.675927     296.99
+WEOF2007ng~h |      1,440    5.121937    3.053621  -6.155603   31.01654
+WEOS2008ng~h |      1,460    5.070025    2.846307  -6.773261   30.54957
+WEOF2008ng~h |      1,458    5.038918    2.955669  -6.092035   30.54957
+WEOS2009ng~h |      1,457    3.843317    3.362665  -11.98688   23.38272
+-------------+---------------------------------------------------------
+WEOF2009ng~h |      1,472    3.778765    3.640321      -18.5   23.38272
+WEOS2010ng~h |      1,456    3.701271    3.389352  -18.01596   27.93793
+WEOF2010ng~h |      1,456    3.825285    3.571385  -18.85608   29.28867
+WEOS2011ng~h |      1,458    3.893042    3.408405  -17.95499   36.43254
+WEOF2011ng~h |      1,458    3.826028    3.598466  -17.95499    51.4202
+-------------+---------------------------------------------------------
+WEOS2012ng~h |      1,457    4.200634    4.051566  -61.02574   76.28968
+WEOF2012ng~h |      1,457    4.226934    4.847616  -59.68692    121.903
+WEOS2013ng~h |      1,466    4.155873    4.508167  -62.07599   104.4833
+WEOF2013ng~h |      1,472    4.021174    4.532663  -62.07599   104.4833
+WEOS2014ng~h |      1,466    4.000019    4.018044  -36.04708   104.4833
+-------------+---------------------------------------------------------
+WEOF2014ng~h |      1,496    3.816345    4.262215  -47.55299   104.4833
+WEOS2015ng~h |      1,496    3.691917    3.105289  -36.04708   32.06053
+WEOF2015ng~h |      1,496    3.544084    3.200545  -36.04708   29.32926
+WEOS2016ng~h |      1,512    3.343862    2.902698  -28.09683   38.90546
+WEOF2016ng~h |      1,512    3.247165    2.894674  -28.09683   26.27563
+-------------+---------------------------------------------------------
+WEOS2017ng~h |      1,520    3.271081    3.299085  -28.09683   53.73849
+WEOF2017ng~h |      1,528    3.329813    3.445854  -28.09683   55.08456
+WEOS2018ng~h |      1,528    3.424042    3.422114  -34.33983   70.80421
+WEOF2018ng~h |      1,536     3.33386    3.227295        -18   64.01406
+WEOS2019ng~h |      1,536    3.371951    3.176654        -25   64.01406
+-------------+---------------------------------------------------------
+WEOF2019ng~h |      1,533    3.279721    3.860305        -35   85.61841
+WEOS2020ng~h |        767    1.858714    6.355417  -58.66226   80.65581
+    comm_exp |     11,820    1.050338    1.154568          0          3
+ LTV_average |      1,105    92.27378    14.05877         35        110
+sum_tightpol |      3,591    .0119744    .2242195         -2          3
+-------------+---------------------------------------------------------
+AFI_RES_TO~O |      6,101    4.196888    4.338756   .0022146   79.23722
+AFI_RES_TO~S |      4,383    64.59758    263.6117   .0094387   6516.988
+AFB_AST_NP~S |      1,493    6.646163    7.455079          0   59.75663
+AFI_RES_XG~D |      8,457    2.03e+10    1.38e+11   -4810496   3.86e+12
+AFI_RES_TO~D |      8,457    2.33e+10    1.43e+11   -4810496   3.90e+12
+-------------+---------------------------------------------------------
+AFM_LBL_BM~G |      7,592    30.37801    246.1557  -99.86368   12513.14
+ABM_KLT_DI~D |      6,867    5.54e+09    2.91e+10  -2.26e+11   5.96e+11
+netfdiout_~p |      6,578    2.105027    25.46289  -89.65926   1533.118
+ABN_KLT_DI~D |      6,197   -4.18e+08    1.68e+10  -3.37e+11   2.12e+11
+ABX_KLT_DI~D |      8,413    4.89e+09    2.54e+10  -2.39e+11   7.34e+11
+-------------+---------------------------------------------------------
+netfdiin_gdp |      7,890    5.880349    47.43418  -58.32288   1846.596
+remittance~p |      6,105    4.243908    10.95078   .0000289   235.9241
+  vulnemploy |      5,365    39.77418     28.7182       .139     94.759
+     rrindex |      8,585    5.863133    4.771115          1         15
+      kaopen |      7,410   -.0013192    1.533682  -1.920278   2.333585
+-------------+---------------------------------------------------------
+         hdi |      4,920    .6571957    .1663117       .189       .954
+ prbalan_gdp |      4,309    .1821422     6.20141  -147.4916   126.7777
+prbalan_pgdp |      1,412   -.3144985    3.629098  -18.62051   51.12129
+SDG_A831_S~T |        191    44.96518    23.44033       2.13      93.47
+SDG_0861_S~T |      1,310    17.06437    9.032366      .0626    68.5643
+-------------+---------------------------------------------------------
+SDG_0922_N~T |      1,936    13.11538    5.586912       .222      32.73
+MHADULT_Y~24 |      3,490    21.84884    20.20792          0   83.46088
+MHADULT_Y~64 |      1,567    8.610313    6.141972      .2149       37.1
+MHADULT_Y~15 |      3,851     15.2945    18.30276          0   82.20447
+MHADULT_Y~25 |      3,480    14.67877    18.73247          0   82.24756
+-------------+---------------------------------------------------------
+Ownaccount~r |        262    23.46371    16.05797        .14     78.249
+ MEO_COV_NAT |      1,249    55.56441    9.624337      22.49    92.0415
+ MEO_COV_RUR |      1,248    56.04835    12.19507      19.25    95.0209
+ MEO_COV_URB |      1,240    55.01868    8.541534      27.51      88.48
+SDG_B831_S~T |        385    55.60566    21.08021        7.7      98.89
+-------------+---------------------------------------------------------
+         v_c |     10,080    1.92e+07    2.45e+08   6.77e-10   7.79e+09
+         v_i |     10,080    1.10e+07    1.57e+08  -7427.121   5.32e+09
+         v_g |     10,080     3690393    4.81e+07   1.44e-10   2.06e+09
+         v_x |     10,080    1.10e+07    1.44e+08   7.20e-11   5.09e+09
+         v_m |     10,080    1.06e+07    1.39e+08   7.25e-11   4.95e+09
+-------------+---------------------------------------------------------
+       v_gdp |     10,080    3.44e+07    4.55e+08   1.02e-09   1.53e+10
+         q_c |     10,080    2.97e+07    2.39e+08   1.583466   5.88e+09
+         q_i |     10,080    1.92e+07    1.66e+08  -57015.31   3.55e+09
+         q_g |     10,080     6434843    4.94e+07   6.396024   8.60e+08
+         q_x |     10,080    1.93e+07    1.67e+08   .4902268   5.01e+09
+-------------+---------------------------------------------------------
+         q_m |     10,080    1.58e+07    1.46e+08   7.812367   5.36e+09
+       q_gdp |     10,080    5.93e+07    4.75e+08    9.75487   1.07e+10
+         pop |     10,579     27.5455    109.7831    .005633   1409.517
+          xr |     10,120    281.9154    1601.436   8.10e-14    33226.3
+         xr2 |     10,120    282.6503    1601.562   8.10e-14    33226.3
+-------------+---------------------------------------------------------
+      v_gfcf |      8,967    1.05e+07    1.34e+08   1.32e-08   4.37e+09
+      q_gfcf |      8,967    1.58e+07    1.36e+08    2.61147   3.42e+09
+         emp |      9,098    13.54395    56.81387    .003251   793.3502
+         avh |      3,008    1964.037    276.3026   1353.887   2910.735
+          hc |      7,482    2.091909    .7279806   1.007038   3.974208
+-------------+---------------------------------------------------------
+      rtfpna |      5,586    1.010478    .3498566   .2890339   7.107444
+   Subregion |          0
+LeastDevel~C |          0
+LandLocked~s |          0
+SmallIslan~S |          0
+-------------+---------------------------------------------------------
+      Region |          0
+ Incomegroup |          0
+   gini_disp |      5,422    38.34085    8.701111       17.5       66.5
+    gini_mkt |      5,422    45.53803    6.456044       22.1       70.4
+     dum_usa |     12,794    .1793028    .3836207          0          1
+-------------+---------------------------------------------------------
+Informalse~r |      2,170     28.6102    11.92763   5.133912   69.13512
+     sars_mr |        201    .2288557    .6613344          0          3
+    dum_sars |     13,570    .0020634    .0453792          0          1
+ sars_sample |     13,570    .1326455    .3392037          0          1
+     h1n1_mr |        201    1.631841     1.05061          0          3
+-------------+---------------------------------------------------------
+    dum_h1n1 |     13,570    .0120118    .1089421          0          1
+ h1n1_sample |     13,570    .7737657     .418408          0          1
+     mers_mr |        201    .2288557    .6613344          0          3
+    dum_mers |     13,570    .0018423     .042884          0          1
+ mers_sample |     13,570    .1182756    .3229461          0          1
+-------------+---------------------------------------------------------
+    ebola_mr |        201    .0945274    .4538942          0          3
+   dum_ebola |     13,570    .0007369    .0271373          0          1
+ebola_sample |     13,570    .0478998    .2135621          0          1
+     zika_mr |        201    .2189055    .5117038          0          3
+    dum_zika |     13,570    .0028003    .0528456          0          1
+-------------+---------------------------------------------------------
+ zika_sample |     13,570    .1805453    .3846552          0          1
+      flu_mr |        201    .2587065    .7763609          0          3
+     dum_flu |     13,570    .0016949     .041136          0          1
+  flu_sample |     13,570     .109801    .3126531          0          1
+dum_bankcr~s |     13,570    .0091378    .0951576          0          1
+-------------+---------------------------------------------------------
+bankcrises~e |     13,570     .476787    .4994793          0          1
+dum_curr_c~_ |     13,570    .0172439    .1301838          0          1
+curr_crisi~e |     13,570    .5563744    .4968301          0          1
+      dum_SS |     13,570    .0020634    .0453792          0          1
+   SS_sample |     13,570    .1046426    .3061036          0          1
+-------------+---------------------------------------------------------
+dum_sobdet~_ |     13,570    .0100221    .0996112          0          1
+sobdet_cri~e |     13,570    .2899779    .4537685          0          1
+dum_natura~s |     13,570    .3139278    .4641045          0          1
+nat~s_sample |     13,570    .8419307    .3648194          0          1
+dum_n~s_clim |     13,570    .2957259    .4563852          0          1
+-------------+---------------------------------------------------------
+naturaldis.. |     13,570    .8419307    .3648194          0          1
+dum_na~s_geo |     13,570    .0623434    .2417871          0          1
+naturaldis.. |     13,570    .4996315    .5000183          0          1
+ins_dama_gdp |      3,994    .0003362    .0056144          0   .2900078
+    dama_gdp |      3,994    .0117054    .0949493          0   2.800878
+-------------+---------------------------------------------------------
+totalaffec~p |      4,203    32225.15    107996.4          0    1564635
+dum_natura~f |     13,570    .0294031    .1689398          0          1
+nat~f_sample |     13,570    .5747973    .4943919          0          1
+ins_dama_g~m |      3,769    .0002377    .0051111          0   .2900078
+dama_gdp_c~m |      3,769    .0106671    .0936878          0   2.800878
+-------------+---------------------------------------------------------
+totalaffec~m |      3,959    32609.52    109715.3          0    1564635
+dum_n~f_clim |     13,570    .0277082    .1641415          0          1
+naturaldis.. |     13,570    .5607959    .4963084          0          1
+ins_dama_g~o |        804     .000556    .0058427          0   .1135276
+dama_gdp_geo |        804    .0081431    .0609706          0   1.207995
+-------------+---------------------------------------------------------
+totalaffec~o |        841    7540.063    39753.05          0   796333.9
+dum_na~f_geo |     13,570    .0058954    .0765574          0          1
+naturaldis.. |     13,570    .2096536    .4070764          0          1
+     tot2010 |      5,333    97.51617    33.18136      15.18   666.8834
+    ch_tot_2 |      5,137    .7423996    12.45865  -62.28743   349.4396
+-------------+---------------------------------------------------------
+   dum_tot_2 |      5,333     .240765     .427588          0          1
+dum_tot_re~2 |      5,333    .2253891    .4178775          0          1
+      ch_tot |      3,575    1.322314    20.27938   -129.076   131.0182
+     dum_tot |      5,333    .1676355    .3735773          0          1
+ dum_tot_ref |      5,333    .1584474    .3651942          0          1
+-------------+---------------------------------------------------------
+   dum_tot_3 |      5,333    .1395087    .3465091          0          1
+  dum_smallc |     13,570     .243552    .4292412          0          1
+     cgrowth |      9,883    3.485792    10.33915  -116.3696   165.2364
+     igrowth |      9,877    4.155343    21.65137  -374.1164   261.2518
+   tfpgrowth |      5,471    .1785603    5.339183  -106.2313    59.8386
+
+. 
+. ********************************************************************************
+. *** PART 3: Closing log file
+. ********************************************************************************
+.     log close
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/02-data_countries_01-2022-01-18_1.log
+  log type:  text
+ closed on:  18 Jan 2022, 15:26:12
+-------------------------------------------------------------------------------------------------------------------------------------------------------

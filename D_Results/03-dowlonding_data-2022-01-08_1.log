@@ -1,0 +1,72 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/03-dowlonding_data-2022-01-08_1.log
+  log type:  text
+ opened on:   8 Jan 2022, 14:54:13
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Using Python to download
+. ********************************************************************************
+. 
+. *** 2.1 Short Python code
+. /*python:
+> # Essential Packages
+> import seaborn as sns
+> import re
+> import os
+> from urllib.request import urlretrieve
+> 
+> # Define path
+> os.chdir(r'C:\Users\JOEL\Dropbox\Project_02\DataWork\B_RawData\03-download_data')
+> 
+> # Dowloading data
+> j = ['SP.POP.TOTL', 'NY.GDP.MKTP.CD']
+> k = ['POP_WB', 'GDP_WB']
+> 
+> for p in [0,1]:
+>     url_wb = 'https://api.worldbank.org/v2/en/indicator/'+str(j[p])+'?downloadformat=excel'
+>     urlretrieve(url_wb, str(k[p])+'.xls')
+> end
+> */
+. ********************************************************************************
+. *** PART 3: Excel to .dta
+. ********************************************************************************
+. 
+. *** 3.1 From World Bank
+.         local names `" "GDP_WB" "POP_WB" "'
+
+.         qui forval n=1/2{
+
+. 
+. *** 3.2 From CEPAL
+.         import excel using "${rawdata_3_1}/SPE_CEPAL",clear firstrow
+(32 vars, 196 obs)
+
+. 
+.         ds y1990-y2019
+y1990  y1992  y1994  y1996  y1998  y2000  y2002  y2004  y2006  y2008  y2010  y2012  y2014  y2016  y2018
+y1991  y1993  y1995  y1997  y1999  y2001  y2003  y2005  y2007  y2009  y2011  y2013  y2015  y2017  y2019
+
+.         qui foreach k in `r(varlist)'{
+
+. 
+.         save "${rawdata_3_1}/SPE_CEPAL.dta", replace
+file C:\Users\JOEL\Dropbox\Project_02\DataWork\B_RawData/03-download_data/SPE_CEPAL.dta saved
+
+. 
+. ********************************************************************************
+. *** PART 4: Closing log file
+. ********************************************************************************
+.     log close
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/03-dowlonding_data-2022-01-08_1.log
+  log type:  text
+ closed on:   8 Jan 2022, 14:54:13
+-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,113 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/04-45º_line_index-2022-01-07_1.log
+  log type:  text
+ opened on:   7 Jan 2022, 23:59:51
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Cleaning database
+. ********************************************************************************
+. 
+. *** 2.1 Cleaning
+.         use "${rawdata_2_1}/main-data_all-countries_15Oct2020 165731.dta", clear
+
+. 
+.         keep year country gdppgrowth ASL_UEM_TOTL_ZS gini_disp cgrowth AFD_AST_PRVT_GD_ZS
+
+. 
+.         *replace country="Bahamas" if country=="Bahamas, The"
+. 
+.         local group1 `" "Antigua and Barbuda", "Argentina", "Aruba", "Bahamas, The", "Barbados", "Belize", "Bolivia", "Brazil", "Cayman Islands" "'
+
+.         local group2 `" "Costa Rica", "Cuba", "Dominica", "Dominican Republic", "Ecuador", "El Salvador", "Grenada", "Guatemala", "Guyana" "'
+
+.         local group3 `" "Jamaica" , "Mexico", "Nicaragua", "Panama", "Paraguay", "Peru", "Puerto Rico", "St. Kitts and Nevis" "'
+
+.         local group4 `" "Suriname" , "Trinidad and Tobago", "Turks and Caicos Islands", "Uruguay", "Venezuela", "Venezuela, RB" "'
+
+.         local group5 `" "Colombia", "Honduras", "St. Lucia,St. Vincent and the Grenadines", "Virgin Islands (U.S.)", "Chile", "Haiti" "'
+
+.         keep if inlist(country, `group1') | inlist(country, `group2') | inlist(country, `group3') | inlist(country, `group4') | inlist(country, `group5')
+(11,245 observations deleted)
+
+. a
+command a is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. tab country
+
+                           Country Name |      Freq.     Percent        Cum.
+----------------------------------------+-----------------------------------
+                    Antigua and Barbuda |         65        2.80        2.80
+                              Argentina |         65        2.80        5.59
+                                  Aruba |         65        2.80        8.39
+                           Bahamas, The |         65        2.80       11.18
+                               Barbados |         65        2.80       13.98
+                                 Belize |         65        2.80       16.77
+                                Bolivia |         65        2.80       19.57
+                                 Brazil |         65        2.80       22.37
+                         Cayman Islands |         60        2.58       24.95
+                                  Chile |         65        2.80       27.74
+                               Colombia |         65        2.80       30.54
+                             Costa Rica |         65        2.80       33.33
+                                   Cuba |         65        2.80       36.13
+                               Dominica |         65        2.80       38.92
+                     Dominican Republic |         65        2.80       41.72
+                                Ecuador |         65        2.80       44.52
+                            El Salvador |         65        2.80       47.31
+                                Grenada |         65        2.80       50.11
+                              Guatemala |         65        2.80       52.90
+                                 Guyana |         65        2.80       55.70
+                                  Haiti |         65        2.80       58.49
+                               Honduras |         65        2.80       61.29
+                                Jamaica |         65        2.80       64.09
+                                 Mexico |         65        2.80       66.88
+                              Nicaragua |         65        2.80       69.68
+                                 Panama |         65        2.80       72.47
+                               Paraguay |         65        2.80       75.27
+                                   Peru |         65        2.80       78.06
+                            Puerto Rico |         65        2.80       80.86
+                    St. Kitts and Nevis |         65        2.80       83.66
+                               Suriname |         65        2.80       86.45
+                    Trinidad and Tobago |         65        2.80       89.25
+               Turks and Caicos Islands |         60        2.58       91.83
+                                Uruguay |         65        2.80       94.62
+                              Venezuela |          5        0.22       94.84
+                          Venezuela, RB |         60        2.58       97.42
+                  Virgin Islands (U.S.) |         60        2.58      100.00
+----------------------------------------+-----------------------------------
+                                  Total |      2,325      100.00
+
+. do "c:\users\joel\appdata\local\temp\st_stata_temp.tmp"
+
+. /*=====================================================================================================
+> * PROJECT NAME
+> * Principal:        Freddy Rojas Cama
+> * Assistant:        Joel Nestor Vicencio Damian
+> * STATA Version:    17
+> *======================================================================================================
+> ********************************************************************************
+> Note: These DO file was created to make a analyze in Freddy's database
+> ********************************************************************************
+> 
+> ********************************************************************************
+> *** PART 1: Introduction
+> *******************************************************************************/
+. 
+. *** 1.1 Globals
+.         global dofilename "04-45º_line_index"
+
+. 
+. *** 1.2 Strucuture of te log file name 
+.         cap log close

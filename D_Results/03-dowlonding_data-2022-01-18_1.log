@@ -1,0 +1,350 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/03-dowlonding_data-2022-01-18_1.log
+  log type:  text
+ opened on:  18 Jan 2022, 15:26:12
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Using Python to download
+. ********************************************************************************
+. 
+. *** 2.1 Short Python code
+. /*
+> python:
+> # Essential Packages
+> import seaborn as sns
+> import re
+> import os
+> from urllib.request import urlretrieve
+> 
+> # Define path
+> os.chdir(r'C:\Users\JOEL\Dropbox\Project_02\DataWork\B_RawData\03-download_data')
+> 
+> # Dowloading data
+> j = ['SP.POP.TOTL', 'NY.GDP.MKTP.CD', 'GC.XPN.TRFT.ZS']
+> k = ['SP_POP_TOTL', 'NY_GDP_MKTP_CD', 'GC_XPN_TRFT_ZS']
+> 
+> for p in [0,1,2]:
+>     url_wb = 'https://api.worldbank.org/v2/en/indicator/'+str(j[p])+'?downloadformat=excel'
+>     urlretrieve(url_wb, str(k[p])+'.xls')
+> end
+> */
+. 
+. ********************************************************************************
+. *** PART 3: Excel to .dta
+. ********************************************************************************
+. 
+. *** 3.1 From World Bank
+.         local names `" "SP_POP_TOTL" "NY_GDP_MKTP_CD" "GC_XPN_TRFT_ZS" "'
+
+.         qui forval n=1/3{
+
+. 
+. *** 3.2 From CEPAL
+.         import excel using "${rawdata_3_1}/SPE_CEPAL",clear firstrow
+(32 vars, 196 obs)
+
+. 
+.         ds y1990-y2019
+y1990  y1992  y1994  y1996  y1998  y2000  y2002  y2004  y2006  y2008  y2010  y2012  y2014  y2016  y2018
+y1991  y1993  y1995  y1997  y1999  y2001  y2003  y2005  y2007  y2009  y2011  y2013  y2015  y2017  y2019
+
+.         qui foreach k in `r(varlist)'{
+
+. 
+.         gen id=_n
+
+.         reshape long y, i(id) j(year)
+(j = 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2
+> 019)
+
+Data                               Wide   ->   Long
+-----------------------------------------------------------------------------
+Number of observations              196   ->   5,880       
+Number of variables                  33   ->   5           
+j variable (30 values)                    ->   year
+xij variables:
+                  y1990 y1991 ... y2019   ->   y
+-----------------------------------------------------------------------------
+
+.         rename y expenditure
+
+. 
+.         save "${rawdata_3_1}/SPE_CEPAL.dta", replace
+file C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\B_RawData/03-download_data/SPE_CEPAL.dta saved
+
+. 
+. *** 3.3 From IMF
+.         import excel using "${rawdata_3_1}/IMF_DATA_GFS_COFOG",sheet("Expenditure by Functions of Go") cellrange("A2:CU799") clear firstrow
+(99 vars, 797 obs)
+
+. 
+.         // Drop pair variables or variable within label: D(2) F(4) H(6) ...
+.            ds C-CU, not(varlabel)
+D   H   L   P   T   X   AB  AF  AJ  AN  AR  AV  AZ  BD  BH  BL  BP  BT  BX  CB  CF  CJ  CN  CR
+F   J   N   R   V   Z   AD  AH  AL  AP  AT  AX  BB  BF  BJ  BN  BR  BV  BZ  CD  CH  CL  CP  CT
+
+.            drop `r(varlist)'
+
+. 
+.         // Change Name variable from C to y1972 ...
+.            ds C-CU
+C   G   K   O   S   W   AA  AE  AI  AM  AQ  AU  AY  BC  BG  BK  BO  BS  BW  CA  CE  CI  CM  CQ  CU
+E   I   M   Q   U   Y   AC  AG  AK  AO  AS  AW  BA  BE  BI  BM  BQ  BU  BY  CC  CG  CK  CO  CS
+
+.            foreach v in `r(varlist)' {
+  2.                    local x : variable label `v'
+  3.                    rename `v' y`x'
+  4.            }
+
+. 
+.         // Database
+.            gen id=_n
+
+.            reshape long y, i(id) j(year)
+(j = 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2
+> 001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020)
+--Break--
+r(1);
+
+end of do-file
+--Break--
+r(1);
+.         do "${code_3_1}/03-matching_data.do"
+.         *do "${code_3_1}/03-downlonding_data_International_Merchandise_trade.do"
+.     }
+--Break--
+r(1);
+
+end of do-file
+
+--Break--
+r(1);
+
+. do "c:\users\joel\appdata\local\temp\st_stata_temp.tmp"
+
+. /***************************************************************************************************
+> * PROJECT:     Project
+> * TITLE:       Title
+> * YEAR:        2021
+> * PRINCIPAL:   Freddy Rojas Cama
+> * STATA:       17
+> * RA:          Joel Vicencio Damian
+> ****************************************************************************************************
+> 
+> *** Outline:
+>     0. Set initial configurations and globals
+>         0.0 Install required packages
+>         0.1 Setting up users
+>         0.2 Setting up folders
+>         0.3 Setting up execution
+>     1. Schpae file to stata
+> 
+> ****************************************************************************************************
+> *** PART 0: Set initial configurations and globals
+> ***************************************************************************************************/
+. 
+. *** 0.0 Install required packages:
+.     set more off
+
+.     pause on
+
+. 
+.     local packages ietoolkit iefieldkit winsor estout outreg2 asdoc xml_tab outwrite reghdfe ftools ///
+>                    winexec wbopendata _gwtmean xtscc stripplot XTBALANCE inlist2 dataex chunky fs
+
+.                 
+.     quie foreach pgks in `packages' {   
+
+.         
+.         ieboilstart, version(14.0)
+
+    DISCLAIMER: Due to how settings work in Stata, this command can only attempt to harmonize settings as much as possible across users, but no
+        guarantee can be given that all commands will always behave identically unless the exact same version and type of Stata is used, with the
+        same releases of user-contributed commands installed.
+
+    Settings set by this command:
+    clear all
+    set matsize      400   , permanently
+    set niceness     5     , permanently
+    set min_memory   0     , permanently
+    set max_memory   .     , permanently
+    set segmentsize  32m   , permanently
+    set more         off   , perm
+    pause            on
+    set varabbrev    off
+
+    IMPORTANT: The most important setting of this command – the version – cannot be set inside the command due to technical reasons. The setting has
+        been prepared by this command, and you only need to write `r(version)' after this command (include the apostrophes).
+
+.         
+. *** 0.1 Setting up users
+.     if ("`c(username)'" == "JOEL") {
+.            global project   "C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork"
+.         }
+
+. 
+.     if ("`c(username)'" == "freddyrojascama") {
+.            global project   "C:/Users/..."
+.         }
+
+. 
+. *** 0.2 Setting up folders
+.         global A "${project}\A_Data"
+
+.         global B "${project}\B_RawData"
+
+.         global C "${project}\C_Programs"
+
+.         global D "${project}\D_Results"
+
+.         global E "${project}\E_Tables"
+
+.         global F "${project}\F_Figures"
+
+. 
+.         // PART 1:
+.             global data_1_1         "${A}/01-example"
+
+.             global rawdata_1_1      "${B}/01-example"
+
+.             global code_1_1         "${C}/01-example"
+
+.             global outputt_1_1      "${E}/01-example"
+
+.             global outputf_1_1      "${F}/01-example"
+
+. 
+.         // PART 2:
+.             global data_2_1         "${A}/02-data-countries"
+
+.             global rawdata_2_1      "${B}/02-data-countries"
+
+.             global code_2_1         "${C}/02-data-countries"
+
+. 
+.         // PART 3:
+.             global data_3_1         "${A}/03-download_match_data"
+
+.             global rawdata_3_1      "${B}/03-download_data"
+
+.             global code_3_1         "${C}/03-download_match_data"
+
+. 
+.         // PART 4:
+.             global data_4_1         "${A}/04-graphs"
+
+.             global code_4_1         "${C}/04-graphs"
+
+.             global outputf_4_1      "${F}/04-graphs"
+
+. 
+.         // PART 5:
+.             global data_5_1         "${A}/05-SS_data"
+
+.             global code_5_1         "${C}/05-SS_data"
+
+. 
+.         // PART 6:
+.             global data_6_1         "${A}/06-BIC_reg_loops"
+
+.             global code_6_1         "${C}/06-BIC_reg_loops"
+
+. 
+. *** 0.3 Setting up execution 
+.     global first_work    0
+
+.     global second_work   0
+
+.     global third_work    0
+
+.     global fourth_work   0
+
+.     global fifth_work    0
+
+.     global sixth_work    0
+
+. 
+. ****************************************************************************************************
+. ***     PART 1: Jordán example
+. ****************************************************************************************************
+.     if (${first_work} == 1) {
+.         do "${code_1_1}/01-jordan_example.do"
+.     }
+
+. 
+. ****************************************************************************************************
+. *** PART 2: Freddy's database
+. ****************************************************************************************************
+.     if (${second_work} == 1) {
+.         do "${code_2_1}/02-data-countries_old.do"
+.     }
+
+. 
+. ****************************************************************************************************
+. *** PART 3: Download and marge data from CEPALSTAT and Worl Bank
+. ****************************************************************************************************
+.     if (${third_work} == 1) {
+.         do "${code_3_1}/03-downlonding_data.do"
+.         do "${code_3_1}/03-matching_data.do"
+.         *do "${code_3_1}/03-downlonding_data_International_Merchandise_trade.do"
+.     }
+
+. 
+. ****************************************************************************************************
+. *** PART 4: Differents graphs with Freddy's database
+. ****************************************************************************************************
+.     if (${fourth_work} == 1) {
+.         do "${code_4_1}/04-average_perca_se.do"
+.         do "${code_4_1}/04-45º_line_index.do"
+.     }
+
+. 
+. ****************************************************************************************************
+. *** PART 5: SS Data
+. ****************************************************************************************************
+.     if (${fifth_work} == 1) {
+.         do "${code_5_1}/05-SS_data.do"
+.     }
+
+. 
+. ****************************************************************************************************
+. *** PART 6: Best BIC with loops
+. ****************************************************************************************************
+.     if (${sixth_work} == 1) {
+.         do "${code_6_1}/06-BIC_reg_loops.do"
+.     }
+
+. 
+end of do-file
+
+. do "c:\users\joel\appdata\local\temp\st_stata_temp.tmp"
+
+. /*=====================================================================================================
+> * PROJECT NAME
+> * Principal:        Freddy Rojas Cama
+> * STATA Version:    17
+> * RA:               Joel Vicencio Damian
+> *======================================================================================================
+> ********************************************************************************
+> Note: These DO file was created to make line and bar graphs using total
+>       population, social public expenditure and gdp
+> ********************************************************************************
+> 
+> ********************************************************************************
+> *** PART 1: Introduction
+> *******************************************************************************/
+. 
+. *** 1.1 Globals
+.         global dofilename "04-average_perca_se"
+
+. 
+. *** 1.2 Strucuture of te log file name 
+.         cap log close

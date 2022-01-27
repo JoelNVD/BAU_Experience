@@ -1,0 +1,27 @@
+%====================================================================================
+\section{Importando datos}
+%====================================================================================
+
+\begin{frame}[fragile]{Importando datos}
+	Importamos datos fácilmente a STATA. Tengamos la siguiente sintaxis
+		$$\cdot\enskip \textup{\texttt{use \textcolor{blue}{\textit{filename}} [, clear nolabel]}}$$
+	no olvides \colorbox{codegray}{\texttt{help import}} para comprobar la sintaxis. Aquí algunos ejemplos
+\begin{lstlisting}[language=Stata, numbers=none]
+use "http://wps.aw.com/wps/media/objects/
+11422/11696965/empirical/empex_tb/cps92_08.dta"
+use auto, clear
+webuse lifeexp, clear
+\end{lstlisting}
+\end{frame}
+
+%---------------------------------------------------
+\begin{frame}[fragile]{Otros formatos: XLS, XLSX y CSV}
+	Importamos fácilmente datos a STATA desde otros formatos. Tengamos la siguiente sintaxis
+		$$\cdot\enskip \textup{\texttt{import \underline{exc}el [using] \textcolor{blue}{\textit{filename}} [, \textcolor{blue}{\textit{import\_excel\_options}}]}}$$
+	no olvides \colorbox{codegray}{\texttt{help import}} para comprobar la sintaxis. Aquí algunos ejemplos
+\begin{lstlisting}[language=Stata, numbers=none]
+import exc using grades_data.xlsx, first clear
+insheet using grades_data.csv, clear
+\end{lstlisting}
+	no olvides \colorbox{codegray}{\texttt{help insheet}} para comprobar la sintaxis entera.
+\end{frame}

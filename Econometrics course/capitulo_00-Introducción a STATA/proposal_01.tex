@@ -1,0 +1,203 @@
+\documentclass[aspectratio=169, 11pt, compress, xcolor={dvipsnames}]{beamer}
+\usetheme[width=1.9cm, numbering=fraction]{Hannover}
+
+% Apartado de tipo de letra
+\usepackage{mathptmx}
+\usepackage{helvet}
+
+% Apartado de Justificación del texto
+\usepackage{ragged2e}
+\justifying
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+
+% Apartado de la sangría
+\usepackage{parskip}
+
+% Apartado de links
+\usepackage{hyperref}
+
+% Apartadode Texto
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% Apartado Matemático
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Apartado de colores
+\usepackage{xcolor}
+\definecolor{cordovan}{rgb}{0.54, 0.25, 0.27}
+\definecolor{darkterracotta}{rgb}{0.8, 0.31, 0.36}
+
+% Apartado de Tabla y Figura
+\usepackage{caption}
+\captionsetup[table]{name = Tabla}
+
+% Apartado de íconos
+\usepackage{fontawesome5}
+\definecolor{twit}{RGB}{29, 161, 242}
+
+% Apartado de Stata
+\usepackage{listings}
+\definecolor{codeblue}{rgb}{0.29296875, 0.51953125, 0.68359375}
+\definecolor{codegreen}{rgb}{0.47265625, 0.62890625, 0.40234375}
+\definecolor{codegray}{rgb}{0.95703125, 0.95703125, 0.95703125}
+\definecolor{codecrimson}{rgb}{0.87109375,0.3984375,0.3984375}
+
+\lstset{frame=tb,
+	backgroundcolor=\color{codegray},
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\ttfamily},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{codeblue},
+	commentstyle=\color{codegreen},
+	stringstyle=\color{codecrimson},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4,
+	numbers=left,                    
+	numbersep=5pt,
+	frame=tlbr,framesep=4pt,framerule=0pt
+}
+
+\input{stata-lstlisting}
+
+% Apartado de configuración del Beamer
+\setbeameroption{show notes}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor*{structure}{bg=darkterracotta!20,fg=cordovan}
+\setbeamercolor{frametitle}{fg=white, bg=darkterracotta}
+\setbeamertemplate{caption}{numbered}
+\setbeamercovered{transparent}
+
+
+% Sub apartado de configuración del lado izquierdo
+\def\swidth{1.9cm}
+\setbeamersize{sidebar width left=\swidth}
+\setbeamertemplate{sidebar left}
+{
+	{\usebeamerfont{title in sidebar}%
+		\vskip1.5em%
+		\usebeamercolor[fg]{title in sidebar}%
+		\insertshorttitle[width=\swidth,center,respectlinebreaks]\par%
+		\vskip1.25em%
+	}%
+	{%
+		\usebeamercolor[fg]{author in sidebar}%
+		\usebeamerfont{author in sidebar}%
+		\insertshortauthor[width=\swidth,center,respectlinebreaks]\par%
+		\vskip1.25em%
+	}%
+	\hbox to2cm{\hss\insertlogo\hss}
+	\vskip1.25em%
+	\insertverticalnavigation{\swidth}%
+	\vfill
+	\hbox to2cm{\hskip0.6cm\usebeamerfont{subsection in
+			sidebar}\strut\usebeamercolor[fg]{subsection in
+			sidebar}\inserttotalframenumber-\insertframenumber\hfill}%
+	\vskip3pt%
+}
+
+% Apartado de logo
+\logo{\includegraphics[height=1cm]{fig/logo-USAT.png}}
+
+% Apartado transparencia de contenido
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>{Contenido}
+		\begin{columns}[t]
+			\begin{column}{.5\textwidth}
+				\tableofcontents[currentsection,currentsubsection, sections={1-6}]
+			\end{column}
+			\begin{column}{.5\textwidth}
+				\tableofcontents[currentsection,currentsubsection, sections={7-12}]
+			\end{column}
+		\end{columns}
+	\end{frame}
+}
+
+%====================================================================================
+% Title Page
+%====================================================================================
+
+\title[STATA]{STATA}
+
+\subtitle{Sintaxis y habilidades básicas}
+
+\author[PhD. Freddy R.]{Econ PhD. Freddy Rojas\\
+				\texttt{frojas@usat.edu.pe} {\color{black}{\faIcon{envelope}}}\\
+				\texttt{\href{https://twitter.com/freddyrojascama?s=20}{@freddyrojascama}} {\color{twit}{\faIcon{twitter}}}}
+\institute{Universidad Católica Santo Toribio de Mogrovejo}
+
+%====================================================================================
+% Open
+%====================================================================================
+\begin{document}
+	
+\begin{frame}
+	\maketitle
+\end{frame}
+
+%---------------------------------------------------
+
+\begin{frame}{Contenido}
+    \begin{columns}[t]
+		\begin{column}{.5\textwidth}
+			\tableofcontents[sections={1-6}]
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\tableofcontents[sections={7-12}]
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%====================================================================================
+% Sections
+%====================================================================================
+
+%01) Key Words --------------------------------------
+	\include{sections/sec_01}
+%02) Preliminaries ----------------------------------
+	\include{sections/sec_02}
+%03) Starting ---------------------------------------
+	\include{sections/sec_03}
+%04) Documentation ----------------------------------
+	\include{sections/sec_04}
+%05) Command Syntax ---------------------------------
+	\include{sections/sec_05}
+%06) Importing Data ---------------------------------
+	\include{sections/sec_06}
+%07) Help -------------------------------------------
+	\include{sections/sec_07}
+%08) The regress command ----------------------------
+	\include{sections/sec_08}
+%09) Significance Test ------------------------------
+	\include{sections/sec_09}
+%10) The DO-file ------------------------------------
+	\include{sections/sec_10}
+%11) Exercises --------------------------------------
+	\include{sections/sec_11}
+%12) References -------------------------------------
+	\include{sections/sec_12}
+
+%====================================================================================
+% END
+%====================================================================================
+\begin{frame}
+	\maketitle
+			\flushleft 
+{\small
+	\LaTeX \enskip suppor and edition:\\
+	Joel Vicencio-Damian\\
+		\vspace{-0.08cm}
+	joel.nestor.damian@gmail.com \faIcon{envelope}}
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\end{document}

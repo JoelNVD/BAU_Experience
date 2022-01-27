@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{¿Qué es la heterocedasticidad?}{3}{0}{1}
+\beamer@sectionintoc {2}{¿Por qué preocuparnos de la heterocedasticidad?}{9}{0}{2}
+\beamer@sectionintoc {3}{¿Varianza con heterocedasticidad?}{15}{0}{3}
+\beamer@sectionintoc {4}{Test de heterocedasticidad}{24}{0}{4}
+\beamer@subsectionintoc {4}{1}{Test de Breusch-Pagan}{30}{0}{4}
+\beamer@subsectionintoc {4}{2}{Test de White}{37}{0}{4}
+\beamer@subsectionintoc {4}{3}{Forma alternativa del Test de White}{42}{0}{4}
+\beamer@subsectionintoc {4}{4}{Ejemplos en STATA}{47}{0}{4}
+\beamer@sectionintoc {5}{Mínimos cuadrados generalizados}{54}{0}{5}
+\beamer@sectionintoc {6}{Referencia}{71}{0}{6}

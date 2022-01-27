@@ -1,0 +1,91 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+
+\documentclass[10pt, aspectratio=169, compress]{beamer}
+
+% Beamer adjust
+\usetheme[progressbar=frametitle, numbering=fraction, subsectionpage=progressbar]{metropolis}
+\useoutertheme[subsection=false]{miniframes}
+\setbeamercolor{section in head/foot}{fg=white, bg=mDarkTeal}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamerfont{section in head/foot}{series=\bfseries}
+\setbeameroption{show notes}
+	% Ver números en la tabla de contenido (TOC)
+		%\setbeamertemplate{section in toc}[sections numbered]
+		%\setbeamertemplate{subsection in toc}[subsections numbered]
+	% Agregar cuadrados a la TOC
+		\setbeamertemplate{section in toc}[square]
+		\setbeamertemplate{subsection in toc}[square]
+		% nota: número solo en secciones, no en subsecciones, no efectos
+		% 		en subsecciones.
+
+% Essential Packages
+\input{packages/packs}
+
+% Another Packages
+\input{packages/stata_pack}
+
+%====================================================================================
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\title{Advanced Econometrics:\\
+	Panel Data Econometrics\\
+	Unobserved heterogeneity}
+\author[Freddy Rojas C.]{\large{PhD. Econ. Freddy Rojas Cama}\\
+	\tiny{\texttt{frojas@usat.edu.pe} {\color{black}{\faIcon{envelope}}}}\\
+	\texttt{\href{https://twitter.com/freddyrojascama?s=20}{@freddyrojascama}} {\color{twit}{\faIcon{twitter}}}}
+\institute{\large Universidad Católica Santo Toribio de Mogrovejo}
+\titlegraphic{\hfill\includegraphics[height=2cm]{figures/logo-USAT.png}}
+\date{\today}
+
+\begin{document}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+	
+%------------------------------------------------------------------------------------
+% Sections
+%---------
+
+%0) Agenda --------------------------------------
+\begin{frame}{Contenido}
+	\tableofcontents
+\end{frame}	
+
+%1) Motivation ----------------------------------
+	\include{sections/sec_01}
+%2) Error component model -----------------------
+	\include{sections/sec_02}
+%3) The Model -----------------------------------
+	\include{sections/sec_03}
+%4) Referencia ----------------------------------
+	\include{sections/sec_04}
+%------------------------------------------------
+	\note[itemize]{
+		\item NOTAS}
+	
+%------------------------------------------------------------------------------------
+% End
+%----
+\miniframesoff
+	\begin{frame}[plain, standout]
+			\vspace{3cm}
+				Econometría Avanzada\\
+				Catedrático: PhD. Freddy Rojas Cama
+			\vspace{3cm}
+			\flushleft 
+		{\small
+		\LaTeX \enskip suppor and edition:\\
+		Joel Vicencio-Damian\\
+			\vspace{-0.28cm}
+		joel.nestor.damian@gmail.com \faIcon{envelope}}
+	\end{frame}
+
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

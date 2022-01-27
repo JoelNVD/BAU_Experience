@@ -1,0 +1,15 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Revisión de Probabilidades}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Elementos de probabilidad}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{fdp y fda}{25}{0}{1}
+\beamer@subsectionintoc {1}{3}{Valor esperado, media muestral y varianza}{31}{0}{1}
+\beamer@subsectionintoc {1}{4}{Distribuciones conjuntas, marginales y condicionales}{50}{0}{1}
+\beamer@subsectionintoc {1}{5}{Distribuciones}{64}{0}{1}
+\beamer@subsectionintoc {1}{6}{Aproximaciones de muestras grandes}{72}{0}{1}
+\beamer@subsectionintoc {1}{7}{Conclusiones}{85}{0}{1}
+\beamer@sectionintoc {2}{Revisión de Estadística}{92}{0}{2}
+\beamer@subsectionintoc {2}{1}{Estimadores y propiedades}{93}{0}{2}
+\beamer@subsectionintoc {2}{2}{Momentos muestrales}{106}{0}{2}
+\beamer@subsectionintoc {2}{3}{Prueba de Hipótesis}{108}{0}{2}
+\beamer@subsectionintoc {2}{4}{Intervalo de confianza}{150}{0}{2}
+\beamer@subsectionintoc {2}{5}{Comparando promedios de poblaciones similares y diferentes}{156}{0}{2}

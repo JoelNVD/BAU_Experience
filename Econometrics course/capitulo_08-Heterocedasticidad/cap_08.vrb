@@ -1,0 +1,13 @@
+\frametitle{STATA: Ejemplo 3}
+Consideremos el siguiente conjunto de datos (Fuente: Wooldridge dataset)
+{\small
+\begin{lstlisting}[language=Stata, numbers=none]
+use "http://fmwww.bc.edu/ec-p/data/
+wooldridge/MROZ", clear
+regress ltotexp suppins phylim actlim totchr age female income
+\end{lstlisting}
+}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=.35]{fig/stata3a.png}
+	\end{figure}

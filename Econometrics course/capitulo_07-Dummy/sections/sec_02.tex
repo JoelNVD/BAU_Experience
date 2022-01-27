@@ -1,0 +1,21 @@
+%====================================================================================
+\section[Modelo]{Modelo de probabilidad lineal}
+%====================================================================================
+
+\subsection{Modelo de probabilidad lineal}
+\begin{frame}{Modelo de probabilidad lineal}
+	\begin{itemize}
+		\item
+		Sea $y$ una variable dicotómica. Entonces: $E(y/x)=P(y=1/x)*1+P(y=0/x)*0=P(y=1/x)*1$
+		\pause
+		\item
+		Entonces, en este caso: $E(y/x)=\beta_{0}+\beta_{1}x_{1}+...+\beta_{k}x_{k}=P(y=1/x)$
+		\pause
+		\item Por lo tanto, la interpretación de $\beta_{i}$ es el cambio en la probabilidad de éxito cuando $x_{i}$ cambia
+		\pause
+		\item El valor que predice este modelo es la probabilidad de éxito, que tiene el inconveniente que podría estar fuera del intervalo
+		esperado de [0,1].
+		\pause
+		\item Otro problema que se tiene es que el modelo viola el supuesto de homocedasticidad (Probar!)
+	\end{itemize}
+\end{frame}
