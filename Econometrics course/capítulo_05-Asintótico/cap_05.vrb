@@ -1,0 +1,7 @@
+\frametitle{Estimador MCO}
+Sea el modelo poblacional definido para el individuo $i$:
+		$$y_i=x_i\beta+\mu_i$$
+	donde $i$ hace referencia a la unidad de análisis, $x_i$ es el vector:
+		$$x_i=(1, x_{i1},x_{i2}...,x_{ik})$$
+	y $\beta$ es un vector de parámetros de orden $(k+1)x1$, donde el supuesto MCO $E(\mu_i/x_i' )=0$, implica, por la LEI, que el $x_i$ es exógeno:
+		$$E(x_i'  \mu_i )=0$$

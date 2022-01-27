@@ -1,0 +1,96 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass{beamer}
+
+% Essential Packages
+\input{packages/packs}	
+
+% Apartado de configuración del Beamer
+\mode<presentation> {
+	\usetheme{Frankfurt}
+	\setbeameroption{show notes}
+	\setbeamercolor{item projected}{fg=white,bg=red}
+	\setbeamertemplate{footline}[frame number]
+	\usefonttheme[onlylarge]{structuresmallcapsserif}
+	\usefonttheme[onlysmall]{structurebold}
+	\usecolortheme{beaver}
+	\setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+}
+
+	% Apartado transparencia de contenido
+	\AtBeginSection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	\AtBeginSubsection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	
+	% Apartado de logo
+	\logo{\includegraphics[scale=.1]{figuras/logo-USAT.png}}
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\title[Capítulo 01]{Econometría Básica}
+	\subtitle{Capítulo 01: Economía y Métricas}
+	\author[José Valderrama \& Freddy Rojas]{José Valderrama \& Freddy Rojas \\
+	\texttt{jtvalderrama@gmail.com \& frojasca@gmail.com} \faIcon{envelope} \\
+		Universidad Católica Santo Toribio de Mogrovejo}
+	\date[Septiembre de 2021]{Septiembre de 2021}
+	
+%------------------------------------------------------------------------------------
+% Open
+%---------
+\begin{document}
+	\rmfamily
+		\begin{frame}
+			\maketitle
+		\end{frame}
+%------------------------------------------------------------------------------------
+% Before all
+%-----------
+	\begin{frame}
+		\centering
+		\vspace{2cm}
+			\emph{\textit {``Ni teoría sin medida, ni medida sin teoría''.}} \\
+		\vspace{2cm}
+		\flushright
+			Ragnar Frish en 1933. \\
+			Primer numero de ECONOMETRICA.
+	\end{frame}
+%------------------------------------------------------------------------------------
+% Sections
+%---------
+	\begin{frame}{Contenido}
+		\tableofcontents
+	\end{frame}
+
+%1) ¿Qué es econometría? ---------------------------
+	\include{secciones/sec_1}
+%2) Pasos en la análisis económico empírico --------
+	\include{secciones/sec_2}
+%3) La estructura de los datos económicos ----------
+	\include{secciones/sec_3}
+%4) La causalidad y la noción de ceteris 
+%	paribus en el análisis econométrico ------------
+	\include{secciones/sec_4}
+
+%------------------------------------------------------------------------------------
+% End
+%----
+	\begin{frame}
+		\maketitle
+	\end{frame}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

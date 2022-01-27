@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Distribuciones muestrales de los estimadores MCO}{3}{0}{1}
+\beamer@sectionintoc {2}{Prueba de hipótesis sobre un solo parámetro de población: la prueba t}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{t-student}{10}{0}{2}
+\beamer@subsectionintoc {2}{2}{P-Value}{20}{0}{2}
+\beamer@sectionintoc {3}{Intervalos de confianza}{22}{0}{3}
+\beamer@sectionintoc {4}{Prueba de hipótesis sobre una combinación lineal simple de parámetros}{26}{0}{4}
+\beamer@sectionintoc {5}{Prueba de restricciones lineales múltiples: la prueba F}{34}{0}{5}
+\beamer@subsectionintoc {5}{1}{Prueba F}{35}{0}{5}
+\beamer@subsectionintoc {5}{2}{P-value}{45}{0}{5}
+\beamer@sectionintoc {6}{Informe de resultados de regresión}{47}{0}{6}

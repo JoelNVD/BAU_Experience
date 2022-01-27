@@ -1,0 +1,88 @@
+%====================================================================================
+\section[La muestra]{Correcciones de selección de muestra}
+%====================================================================================
+
+\begin{frame}{Inferencia}
+	En todos los modelos mostrados anteriormente se describe explícitamente la función de log-likelihood. Bajo condiciones regulares el MLE es consistente y asintóticamente normal. La matriz de varianzas y covarianzas puede ser estimada calculando la inversa de la matriz de información:
+		$$I(\beta)^{-1}=-E\Big[\frac{\partial^2 L(\boldsymbol{\beta})}{\partial \boldsymbol{\beta} \partial \boldsymbol{\beta}}\Big]$$
+	Alternativamente,
+		$$\frac{\partial L(\boldsymbol{\beta})}{\partial \boldsymbol{\beta}} \frac{\partial L(\boldsymbol{\beta})}{\partial \boldsymbol{\beta'}}$$
+	Hay que recordar que en ambos casos se asume que el modelo está especificado correctamente. Si lo anterior no es el caso, un estimador asintótico de la matriz de varianza y covarianzas es requerido.
+\end{frame}
+%---------------------------------------------------
+\begin{frame}
+	\begin{itemize}
+		\item El modelo de datos truncados es un buen ejemplo de la selección no aleatoria de la muestra.
+		\item Sin embargo, el dise\~no de investigación puede incluir una muestra (representativa) de la población, y a\'{u}n tienes acceso o disponibilidad de una sub-muestra \textendash los entrevistados rehusan responder al ``survey'' por ejemplo.
+		\item Cuando lo anterior ocurre, la pregunta inmediata es: ?`cómo esto afecta a mis estimadores en t\'{e}rminos de eficiencia y sesgo?
+	\end{itemize}
+	Vamos el caso de ``incidental truncation''. Antes revisaremos la implicancia en cuestión de sesgo y consistencia.
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{?`Cuando OLS en la muestra es consistente?}
+%------------------------------------------------------------------------------------
+\begin{frame}
+	\begin{itemize}
+		\item consideremos el siguiente modelo:
+			\begin{align}
+				y&=\beta_0+\beta_1x_1+\dots+\beta_kx_k+u, \ \ E(u|x_1,x_2,\dots,x_k)=0\\
+			\intertext{re-escribiendo el modelo anterior;}
+				y&=\boldsymbol{x_i\beta}+u
+			\intertext{Tengamos el siguiente indicador $S$ que toma el valor 1 si se observa la dupla ${y_i,x_i}$ y cero de otra manera.}
+				s_iy_i&=s_i\boldsymbol{x_i\beta_i}+s_iu
+			\end{align}
+			Consistencia se consigue si el termino del error tiene esperanza cero y es no está correlacionado con las x's.
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}
+		\begin{align}
+			E[(sx_j)(su)]\equiv E[sx_ju]=0
+		\end{align}
+	Una condición clave para el insesgamiento (lo cual no es requerido para consistencia) es $E(su|x)=0$. Si la selección de la muestra es completamente aleatoria entonces i.e. $x$ y $s$ son independientes \textendash $E(sx_ju)\equiv E(s)E(x_ju)=0$. En otras palabras, si los datos se excluye de manera aleatoria, OLS es consistente e insesgado.
+\end{frame}
+%---------------------------------------------------
+\begin{frame}
+	\begin{itemize}
+		\item En general, si $s$ depende de variables explicativas y t\'{e}rminos aleatorios adicionales que son independientes de $x$ y $u$, OLS es consistente e insesgado. 
+		\item Por ejemplo, IQ es una variable explicativa en un modelo de horas de trabajo / salario. Pero la información de IQ es limitada; $s=1$ si IQ$\ge\nu$ y s=0 si IQ$<\nu$. El parámetro $\nu$ no es fijo y es una variable no observada que es independiente de IQ, $u$ y de otras variables explicativas. Asi s es una variable aleatoria (sin patrón definido) como por ejemplo una bernoulli.
+		\item En t\'{e}rminos de eficiencia, si $s$ es independiente de $u$, entonces $E(u|x,s)=E(u|x)$. Así entonces, si se a\~nade la hipótesis de homocedasticidad $E(u^2|x,s)=E(u^2)=\sigma^2$. Luego los errores estándar son válidos. 
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{?`Cuando OLS en una muestra es inconsistente?} 
+%------------------------------------------------------------------------------------
+\begin{frame}
+	?`Cuando OLS en la muestra es inconsistente?
+	\begin{itemize}
+		\item En un modelo de truncamiento, se observa que $s=1$ si $y_i\le c_i$ donde $c_i$ es el threshold que define el truncamiento. 
+		\item Equivalentemente $s_i=1$ si $u_i\le c_i-x_i\beta$. Porque $s_i$ depende directamente de $u_i$, entonces $s_i$ y $u_i$ están correlacionados. Esta es la razón por la cual OLS sobre una muestra seleccionada no entrega estimadores de $\beta$ consistentes.
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{Incidental truncation} 
+%------------------------------------------------------------------------------------
+\begin{frame}{Incidental truncation}
+	A veces la regla que hace visualizar el resultado $y$ no es exógena. Por ejemplo, en el caso del salario (por hora), las personas fuera de la fuerza laboral no hacen visible un salario. Así el truncamiento de la variable de salario es ``incidental'' por que esta depende de otra variable relacionada a la participación laboral. Otras variables pueden ser observadas como educación, experiencia, g\'{e}nero, estado marital y demás. \\
+	El modelo que puede lidiar con el ``incidental truncation'' tiene la siguiente forma:
+		\begin{align}
+			y=&\boldsymbol{x\beta}+u, \ E(u | x,z)=0 \\
+			s=&1[\boldsymbol{z\gamma}+\nu\ge 0]
+		\end{align}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Incidental truncation}
+	El modelo a estimar es:
+		\begin{align}
+			E(y|z,s=1)=&\boldsymbol{x\beta}+\rho\lambda(\boldsymbol{z\gamma}) \\
+			P(s=1|\boldsymbol{z})=&\Phi (\boldsymbol{z\gamma})
+		\end{align}
+	Es decir, se estima primero $\boldsymbol{\gamma}$ con un probit ($s$ sobre $\boldsymbol{z}$ utilizando la muestra completa. Luego, podemos estimar $\boldsymbol{\beta}$. Pregunta de examen: ?`cómo se llama el procedimiento de identificación: Los dos pasos de Heckman (o Heckit). 
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Incidental truncation}
+	Utilicemos la base de datos ``mroz.dta'' en la estimación de un Heckit.
+\end{frame}

@@ -1,0 +1,95 @@
+%====================================================================================
+\section{Prueba de hipótesis sobre una combinación lineal simple de parámetros}
+%====================================================================================
+
+\begin{frame}{Medidas de Ajuste}
+	Surgen algunas preguntas sobre el rendimiento del modelo.
+		\begin{itemize}
+			\item ¿Qué tan bien esa línea de regresión describe los datos?
+			\item ¿Los regresores explican mucha o poca variación en la variable dependiente?
+			\item ¿Están las observaciones dispersas o lejos de la línea de regresión?
+		\end{itemize}
+	El $R^2$ y el error estándar de la regresión miden qué tan bien la línea de regresión MCO $\ldots$ coincide con los datos. Estudiante: ¿Qué es el $R^2$?
+		\begin{itemize}
+			\item el $R^2$ mide la fracción de la varianza de $y$ que se explica por los regresores
+			\item $0 < R^2 <1$
+		\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Medidas de Ajuste}
+	Consideremos el siguiente modelo
+		$$Y_i = \widehat{Y}_i + \widehat{u}_i$$
+	reexpresamos arriba en términos de varianza
+		$$Var(Y_i) = Var	(\widehat{Y_i}) + Var(\widehat{u}_i)$$
+	equivalentemente
+		$$\frac{Var(\widehat{Y_i})}{Var(Y_i)} + \frac{Var(\widehat{u})}{Var(Y_i)} = 1$$
+	o
+		$$\frac{Var(\widehat{Y_i})}{Var(Y_i)} = 1 - \frac{Var(\widehat{u}_i)}{Var(Y_i)}$$
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Medidas de Ajuste}
+	Por lo tanto
+		$$R^{2} = \frac{Var(\widehat{u}_i)}{Var(Y_i)} = 1 - \frac{SCR}{SCT}$$
+	Ahora, necestimos definir la \textbf{Suma Cuadrado de la Regresión} (SCR) y \textbf{Suma Cuadrada del Total} (SCT).
+		\begin{gather}
+			SCT = \sum_{i=1}^{n}(Y_I-\overline{Y}_i)^2 \tag{SCT}\\
+			SCR = \sum_{i^1}^{n}\widehat{\mu}_i^{2} \tag{SCR}
+		\end{gather}
+	Por lo tanto, si la varianza del error es igual a la varianza de $Y$, eso significa que nuestro modelo no tiene poder de predicción. Eso implica $R^{2} = 0$. Si nuestro modelo puede explicar la mayoría de los cambios de $y$, entonces $R^{2} \rightarrow 1$
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Medidas de Ajuste: Ejemplo I}
+	\begin{enumerate}
+		\item En el ejemplo relativo a la estimación de una función de producción para Perú.
+			$$Q=e^{\alpha_{0}}K^{\alpha_{k}}L^{\alpha_{l}}$$
+		el $R ^ 2 = 0,80$. Eso significa que el 80\% de los cambios en la producción se deben a cambios en el capital y el trabajo.
+		\item Tenemos los siguientes datos $y = [40\enskip 55\enskip 25\enskip 5\enskip 10]'$. Su querido profesor quiere que estimen el siguiente modelo $y_t = \beta_0+ u_t$ utilizando el estimador MCO. Específicamente;
+			\begin{itemize}
+				\item ¿Cuál es la estimación de $ \beta_0$
+				\item ¿Cuál es el $R^2$?
+			\end{itemize}
+	\end{enumerate}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Medidas de Ajuste: Ejemplo II}
+	\begin{enumerate}
+		\item De las cuentas nacionales, tenemos la siguiente identidad $Y = C + I + G + XM$. Un estudiante que reprobó la econometría propuso el siguiente modelo para evaluar el impacto del consumo en el PIB ($Y$)
+			$$Y_t = \beta_0+\beta_1C_t+\ldots +\beta_5M_t+u_t$$
+			\begin{itemize}
+				\item ¿Cuál es la media de $\widehat{u}^2$?
+				\item ¿Cuál es el $R^2$?
+			\end{itemize}
+		\item el siguiente modelos
+			\begin{align*}
+				M_1 & : Y_i = \beta_0 + \beta_1X_{1i} + u_i\\
+				M_2 & : Y_i = \gamma_0 + \gamma_1X_{1i} + \gamma_2X_{2i} + u_i
+			\end{align*}
+			El $R^2$ de $M_1$ y $M_2$ son 0.701 y 0.80 respectivamente.\\
+			¿Qué modelo es mejor?
+	\end{enumerate}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Una advertencia sobre R2}
+	\begin{enumerate}
+		\item El $R ^ 2$ aumenta cuando se agrega una nueva variable, por lo tanto, un aumento en el $R ^ 2$ no significa que agregar una nueva variable realmente mejora el ajuste del modelo.
+		\item De hecho, aunque la nueva variable no es significativa, $R ^ 2$ aumenta.
+		\item Un mal investigador puede inflar el ajuste del modelo agregando variables irrelevantes al modelo empírico.
+		\item $R ^ 2$ es útil para mostrar el poder de explicación de su modelo, pero no para comparar.
+	\end{enumerate}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Una alternativa: R2 ajustado o R2 adj}
+	Tenemos una alternativa: el $R^2$ ajustado
+		$$R^2 = 1 \frac{N - 1}{N - k} \frac{SCR}{SCT}$$
+	Algunas observaciones sobre esta medida de ajuste o ajuste
+		\begin{enumerate}
+			\item El $R^2$-ajustado siempre es más bajo que $R^2$
+			\item Agregar un regresor tiene dos efectos opuestos en $R^2$-ajustado
+			\item El $R^2$-ajustado puede ser negativo
+		\end{enumerate}
+	Una advertencia con respecto a esta medida de ajuste.
+		\begin{enumerate}
+			\item La medida de $R^2$-ajustado aumenta (disminuye) cuando el cuadrado del valor $t$ realmente calculado, relacionado con la variable nueva o adicional, es mayor (menor) que uno.
+			\item Al final, $R^2$-ajustado también es útil para mostrar el poder de explicación de su modelo y eso tiene cierto poder de comparación, pero también es débil.
+		\end{enumerate}
+\end{frame}

@@ -1,0 +1,11 @@
+%===============================================================================
+\section{Regresión por el origen y Regresión sobre una constante}
+%===============================================================================
+\begin{frame}{Caso particular: Modelo ingenuo}
+	Función a minimizar
+	$$g(\alpha)=\sum_{i=1}^n \varepsilon _i ^2= \sum_{i=1}^n (Y_i-\alpha)^2$$
+	CPO:
+	$$\frac{\partial g(\alpha)}{\partial \alpha}=\sum_{i=1}^n \frac{\partial \varepsilon _i ^2}{\partial \alpha}=\sum_{i=1}^n \frac{\partial \varepsilon _i ^2}{\partial \varepsilon_i} \frac{\partial \varepsilon_i}{\partial \alpha}=0$$
+	C2O:
+	$$\frac{\partial^2 g(\alpha)}{\partial^2 \alpha}>0$$
+\end{frame}

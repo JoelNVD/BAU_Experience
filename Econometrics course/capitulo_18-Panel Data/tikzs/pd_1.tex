@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+	\begin{axis}[samples=100,
+				 xmin = 0, xmax = 8,
+				 ymin = 0, ymax = 10,
+				 axis lines* = left,
+				 xtick = \empty, ytick = \empty,
+				 clip = false,
+				 xmajorgrids=true, ymajorgrids=true]
+		
+		% Lines
+		\addplot [ ] coordinates {(0, 2) (6, 4)};
+		\addplot [ ] coordinates {(0, 4) (7, 6.33)};
+		\addplot [ ] coordinates {(0, 6) (8, 8.67)};
+		\addplot [ ] coordinates {(2, 0) (5, 10)};
+		
+		% Points
+		\addplot[smooth,thick,mark=x] coordinates {(3.51, 2.56)};
+		\addplot[smooth,thick,mark=x] coordinates {(3.58,3.54)};
+		\addplot[smooth,thick,mark=x] coordinates {(2.17,3.14)};
+		\addplot[smooth,thick,mark=x] coordinates {(2.66,3.95)};
+		\addplot[smooth,thick,mark=x] coordinates {(2.71,4.58)};
+		\addplot[smooth,thick,mark=x] coordinates {(3.84,4.21)};
+		\addplot[smooth,thick,mark=x] coordinates {(4.51,4.56)};
+		\addplot[smooth,thick,mark=x] coordinates {(3.84,4.95)};
+		\addplot[smooth,thick,mark=x] coordinates {(4.58,5.37)};
+		\addplot[smooth,thick,mark=x] coordinates {(4,6)};
+		\addplot[smooth,thick,mark=x] coordinates {(4.41,7.02)};
+		\addplot[smooth,thick,mark=x] coordinates {(1.59,4.95)};
+		\addplot[smooth,thick,mark=x] coordinates {(2.36,5.23)};
+		\addplot[smooth,thick,mark=x] coordinates {(3.04,5.84)};
+		\addplot[smooth,thick,mark=x] coordinates {(2.64,6.15)};
+		\addplot[smooth,thick,mark=x] coordinates {(3.33,6.79)};
+		
+		% Labels
+		\node [left]  at (0, 20)  {alfa 1};
+		\node [left]  at (0, 40)  {alfa 2};
+		\node [left]  at (0, 60)  {alfa 3};
+		\node [right] at (500,100)  {OLS};
+		
+	\end{axis}
+\end{tikzpicture}

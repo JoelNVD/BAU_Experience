@@ -1,0 +1,87 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass{beamer}
+
+% Essential Packages
+\input{packages/packs}	
+
+% Apartado de configuración del Beamer
+\mode<presentation> {
+	\usetheme{Frankfurt}
+	\setbeamercolor{item projected}{fg=white,bg=red}
+	\setbeamertemplate{footline}[frame number]
+	\usefonttheme[onlylarge]{structuresmallcapsserif}
+	\usefonttheme[onlysmall]{structurebold}
+	\usecolortheme{beaver}
+	\setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+}
+
+	% Apartado transparencia de contenido
+	\AtBeginSection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	\AtBeginSubsection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	
+	\beamerdefaultoverlayspecification{<+->}
+	
+	% Apartado de logo
+	\logo{\includegraphics[scale=.05]{figuras/logo-USAT.png}}
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+
+\title[Capítulo 00]{Econometría Básica}
+
+\subtitle{Capítulo 00: Probabilidades y Estadística}
+
+\author[José V. \& Freddy R.]{José Valderrama \& Freddy Rojas \\
+	\texttt{jtvalderrama@gmail.com \& frojasca@gmail.com} \\
+	Universidad Católica Santo Toribio de Mogrovejo}
+
+\date[Septiembre de 2021]{Septiembre de 2021}
+
+\setbeamercovered{transparent}
+
+%------------------------------------------------------------------------------------
+% Title
+%---------
+\begin{document}
+	\rmfamily
+		\begin{frame}
+			\maketitle
+		\end{frame}
+
+%------------------------------------------------------------------------------------
+% Sections
+%---------
+	\begin{frame}{Contenido}
+		\tableofcontents
+	\end{frame}
+
+%1) Revisión de Probabilidades ---------------------
+	\include{secciones/sec_1}
+%2) Revisión de Estadística ------------------------
+	\include{secciones/sec_2}
+
+%------------------------------------------------------------------------------------
+% End
+%----
+	\begin{frame}
+		\maketitle
+	\end{frame}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================

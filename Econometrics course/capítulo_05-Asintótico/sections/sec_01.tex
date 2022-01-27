@@ -1,0 +1,15 @@
+%====================================================================================
+\section{Consistencia}
+%====================================================================================
+
+%------------------------------------------------------------------------------------
+\subsection{Supuesto para la inferencia}
+%------------------------------------------------------------------------------------
+\begin{frame}{Supuesto para la inferencia}
+	\begin{itemize}
+		\item \textcolor{blue}{Suposición RLM6:} Normalidad. Con el fin de probar hipótesis se necesita agregar un supuesto adicional a los cinco supuestos ya vistos: $u \thicksim N(o,\sigma^2)$ El error poblacional se distribuye como una normal con media cero y varianza $\sigma^2$
+		\item Lo anterior implica que $y/x \thicksim N(\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+...+\beta_{k}x_{k},\sigma^2)$
+		\item También $\hat{\beta_{j}}=N(\beta_{j},Var(\hat{\beta_{j}}))$, por lo que estandarizando se tiene:
+		\item $\frac{\hat{\beta_{j}}-\beta_{j}}{Es(\hat{\beta_{j}})} \thicksim N(0,1)$
+	\end{itemize}
+\end{frame}

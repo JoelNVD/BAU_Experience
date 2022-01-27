@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
+\beamer@sectionintoc {2}{Motivación}{5}{0}{2}
+\beamer@sectionintoc {3}{Definición}{10}{0}{3}
+\beamer@subsectionintoc {3}{1}{Origen de la endogeneidad}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Variable instrumental}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{Ejemplo}{18}{0}{3}
+\beamer@sectionintoc {4}{Estimación}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{Modelo simple}{21}{0}{4}
+\beamer@subsectionintoc {4}{2}{Modelo multivariado (m=k)}{24}{0}{4}
+\beamer@subsectionintoc {4}{3}{Modelo multivariado (m>k)}{26}{0}{4}
+\beamer@subsectionintoc {4}{4}{Aplicación matemática}{28}{0}{4}
+\beamer@sectionintoc {5}{Referencia}{31}{0}{5}

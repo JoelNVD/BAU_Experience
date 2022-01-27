@@ -1,0 +1,18 @@
+%====================================================================================
+\section{Test de significancia}
+%====================================================================================
+
+\begin{frame}[fragile]{Prueba F}
+	La sintaxis de los comandos en Stata, describen las reglas del lenguaje de programación en Stata para regresiones. El comando \colorbox{codegray}{\textcolor{codeblue}{\texttt{test}}} prueba las hipotesis lineales después de la estimación.
+	\begin{gather}
+		\cdot\, \textup{\texttt{\underline{te}st} \textcolor{blue}{\texttt{\textit{coeflist}}}} \tag{Sintaxis 1} \\
+		\cdot\, \textup{\texttt{\underline{te}st} \textcolor{blue}{\texttt{\textit{exp}}}=\textcolor{blue}{\texttt{\textit{exp}}}} [= . . .] \tag{Sintaxis 2}
+	\end{gather}
+	
+		\begin{lstlisting}[language=Stata, numbers=none]
+							   test poverty
+							   test poverty = 0
+							   test single
+		\end{lstlisting}
+
+\end{frame}

@@ -1,0 +1,15 @@
+\frametitle{Ejemplo}
+Por favor, usando STATA ,descargue el conjunto de datos de crecimiento del sitio web de recursos de SW y realice una regresión basada en el siguiente modelo
+		\begin{align*}
+			Growth_i  = & \enskip  \beta_0 + \beta_1Tradeshare_i + \beta_2YearSchool_i\\
+			& + \beta_3rev\_coups_i + \beta_4Assasinations_i \\
+			& + \beta_5rgdp60_i
+		\end{align*}
+	La líneas de código son\\
+		\begin{Stata code}{STATA code}
+			{\tiny
+				\texttt{\textcolor{codeblue}{use} \textcolor{codecrimson}{\textquotedblleft http://wps.aw.com/wps/media/objects/11422/11696965/empirical/empex\_tb/Growth.dta\textquotedblright}, clear}\\
+				\texttt{\textcolor{codeblue}{browse}}\\
+				\texttt{\textcolor{codeblue}{describe}}\\
+				\texttt{\textcolor{codeblue}{reg} growth tradeShare yearsSchool rev\_coups assasinations rgdp60}}
+		\end{Stata code}

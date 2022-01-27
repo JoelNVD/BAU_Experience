@@ -1,0 +1,116 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/01-jordan_example-2022-01-18_1.log
+  log type:  text
+ opened on:  18 Jan 2022, 15:26:08
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Introduction
+. ********************************************************************************
+. 
+.         *--------------------------------------------------
+.     * 2.1 Using website database
+.     *--------------------------------------------------
+.                 use "${rawdata_1_1}/jorda_database_old.dta", clear
+
+. 
+.                 describe
+
+Contains data from C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\B_RawData/01-example/jorda_database_old.dta
+ Observations:           397                  
+    Variables:            19                  10 Dec 2021 18:18
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+date            str10   %10s                  fed string date
+daten           float   %tdCCYYMon            numeric (daily) date
+gs3m            double  %10.0g                3-Month Treasury Constant Maturity Rate
+gs1             double  %10.0g                1-Year Treasury Constant Maturity Rate
+gs2             double  %10.0g                2-Year Treasury Constant Maturity Rate
+gs3             double  %10.0g                3-Year Treasury Constant Maturity Rate
+gs5             double  %10.0g                5-Year Treasury Constant Maturity Rate
+gs10            double  %10.0g                10-Year Treasury Constant Maturity Rate
+gs20            double  %10.0g                20-Year Treasury Constant Maturity Rate
+gs30            double  %10.0g                30-Year Treasury Constant Maturity Rate
+fii10           double  %10.0g                10-Year Treasury Inflation-Indexed Security, Constant Maturity
+fedfunds        double  %10.0g                Effective Federal Funds Rate
+med1            double  %10.0g                1-Month Eurodollar Deposit Rate (London)
+aaa             double  %10.0g                Moody's Seasoned Aaa Corporate Bond Yield©
+baa             double  %10.0g                Moody's Seasoned Baa Corporate Bond Yield©
+year            float   %9.0g                 Year
+time            float   %9.0g                 Minths since January 1982
+dgs1            float   %9.0g                 Change in 1-Year Treasury Rate
+dgs10           float   %9.0g                 Change in 10-Year Treasury Rate
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: time
+
+.                 summarize
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+        date |          0
+       daten |        397     14061.8    3492.666       8036      20089
+        gs3m |        397    4.320982    3.116862        .01      14.28
+         gs1 |        397    4.691209    3.283398         .1      14.73
+         gs2 |        397    5.071889    3.351368        .21      14.82
+-------------+---------------------------------------------------------
+         gs3 |        397    5.296851    3.297421        .33      14.73
+         gs5 |        397     5.67937    3.145828        .62      14.65
+        gs10 |        397     6.18602    2.878117       1.53      14.59
+        gs20 |        316     6.22307    2.816651        2.2      14.57
+        gs30 |        350      6.8232    2.668733       2.46      14.22
+-------------+---------------------------------------------------------
+       fii10 |        145    1.282276    .9435819       -.77       2.89
+    fedfunds |        397     4.58063    3.306386        .07      14.94
+        med1 |        397    4.732897    3.304248        .17      15.52
+         aaa |        397    7.443023    2.521626        3.4      15.27
+         baa |        397    8.507204    2.709075       4.45      17.18
+-------------+---------------------------------------------------------
+        year |        397    1998.043    9.560054       1982       2015
+        time |        397         199    114.7483          1        397
+        dgs1 |        396   -.0356566    .2876114      -1.81        .76
+       dgs10 |        396    -.032096    .2740154      -1.43        .78
+
+. 
+.         *--------------------------------------------------
+.     * 2.2 Choose impulse response horizon
+.     *--------------------------------------------------
+.                 local hmax = 12
+
+. 
+.         *--------------------------------------------------
+.     * 2.3 Generate LHS variables for the LPs
+.     *--------------------------------------------------
+.                 qui forvalues h = 0/`hmax' {
+
+. 
+.                 save "${data_1_1}/jorda_database_new.dta", replace
+file C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\A_Data/01-example/jorda_database_new.dta saved
+
+. 
+.         *--------------------------------------------------
+.     * 2.5 Run the LPs 
+.     *--------------------------------------------------
+.         use "${data_1_1}/jorda_database_new.dta", clear
+
+. 
+.                 qui foreach x in "gs1"{
+
+. 
+. ********************************************************************************
+. *** PART 3: Closing log file
+. ********************************************************************************
+.     log close
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/01-jordan_example-2022-01-18_1.log
+  log type:  text
+ closed on:  18 Jan 2022, 15:26:12
+-------------------------------------------------------------------------------------------------------------------------------------------------------

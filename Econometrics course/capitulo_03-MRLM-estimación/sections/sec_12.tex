@@ -1,0 +1,193 @@
+%===============================================================================
+\section{Mecánica e interpretación de mínimos cuadrados ordinarios}
+%===============================================================================
+
+%-------------------------------------------------------------------------------
+\subsection{Obtención de las estimaciones de MCO}
+%-------------------------------------------------------------------------------
+%---------------------------------------------------
+\begin{frame}{Estimación (1)}
+	Es la generalización del modelo de regresión simple:
+	$$y=\beta_{0}+\beta_{1}x_1+\beta_{2}x_2+...+\beta_{k}x_k+u$$
+	Donde:
+	\begin{itemize}
+		\item $y=X\widehat{\beta}+e$
+		\item $\sum e_i^2=e'e$
+		\item El criterio de optimización es el mismo sólo que ahora se tienen $k+1$ condiciones de primer orden:
+		\bigskip
+		\begin{itemize}
+			\item $\sum e_i=e'1=0$
+			\item $\sum e_i x_{1i}=e'x_1=0$
+			\item $\sum e_i x_{2i}=e'x_2=0$, etc
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Estimación (2)}
+	Las $k+1$ ecuaciones pueden expresarse matricialmente de la siguiente forma:
+	\begin{align*}
+		e'X & = [0, 0, \ldots ,0] \\
+		X'e & = [0, 0, \ldots ,0]' \\ 
+		X'(y-X\widehat{\beta}) &= [0,0,...,0]' \\
+		\widehat{\beta}&= (X'X)^{-1}X'y  \\
+	\end{align*}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Estimación (3)}
+	Alternativamente, cómo el objetivo es minimizar $\sum e_i^2=e'e=$
+	\begin{align*}
+		(y-X\beta)'(y-X\beta) & = y'y-y'X\beta-\beta'x'y+\beta'X'X\beta \\
+		& = y'y-2y'X\beta+\beta'X'X\beta
+	\end{align*}
+	Condiciones de optimización:
+	\bigskip
+	\begin{description}
+		\item[CPO:] $\frac{\partial e'e}{\partial\widehat{\beta}}=0-2X'y+2X'X\widehat{\beta}=0$
+		\item[CSO:] $\frac{\partial^2 e'e}{\partial\widehat{\beta}^2}=2X'X$, (Definida positiva)
+	\end{description}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Interpretación de la ecuación de regresión de MCO}
+%-------------------------------------------------------------------------------
+\begin{frame}{Interpretación}
+	\begin{itemize}
+		\item $\hat{y}=\hat{\beta_{0}}+\hat\beta_{1}x_{1}+\hat\beta_{2}x_{2}+...+\hat\beta_{k}x_{k}$\\
+		Tomando el operador diferencial:
+		\item $\Delta\hat{y}=\hat\beta_{1}\Delta x_{1}+\hat\beta_{2}\Delta x_{2}+...+\hat\beta_{k}\Delta x_{k}$ \\
+		Así, manteniendo fijos $x_{2},...,x_{k}$, entonces
+		\item $\Delta\hat{y}=\hat{\beta_{1}}\Delta x_{1}$\\
+		Interpretar
+		\bigskip
+		\begin{enumerate}
+			\item $Ln(y)=\hat\beta_{0}+\hat\beta_{1} Ln(x_{1})$
+			\item $Ln(y)=\hat\beta_{0}+\hat\beta_{1} x_{1}$
+			\item $y=\hat{\beta_{0}}+\hat\beta_{1} Ln(x_{1})$
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Sobre el significado de "mantener otros factores fijos" en regresión múltiple}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+\subsection{Cambiar más de una variable independiente simultáneamente}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+\subsection{Valores ajustados y residuales de MCO}
+%-------------------------------------------------------------------------------
+\begin{frame}{Valor ajustado o predicho}
+	La línea de regresión poblacional es la relación que se mantiene entre $y$ y $x$ en promedio en la población.
+	$$E(y|x_{1}, x_{2}) = \beta_{0}+\beta_{1}x_1+\beta_{2}x_2$$
+	Los valores predichos $\widehat{y}$ y residuales $\widehat{uº}$ por MCO son
+	\begin{align*}
+		\hat{u} & = y - \hat{y}\\
+		& \equiv y - (\hat{\beta}_{0}+\hat{\beta}_{1}x_{1}+\hat{\beta}_{2}x_{2})
+	\end{align*}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Una interpretación "parcializada" de la regresión múltiple}
+%-------------------------------------------------------------------------------
+\begin{frame}{Recordando}
+	\begin{enumerate}
+		\item Si $y=\hat\beta_0+\hat\beta_1 x_1+\hat u=\hat y+\hat u$
+		\begin{itemize}
+			\item CPO:
+			\item $\sum \hat u=0$
+			\item $\sum \hat u x_1=0$
+		\end{itemize}
+		\item Dos ecuaciones, dos incógnitas. Resolviendo (Probar):
+		\item $\hat{\beta}_1=\frac{\sum(x_i-\overline{x})(y_i-\overline y)}{\sum(x_i-\overline x)^2}=\frac{\sum(x_i-\overline x)y_i}{\sum(x_i-\overline x)^2}$
+	\end{enumerate}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Generalizando}
+	\begin{enumerate}
+		\item Si $y=\hat\beta_0+\hat\beta_1 x_1+\hat\beta_2 x_2+\hat v=\hat y+\hat v$
+		\begin{align}
+			\sum \hat v & = 0 \\
+			\sum \hat v x_1 & = 0 \\
+			\sum \hat v x_2 & = 0
+		\end{align}
+		\item Imagina que:
+		\begin{align}
+			x_1 = \gamma_0+\gamma_1 x_2+\hat e=\hat{x}_1+\hat e
+		\end{align}
+		entonces CPO:
+		\begin{itemize}
+			\item $\sum \hat e=0$
+			\item $\sum \hat e x_2=0$
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Estimación} De (2):
+	\begin{align}
+		\sum\hat v x_1 & = 0 \\
+		\sum\hat v (\gamma_0+\gamma_1 x_2+\hat e) & = 0 \\
+		\sum\hat v \hat e & = 0 \\
+		\sum (y-\hat\beta_0-\hat\beta_1 x_1-\hat\beta_2 x_2) \hat e & = 0\\
+		\hat{\beta}_1=\frac{\sum y \hat e}{\sum \hat{e}^2}
+	\end{align}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Comparación de estimaciones de regresión simple y múltiple}
+%-------------------------------------------------------------------------------
+\begin{frame}{Condiciones de primer orden}
+	$y_i=\widehat{\beta}_0+\widehat{\beta}_1 x_i+e_i$, resultado de
+	minimizar la función $\sum e_i^2$ se tiene que las CPO son: 
+		\begin{align*}
+			\frac{\partial\sum e_i^2}{\partial \widehat{\beta}_0} &= \sum(y_i-\beta_0-\widehat{\beta}_1 x_i)(-1)=0 \\
+			\frac{\partial\sum e_i^2}{\partial \widehat{\beta}_1} &= \sum(y_i-\widehat{\beta}_0-\beta_1 x_i)(-x_i)=0
+		\end{align*}
+	$(y-X\beta)'(y-X\beta)  = y'y-y'X\beta-\beta'x'y+\beta'X'X\beta= y'y-2y'X\beta+\beta'X'X\beta
+	Condiciones de optimización:$
+		\bigskip
+		\begin{description}
+			\item[CPO:] $\frac{\partial e'e}{\partial\widehat{\beta}}=0-2X'y+2X'X\widehat{\beta}=0$
+			\item[CSO:] $\frac{\partial^2 e'e}{\partial\widehat{\beta}^2}=2X'X$, (Definida positiva)
+		\end{description}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Bondad de ajuste}
+%-------------------------------------------------------------------------------
+\begin{frame}{Un paso más}
+	\begin{align}
+		Var(\beta_1|x) & = Var(\frac{\sum y \hat e}{\sum \hat{e}^2}|x) \\
+		& = \frac{\sum \hat{e}^2 Var (y|x)}{(\sum \hat e^2)^2} \\
+		& = \frac{\sigma^2}{\sum \hat{e}^2}
+	\end{align}
+	De la ecuación (4) se podría calcular el R cuadrado:\\
+	$R^2_1=1-SCR_1/SCT_1=1-\sum \hat{e}^2/\sum (x_1-\overline{x})^2$;entonces\\
+	$\sum \hat{e}^2=(1-R_1^2)\sum(x_1-\overline{x})^2$,
+	entonces:\\
+	\begin{align}
+		&= \frac{\sigma^2}{SCT_1(1-R_1^2)}
+	\end{align}
+\end{frame}	
+%---------------------------------------------------
+\begin{frame}[fragile]{Ejemplo}
+	Por favor, usando STATA ,descargue el conjunto de datos de crecimiento del sitio web de recursos de SW y realice una regresión basada en el siguiente modelo
+		\begin{align*}
+			Growth_i  = & \enskip  \beta_0 + \beta_1Tradeshare_i + \beta_2YearSchool_i\\
+			& + \beta_3rev\_coups_i + \beta_4Assasinations_i \\
+			& + \beta_5rgdp60_i
+		\end{align*}
+	La líneas de código son\\
+		\begin{Stata code}{STATA code}
+			{\tiny
+				\texttt{\textcolor{codeblue}{use} \textcolor{codecrimson}{\textquotedblleft http://wps.aw.com/wps/media/objects/11422/11696965/empirical/empex\_tb/Growth.dta\textquotedblright}, clear}\\
+				\texttt{\textcolor{codeblue}{browse}}\\
+				\texttt{\textcolor{codeblue}{describe}}\\
+				\texttt{\textcolor{codeblue}{reg} growth tradeShare yearsSchool rev\_coups assasinations rgdp60}}
+		\end{Stata code}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Regresión por el origen}
+%-------------------------------------------------------------------------------

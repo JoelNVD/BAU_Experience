@@ -1,0 +1,66 @@
+%====================================================================================
+\section{Eficiencia asintótica de MCO}
+%====================================================================================
+
+%------------------------------------------------------------------------------------
+\subsection{Estimador MCO}
+%------------------------------------------------------------------------------------
+\begin{frame}[fragile]{Estimador MCO}
+	Sea el modelo poblacional definido para el individuo $i$: 
+		$$y_i=x_i\beta+\mu_i$$
+	donde $i$ hace referencia a la unidad de análisis, $x_i$ es el vector:
+		$$x_i=(1, x_{i1},x_{i2}...,x_{ik})$$
+	y $\beta$ es un vector de parámetros de orden $(k+1)x1$, donde el supuesto MCO $E(\mu_i/x_i' )=0$, implica, por la LEI, que el $x_i$ es exógeno:
+		$$E(x_i'  \mu_i )=0$$
+\end{frame}
+
+\begin{frame}{Estimador MCO}
+	Es posible tener el vector de $\beta$ poblacionales a partir de este último supuesto, premultiplicando pirmero por $x_i'$:
+		$$x_i' y_i=x_i' x_i\beta+x_i'\mu_i$$
+	aplicando esperanza matemática:
+		$$E(x_i' y_i)=E(x_i' x_i)\beta+E(x_i'\mu_i)$$
+	usando la condición de exogeneidad $E(x_i'\mu_i)=0$:
+		$$\beta=E(x_i' x_i)^{-1}E(x_i' y_i)$$
+	Que son los $\beta$ poblacionales, que son identificados si es que la matriz $E(x_i' x_i)^{-1}$ existe.
+\end{frame}
+
+\begin{frame}{Introducción}
+	De acuerdo al método de los momentos la esperanza muestral es equivalente a su valor poblacional:
+		$$\hat\beta_{MCO}=\left[\frac{1}{n}\sum_{i=1}^n x_i' x_i\right]^{-1} \left[\frac{1}{n}\sum_{i=1}^n  x_i' y_i\right]$$
+	Que en forma compacta puede ser presentada matricialmente:
+		$$\hat\beta_{MCO}=(X'X)^{-1}(X'Y)$$
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{Distribución asintótica de MCO}
+%------------------------------------------------------------------------------------
+\begin{frame}{Distribución asintótica de MCO}
+	\begin{align*}
+		\widehat{\beta}_{MCO} & = \left[\sum_{i=1}^n x_i' x_i \right]^{-1}\sum_{i=1}^n x_i' y_i \\
+		y_i & = x_i\beta + \varepsilon \\
+		\widehat{\beta} & = \beta+\left[\sum_{i=1}^n x_i' x_i \right]^{-1}\sum_{i=1}^n x_i' \varepsilon_i \\
+		\sqrt{n}(\widehat{\beta} - \beta) &= \textcolor{blue}{\left[\sum_{i=1}^n x_i' x_i /n \right]^{-1}}  \textcolor{red}{\frac{1}{\sqrt{n}} \sum_{i=1}^n x_i' \varepsilon_i }
+	\end{align*}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Distribución asintótica de MCO}
+	\textcolor{blue}{Por LGN:} 
+		$$ \textcolor{blue}{\left[\sum_{i=1}^n x_i' x_i /n \right]^{-1} \xrightarrow{p}  E(x_i' x_i)^{-1} }$$
+	\medskip
+	\textcolor{red}{Por TCL:} 
+		$$ \textcolor{red}{\frac{1}{\sqrt{n}} \sum_{i=1}^n x_i' \varepsilon_i  \xrightarrow{d}  N(0,E[x_i' x_i \varepsilon_i^2]) }$$
+	\medskip
+	\textcolor{magenta}{Finalmente por Slutsky:}
+		$$ \textcolor{magenta}{\sqrt{n}(\widehat{\beta} - \beta)  \xrightarrow{d}  N(0,E[x_i' x_i]^{-1}E[x_i' x_i \varepsilon_i^2]E[x_i' x_i]^{-1}) }$$
+\end{frame}    
+%---------------------------------------------------
+\begin{frame}{Demostración TCL}
+		$$ \frac{1}{\sqrt{n}} \sum_{i=1}^n x_i' \varepsilon_i  = \sqrt{n} \sum_{i=1}^n \frac{x_i' \varepsilon_i}{n} $$
+	Si $\bar z_n=\sum_{i=1}^n \frac{x_i' \varepsilon_i}{n}$, se tiene que los supuestos del TCL serían:
+		\begin{gather*}
+			E(x_i'\varepsilon_i)=0\\
+			V(x_i'\varepsilon_i)=E(x_i' x_i \varepsilon_i^2)\\
+			\sqrt{n}(\bar z_n - 0) \xrightarrow{d} N(0,E(x_i' x_i \varepsilon_i^2))\\
+			\sqrt{n}\left(\sum_{i=1}^n \frac{x_i' \varepsilon_i}{n} \right) \xrightarrow{d} N(0,E(x_i' x_i \varepsilon_i^2))
+		\end{gather*}
+\end{frame}  

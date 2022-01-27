@@ -1,0 +1,2767 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.22)  24 SEP 2021 23:11
+entering extended mode
+**./cap_03.tex
+(cap_03.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> xparse <2020-03-03>
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
+Document Class: beamer 2021/03/19 v3.62 A class for typesetting presentations
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasemodes.s
+ty (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count179
+)
+\beamer@tempbox=\box47
+\beamer@tempcount=\count180
+\c@beamerpauses=\count181
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasedecode.
+sty
+\beamer@slideinframe=\count182
+\beamer@minimum=\count183
+\beamer@decode@box=\box48
+)
+\beamer@commentbox=\box49
+\beamer@modecount=\count184
+) (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\headdp=\dimen138
+\footheight=\dimen139
+\sidebarheight=\dimen140
+\beamer@tempdim=\dimen141
+\beamer@finalheight=\dimen142
+\beamer@animht=\dimen143
+\beamer@animdp=\dimen144
+\beamer@animwd=\dimen145
+\beamer@leftmargin=\dimen146
+\beamer@rightmargin=\dimen147
+\beamer@leftsidebar=\dimen148
+\beamer@rightsidebar=\dimen149
+\beamer@boxsize=\dimen150
+\beamer@vboxoffset=\dimen151
+\beamer@descdefault=\dimen152
+\beamer@descriptionwidth=\dimen153
+\beamer@lastskip=\skip47
+\beamer@areabox=\box50
+\beamer@animcurrent=\box51
+\beamer@animshowbox=\box52
+\beamer@sectionbox=\box53
+\beamer@logobox=\box54
+\beamer@linebox=\box55
+\beamer@sectioncount=\count185
+\beamer@subsubsectionmax=\count186
+\beamer@subsectionmax=\count187
+\beamer@sectionmax=\count188
+\beamer@totalheads=\count189
+\beamer@headcounter=\count190
+\beamer@partstartpage=\count191
+\beamer@sectionstartpage=\count192
+\beamer@subsectionstartpage=\count193
+\beamer@animationtempa=\count194
+\beamer@animationtempb=\count195
+\beamer@xpos=\count196
+\beamer@ypos=\count197
+\beamer@ypos@offset=\count198
+\beamer@showpartnumber=\count199
+\beamer@currentsubsection=\count266
+\beamer@coveringdepth=\count267
+\beamer@sectionadjust=\count268
+\beamer@tocsectionnumber=\count269
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseoptions
+.sty (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+))
+\beamer@paperwidth=\skip48
+\beamer@paperheight=\skip49
+ (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
+\Gm@dimlist=\toks16
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.s
+ty (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cf
+g
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.s
+ty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
+common.tex
+\pgfutil@everybye=\toks17
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
+common-lists.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
+latex.def
+\pgfutil@abb=\box56
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.c
+ode.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.
+code.tex
+\pgfkeys@pathtoks=\toks18
+\pgfkeys@temptoks=\toks19
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysf
+iltered.code.tex
+\pgfkeys@tmptoks=\toks20
+))
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count273
+\c@pgf@countb=\count274
+\c@pgf@countc=\count275
+\c@pgf@countd=\count276
+\t@pgf@toka=\toks21
+\t@pgf@tokb=\toks22
+\t@pgf@tokc=\toks23
+\pgf@sys@id@count=\count277
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cf
+g
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+-pdftex.def
+File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+-common-pdf.def
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+softpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count278
+\pgfsyssoftpath@bigbuffer@items=\count279
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+protocol.code.tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.
+tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.c
+ode.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.c
+ode.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser
+.code.tex
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count280
+\pgfmath@box=\box57
+\pgfmath@toks=\toks24
+\pgfmath@stack@operand=\toks25
+\pgfmath@stack@operation=\toks26
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.basic.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.trigonometric.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.random.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.comparison.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.base.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.round.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.misc.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.integerarithmetics.code.tex)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.
+code.tex
+\c@pgfmathroundto@lastzeros=\count281
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.t
+ex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+points.code.tex
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+pathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+pathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+scopes.code.tex
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count282
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+graphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen195
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+transformations.code.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+quick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+objects.code.tex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+pathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+arrows.code.tex
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen199
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+shade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count283
+\pgf@shadingcount=\count284
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+image.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+external.code.tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box61
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+layers.code.tex
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+transparency.code.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+patterns.code.tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+rdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\xxcolor.st
+y
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count285
+\XC@countmixins=\count286
+) (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+) (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2021-02-10 v7.00j Hypertext links for LaTeX
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
+sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.st
+y
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
+eys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.st
+y
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.
+sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen257
+\Hy@linkcounter=\count287
+\Hy@pagecounter=\count288
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2021-02-10 v7.00j Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref-langpa
+tches.def
+File: hyperref-langpatches.def 2021-02-10 v7.00j Hyperref: patches for babel la
+nguages
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count289
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2021-02-10 v7.00j Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4073.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
+Package hyperref Info: Option `implicit' set `false' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count290
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen258
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.
+sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count291
+\Field@Width=\dimen259
+\Fld@charsize=\dimen260
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+\Hy@abspage=\count292
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2021-02-10 v7.00j Hyperref driver for pdfTeX
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count293
+\c@bookmark@seq@number=\count294
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
+check.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqueco
+unter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaserequire
+s.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasecompati
+bility.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasefont.st
+y (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks27
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\sansmatha
+ccent.sty
+Package: sansmathaccent 2020/01/31
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.sty
+Package: scrlfile 2021/03/17 v3.33 KOMA-Script package (file load hooks)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-hoo
+k.sty
+Package: scrlfile-hook 2021/03/17 v3.33 KOMA-Script package (using LaTeX hooks)
+
+
+LaTeX3 Info: Defining command \BeforeFile with sig. 'm' on line 61.
+
+
+LaTeX3 Info: Defining command \AfterFile with sig. 'm' on line 65.
+
+
+LaTeX3 Info: Defining command \BeforeClass with sig. 'm' on line 69.
+
+
+LaTeX3 Info: Defining command \BeforePackage with sig. 'm' on line 73.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfClass with sig. 'smo+m' on line 83.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfPackage with sig. 'smo+m' on line
+(LaTeX3)     93.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterClass with sig. 'smo+m' on line
+(LaTeX3)     173.
+
+
+LaTeX3 Info: Defining command \AfterClass with sig. '' on line 174.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterPackage with sig. 'smo+m' on line
+(LaTeX3)     191.
+
+
+LaTeX3 Info: Defining command \AfterPackage with sig. '' on line 192.
+
+
+LaTeX3 Info: Defining command \ReplaceInput with sig. '' on line 193.
+
+
+LaTeX3 Info: Defining command \ReplaceClass with sig. 'mm' on line 196.
+
+
+LaTeX3 Info: Defining command \ReplacePackage with sig. 'mm' on line 199.
+
+
+LaTeX3 Info: Defining command \UnReplaceInput with sig. '' on line 200.
+
+
+LaTeX3 Info: Defining command \UnReplaceClass with sig. 'm' on line 203.
+
+
+LaTeX3 Info: Defining command \UnReplacePackage with sig. 'mm' on line 206.
+
+
+LaTeX3 Info: Defining command \PreventPackageFromLoading with sig. 's+om' on
+(LaTeX3)     line 234.
+
+
+LaTeX3 Info: Defining command \StorePreventPackageFromLoading with sig. 'm' on
+(LaTeX3)     line 242.
+
+
+LaTeX3 Info: Defining command \ResetPreventPackageFromLoading with sig. '' on
+(LaTeX3)     line 247.
+
+
+LaTeX3 Info: Defining command \UnPreventPackageFromLoading with sig. 'sm' on
+(LaTeX3)     line 261.
+
+
+LaTeX3 Info: Defining command \BeforeClosingMainAux with sig. 'om' on line
+(LaTeX3)     274.
+
+
+LaTeX3 Info: Defining command \AfterReadingMainAux with sig. 'om' on line 287.
+
+
+LaTeX3 Info: Defining command \protected@immediate@write with sig. 'm+m+m' on
+(LaTeX3)     line 298.
+
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2021/03/17 v3.33 KOMA-Script package (logo)
+)))))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetransla
+tor.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator.st
+y
+Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasemisc.st
+y)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetwoscre
+ens.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseoverlay
+.sty
+\beamer@argscount=\count295
+\beamer@lastskipcover=\skip50
+\beamer@trivlistdepth=\count296
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetitle.s
+ty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasesection
+.sty
+\c@lecture=\count297
+\c@part=\count298
+\c@section=\count299
+\c@subsection=\count300
+\c@subsubsection=\count301
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframe.s
+ty
+\beamer@framebox=\box62
+\beamer@frametitlebox=\box63
+\beamer@zoombox=\box64
+\beamer@zoomcount=\count302
+\beamer@zoomframecount=\count303
+\beamer@frametextheight=\dimen261
+\c@subsectionslide=\count304
+\beamer@frametopskip=\skip51
+\beamer@framebottomskip=\skip52
+\beamer@frametopskipautobreak=\skip53
+\beamer@framebottomskipautobreak=\skip54
+\beamer@envbody=\toks28
+\framewidth=\dimen262
+\c@framenumber=\count305
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseverbati
+m.sty
+\beamer@verbatimfileout=\write4
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframesi
+ze.sty
+\beamer@splitbox=\box65
+\beamer@autobreakcount=\count306
+\beamer@autobreaklastheight=\dimen263
+\beamer@frametitletoks=\toks29
+\beamer@framesubtitletoks=\toks30
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseframeco
+mponents.sty
+\beamer@footins=\box66
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasecolor.s
+ty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasenotes.s
+ty
+\beamer@frameboxcopy=\box67
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetoc.sty
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetemplat
+es.sty
+\beamer@sbttoks=\toks31
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseauxtemp
+lates.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseboxes.s
+ty
+\bmb@box=\box68
+\bmb@colorbox=\box69
+\bmb@boxwidth=\dimen264
+\bmb@boxheight=\dimen265
+\bmb@prevheight=\dimen266
+\bmb@temp=\dimen267
+\bmb@dima=\dimen268
+\bmb@dimb=\dimen269
+\bmb@prevheight=\dimen270
+)
+\beamer@blockheadheight=\dimen271
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaselocalst
+ructure.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\enumerate.st
+y
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks32
+)
+\beamer@bibiconwidth=\skip55
+\c@figure=\count307
+\c@table=\count308
+\abovecaptionskip=\skip56
+\belowcaptionskip=\skip57
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasenavigat
+ion.sty
+\beamer@section@min@dim=\dimen272
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetheorem
+s.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks33
+\ex@=\dimen273
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen274
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count309
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count310
+\leftroot@=\count311
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count312
+\DOTSCASE@=\count313
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box70
+\strutbox@=\box71
+\big@size=\dimen275
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count314
+\c@MaxMatrixCols=\count315
+\dotsspace@=\muskip17
+\c@parentequation=\count316
+\dspbrk@lvl=\count317
+\tag@help=\toks34
+\row@=\count318
+\column@=\count319
+\maxfields@=\count320
+\andhelp@=\toks35
+\eqnshift@=\dimen276
+\alignsep@=\dimen277
+\tagshift@=\dimen278
+\tagwidth@=\dimen279
+\totwidth@=\dimen280
+\lineht@=\dimen281
+\@envbody=\toks36
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks38
+\thm@bodyfont=\toks39
+\thm@headfont=\toks40
+\thm@notefont=\toks41
+\thm@headpunct=\toks42
+\thm@preskip=\skip61
+\thm@postskip=\skip62
+\thm@headsep=\skip63
+\dth@everypar=\toks43
+)
+\c@theorem=\count321
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasethemes.
+sty))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemedefaul
+t.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemede
+fault.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemed
+efault.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthemed
+efault.sty
+\beamer@dima=\dimen282
+\beamer@dimb=\dimen283
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthemed
+efault.sty))) (packages/packs.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen284
+\lightrulewidth=\dimen285
+\cmidrulewidth=\dimen286
+\belowrulesep=\dimen287
+\belowbottomsep=\dimen288
+\aboverulesep=\dimen289
+\abovetopsep=\dimen290
+\cmidrulesep=\dimen291
+\cmidrulekern=\dimen292
+\defaultaddspace=\dimen293
+\@cmidla=\count322
+\@cmidlb=\count323
+\@aboverulesep=\dimen294
+\@belowrulesep=\dimen295
+\@thisruleclass=\count324
+\@lastruleclass=\count325
+\@thisrulewidth=\dimen296
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.s
+ty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodules
+hapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box72
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulep
+lot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
+p-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen297
+\pgf@nodesepend=\dimen298
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
+p-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.st
+y
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.
+code.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.
+tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.c
+ode.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.
+tex)
+\pgffor@iter=\dimen299
+\pgffor@skip=\dimen300
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+\tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+ryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count326
+\pgfplotmarksize=\dimen301
+)
+\tikz@lastx=\dimen302
+\tikz@lasty=\dimen303
+\tikz@lastxsaved=\dimen304
+\tikz@lastysaved=\dimen305
+\tikz@lastmovetox=\dimen306
+\tikz@lastmovetoy=\dimen307
+\tikzleveldistance=\dimen308
+\tikzsiblingdistance=\dimen309
+\tikz@figbox=\box73
+\tikz@figbox@bg=\box74
+\tikz@tempbox=\box75
+\tikz@tempbox@bg=\box76
+\tikztreelevel=\count327
+\tikznumberofchildren=\count328
+\tikznumberofcurrentchild=\count329
+\tikz@fig@count=\count330
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulem
+atrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count331
+\pgfmatrixcurrentcolumn=\count332
+\pgf@matrix@numberofcolumns=\count333
+)
+\tikz@expandcount=\count334
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revi
+sion.tex)
+Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code
+.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.
+code.tex
+\t@pgfplots@toka=\toks46
+\t@pgfplots@tokb=\toks47
+\t@pgfplots@tokc=\toks48
+\pgfplots@tmpa=\dimen310
+\c@pgfplots@coordindex=\count335
+\c@pgfplots@scanlineindex=\count336
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotss
+ysgeneric.code.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplots
+library.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompati
+b\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+ryfpu.code.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+util.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsliststructure.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsliststructureext.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count337
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsmatrix.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfp
+lotstableshared.code.tex
+\c@pgfplotstable@counta=\count338
+\t@pgfplotstable@a=\toks49
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsdeque.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+binary.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+binary.data.code.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+util.verb.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibra
+rypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count339
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
+ypgfplots.surfshading.pgfsys-pdftex.def)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+colormap.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+color.code.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstack
+edplots.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsploth
+andlers.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshp
+lothandler.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshp
+lotimage.code.tex)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scal
+ing.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoord
+processing.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.erro
+rbars.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.mark
+ers.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks
+.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.path
+s.code.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduled
+ecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen311
+\pgfdecoratedremainingdistance=\dimen312
+\pgfdecoratedinputsegmentcompleteddistance=\dimen313
+\pgfdecoratedinputsegmentremainingdistance=\dimen314
+\pgf@decorate@distancetomove=\dimen315
+\pgf@decorate@repeatstate=\count340
+\pgfdecorationsegmentamplitude=\dimen316
+\pgfdecorationsegmentlength=\dimen317
+)
+\tikz@lib@dec@box=\box77
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorati
+ons\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorati
+ons\pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count341
+\pgfplots@xmin@reg=\dimen318
+\pgfplots@xmax@reg=\dimen319
+\pgfplots@ymin@reg=\dimen320
+\pgfplots@ymax@reg=\dimen321
+\pgfplots@zmin@reg=\dimen322
+\pgfplots@zmax@reg=\dimen323
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+ryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerseminar.sty
+\beamerseminar@overlay=\count342
+\semin=\dimen324
+\semcm=\dimen325
+) (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks50
+\inpenc@posthook=\toks51
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/01/26 3.53 The Babel package
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2021/01/26 3.53 Babel common definitions
+\babel@savecnt=\count343
+\U@D=\dimen326
+\l@babelnohyphens=\language79
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read3
+)
+LaTeX Info: Redefining \textlatin on input line 716.
+\bbl@dirlevel=\count344
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ld
+f
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+\es@quottoks=\toks52
+\es@quotdepth=\count345
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+)) (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+12.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count346
+\calc@Bcount=\count347
+\calc@Adimen=\dimen327
+\calc@Bdimen=\dimen328
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count348
+\calc@Cskip=\skip66
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count349
+\l_MT_multwidth_dim=\dimen329
+\origjot=\skip67
+\l_MT_shortvdotswithinadjustabove_dim=\dimen330
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen331
+\l_MT_above_intertext_sep=\dimen332
+\l_MT_below_intertext_sep=\dimen333
+\l_MT_above_shortintertext_sep=\dimen334
+\l_MT_below_shortintertext_sep=\dimen335
+\xmathstrut@box=\box78
+\xmathstrut@dim=\dimen336
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
+5.sty (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count350
+\l__pdf_internal_box=\box79
+))
+Package: fontawesome5 2020/03/24 v5.13.0 Font Awesome 5
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3ke
+ys2e.sty
+Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
+.sty
+Package: xparse 2020-10-27 L3 Experimental document command parser
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
+-generic.tex))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
+5-generic-helper.sty
+Package: fontawesome5-generic-helper 2020/03/24 v5.13.0 non-uTeX helper for fon
+tawesome5
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesome
+5-mapping.def)))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2021/02/05 v3.0 ragged2e Package
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/everysel\everysel.sty
+Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/everysel\everysel-2011-1
+0-28.sty))
+\CenteringLeftskip=\skip68
+\RaggedLeftLeftskip=\skip69
+\RaggedRightLeftskip=\skip70
+\CenteringRightskip=\skip71
+\RaggedLeftRightskip=\skip72
+\RaggedRightRightskip=\skip73
+\CenteringParfillskip=\skip74
+\RaggedLeftParfillskip=\skip75
+\RaggedRightParfillskip=\skip76
+\JustifyingParfillskip=\skip77
+\CenteringParindent=\skip78
+\RaggedLeftParindent=\skip79
+\RaggedRightParindent=\skip80
+\JustifyingParindent=\skip81
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count351
+\lst@gtempboxa=\box80
+\lst@token=\toks53
+\lst@length=\count352
+\lst@currlwidth=\dimen337
+\lst@column=\count353
+\lst@pos=\count354
+\lst@lostspace=\dimen338
+\lst@width=\dimen339
+\lst@newlines=\count355
+\lst@lineno=\count356
+\lst@maxwidth=\dimen340
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count357
+\lst@skipnumbers=\count358
+\lst@framebox=\box81
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+) (packages/stata.tex)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemeFrankf
+urt.sty
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthemes
+moothbars.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthemer
+ounded.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemeo
+rchid.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemew
+hale.sty))
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemest
+ructuresmallcapsserif.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerfontthemest
+ructurebold.sty)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemeb
+eaver.sty)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\faIcon' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 54.
+
+(cap_03.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ (sections/sec_11.aux) (sections/sec_12.aux) (sections/sec_13.aux)
+(sections/sec_14.aux) (sections/sec_15.aux) (sections/sec_16.aux)
+(sections/sec.aux))
+\openout1 = `cap_03.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=307.28987pt
+* \textheight=244.6939pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=14.22636pt
+* \marginparwidth=3.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count359
+\scratchdimen=\dimen341
+\scratchbox=\box82
+\nofMPsegments=\count360
+\nofMParguments=\count361
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count362
+\MPscratchDim=\dimen342
+\MPnumerator=\count363
+\makeMPintoPDFobject=\count364
+\everyMPtoPDFconversion=\toks55
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
+se.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+Package hyperref Info: Link coloring OFF on input line 61.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitl
+estring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count365
+)
+LaTeX Info: Redefining \ref on input line 61.
+LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \nameref on input line 61.
+ (cap_03.out) (cap_03.out)
+\@outlinefile=\write5
+\openout5 = `cap_03.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 61.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 61.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 61.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 61.
+\symnumbers=\mathgroup6
+\sympureletters=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 61.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 61.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 61.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 61.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 61.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 61.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 61.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 61.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-ba
+sic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-bi
+bliography-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-en
+vironment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-mo
+nths-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-nu
+mbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-th
+eorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
+your preamble.
+ on input line 61.
+
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 61.
+\c@lstlisting=\count366
+ (cap_03.nav)
+Overfull \hbox (396.41588pt too wide) detected at line 61
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 62
+.
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
+5.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
+nput line 65.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesom
+efree1.fd)
+<fig/logo-USAT.png, id=176, 432.6564pt x 356.532pt>
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 65.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[1{C:/Users/JOEL/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
+ <./fig/logo-USAT.png>] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 2.
+
+
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 2.
+
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <5> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 71.
+
+
+Overfull \vbox (97.76067pt too high) detected at line 71
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 71.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[2
+
+]
+\openout2 = `sections/sec_11.aux'.
+
+ (sections/sec_11.tex (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 2
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 2.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[3
+
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 6
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 6.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[4
+
+]
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+13.
+ (C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+3.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+13.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+13.
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 13.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+
+
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 13.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 13.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 13.
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 13.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[5
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 16
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 16.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[6
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 28.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[7
+
+])
+\openout2 = `sections/sec_12.aux'.
+
+ (sections/sec_12.tex (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 2
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 2.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[8
+
+
+
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 6
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 6.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[9
+
+]
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <9> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 24.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 24.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 24.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 24.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 24.
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 24.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[10
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 34.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[11
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 48.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[12
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 51
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 51.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[13
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 68.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[14
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\dimen@' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ht' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\globaldefs' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\m@ne' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tf@size' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sf@size' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ssf@size' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\globaldefs' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@tempa' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\advance' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\dimen@' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\raise' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\dimen@' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 71.
+
+(cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 71
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 71.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[15
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 75
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 75.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[16
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 79
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 79.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[17
+
+]
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 89.
+
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
+9.
+(C:\Users\JOEL\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 89.
+
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 89.
+
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 89.
+
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 89.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[18
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 92
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 92.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[19
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 105.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[20
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 125.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[21
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 135.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[22
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 138
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 138.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[23
+
+]
+
+LaTeX Warning: Command \' invalid in math mode on input line 154.
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 154.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[24
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 157
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 157.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[25
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 172.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[26
+
+]
+\openout4 = `cap_03.vrb'.
+
+ (cap_03.vrb)
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 189.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[27
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 192
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 192.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[28
+
+])
+\openout2 = `sections/sec_13.aux'.
+
+ (sections/sec_13.tex (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 2
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 2.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[29
+
+
+
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 11.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[30
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 12
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 12.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[31
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 13
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 13.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[32
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 14
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 14.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[33
+
+])
+\openout2 = `sections/sec_14.aux'.
+
+ (sections/sec_14.tex (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 2
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 2.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[34
+
+
+
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 14.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[35
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 23.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[36
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 25
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 25.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[37
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 26
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 26.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[38
+
+] (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 27
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 27.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[39
+
+])
+\openout2 = `sections/sec_15.aux'.
+
+ (sections/sec_15.tex (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 2
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 2.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[40
+
+
+
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 12.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[41
+
+])
+\openout2 = `sections/sec_16.aux'.
+
+ (sections/sec_16.tex (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 2
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 2.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[42
+
+
+
+
+])
+\openout2 = `sections/sec.aux'.
+
+ (sections/sec.tex (cap_03.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (4.39247pt too wide) in paragraph at lines 23--23
+ [][][]\T1/lmr/m/sc/12 Eficiencia de MCO: el teo-re-ma de Gauss-Markov[] 
+ []
+
+
+Overfull \hbox (0.76141pt too wide) in paragraph at lines 24--24
+ [][][]\T1/lmr/m/sc/12 Algunos co-men-ta-rios so-bre el len-gua-je del aná-
+ []
+
+)
+Overfull \vbox (97.76067pt too high) detected at line 2
+ []
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 2.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[43
+
+
+
+
+]
+
+Package hyperref Warning: Suppressing link with empty target on input line 18.
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 18.
+
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 18.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[44
+
+ <C:/Users/JOEL/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonbook.p
+df> <C:/Users/JOEL/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericononl
+ine.pdf> <C:/Users/JOEL/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beameric
+onarticle.pdf>]) [45
+
+
+
+]
+File: fig/logo-USAT.png Graphic file (type png)
+<use fig/logo-USAT.png>
+Package pdftex.def Info: fig/logo-USAT.png  used on input line 116.
+(pdftex.def)             Requested size: 25.95825pt x 21.39099pt.
+
+Overfull \hbox (396.41588pt too wide) has occurred while \output is active
+  [] [][][][][][] [][][][][][][][][][][][][][][][][][][][][][] [][][][][][] [][
+][][][][][] [][][] [][] [][][][]  
+ []
+
+[46
+
+]
+\tf@nav=\write6
+\openout6 = `cap_03.nav'.
+
+\tf@toc=\write7
+\openout7 = `cap_03.toc'.
+
+\tf@snm=\write8
+\openout8 = `cap_03.snm'.
+
+ (cap_03.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ (sections/sec_11.aux) (sections/sec_12.aux)
+(sections/sec_13.aux) (sections/sec_14.aux) (sections/sec_15.aux)
+(sections/sec_16.aux) (sections/sec.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `cap_03.out' has not changed.
+(rerunfilecheck)             Checksum: 64254987A5351090A7FD47CFAB7BA74C;7258.
+ ) 
+Here is how much of TeX's memory you used:
+ 40908 strings out of 479334
+ 940108 string characters out of 2857559
+ 1366778 words of memory out of 3000000
+ 57347 multiletter control sequences out of 15000+200000
+ 499975 words of font info for 85 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 131i,20n,132p,1419b,946s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C
+:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Use
+rs/JOEL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/JO
+EL/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/JOE
+L/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/JOEL
+/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/JOEL/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}<C:/Use
+rs/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAweso
+me5Free-Solid.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmbx5.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmbx7.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmcsc10.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmex10.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmmi10.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmmi7.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+mi9.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr1
+0.pfb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.p
+fb><C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb>
+<C:/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:
+/Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/
+Users/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
+sers/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Use
+rs/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users
+/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/User
+s/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/User
+s/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users
+/JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso9.pfb><C:/Users/
+JOEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/J
+OEL/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/JOE
+L/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/JOEL/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/JOEL/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/JOEL/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
+Output written on cap_03.pdf (46 pages, 1259933 bytes).
+PDF statistics:
+ 3625 PDF objects out of 4296 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
+ 396 words of extra memory for PDF output out of 10000 (max. 10000000)
+

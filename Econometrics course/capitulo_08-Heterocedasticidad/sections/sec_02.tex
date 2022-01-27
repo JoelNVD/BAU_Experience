@@ -1,0 +1,32 @@
+%====================================================================================
+\section[¿Problema?]{¿Por qué preocuparnos de la heterocedasticidad?}
+%====================================================================================
+
+\begin{frame}{¿Porqué preocuparnos de la heterocedasticidad?}
+		\begin{center}
+			\input{tikzs/bell}
+		\end{center}
+	Si usamos la varianza de homocedasticidad del estimador para hacer inferencia, podemos rechazar la hipótesis nula cuando esa de hecho es verdad (Error Tipo 1).
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{¿Porqué preocuparnos de la heterocedasticidad?}
+	\begin{itemize}
+		\item Aun con heterocedasticidad los estimadores MCO son insesgados y consistentes.
+		\pause
+		\item Sin embargo, los errores estándar de los estimadores son sesgados
+		\pause
+		\item Al ser sesgados los errores estándar entonces no se pueden usar los estadísticos usuales t y F para hacer inferencia
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{¿Porqué preocuparnos de la heterocedasticidad?}
+	Entonces tenemos que encontrar un estimador MELI¡.\\
+	De hecho, podemos mantener nuestras estimaciones de MCO, debes saber que:	
+	\begin{enumerate}
+		\item MCO es aún insesgado.
+		\item El problema es que podemos hacer una inferencia incorrecta (surge error tipo 1), solo lo que tenemos que hacer es calcular la verdadera varianza (asumiendo heterocedasticidad) y simplemente hacer la inferencia.
+		\item Si nos interesa la predicción o el cálculo de intervalos de confianza que necesitamos para encontrar un estimador MELI. Recuerda esto:
+			$$Var(\beta^{MELI})<Var(\beta^{het})$$
+	\end{enumerate}
+	Un estimador MELI es el estimador de ``Mínimos Cuadrados Generalizados'' (MCG).
+\end{frame}

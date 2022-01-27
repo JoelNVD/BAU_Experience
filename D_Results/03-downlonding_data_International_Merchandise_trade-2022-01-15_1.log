@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/03-downlonding_data_International_Merchandise_trade-2022-01-15_1.lo
+> g
+  log type:  text
+ opened on:  15 Jan 2022, 21:36:17
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Dowloading
+. ********************************************************************************
+.         
+.         import delimited "US_TradeMatrix_Part1_ST202109291451_v1", clear
+file US_TradeMatrix_Part1_ST202109291451_v1.csv not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "c:\users\joel\appdata\local\temp\st_stata_temp.tmp"
+
+.         import delimited "${rawdata_3_1}/International_Merchandise_trade/US_TradeMatrix_Part1_ST202109291451_v1", clear
+(encoding automatically selected: ISO-8859-1)
+op. sys. refuses to provide memory
+    Stata ran out of room to track where observations are stored.  Right now, Stata has 220m bytes allocated to track observations.  Stata
+    requested an extra 1m bytes and the operating system said no.  Stata is currently tracking 115343360 observations and was asked to track
+    115343360.  You are up against the memory limits of this computer.

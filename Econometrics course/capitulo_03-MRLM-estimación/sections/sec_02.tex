@@ -1,0 +1,80 @@
+%===============================================================================
+\section[MRLM]{Modelo de regresión lineal múltiple}
+%===============================================================================
+\begin{frame}{Regresión múltiple}
+	Es la generalización del modelo de regresión simple:
+	$$y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+...+\beta_{k}x_{k}+u$$
+	Donde:
+	\begin{itemize}
+		\item $\beta_{0}$ es el intercepto.
+		\item $\beta_{1}$ a $\beta_{k}$ se suelen llamar pendientes.
+		\item $u$ es el término de error que se supone $E(u/x_{1},x_{2}..x_{k})=0$.
+		\item El criterio de optimización es el mismo sólo que ahora se tienen $k+1$ condiciones de primer orden.
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Regresión múltiple}
+	Tenemos el siguiente modelo (o PGD) con una constante y más de un regresor, en el caso de 2 regresores
+	$$y_i = \beta_{0} + \beta_{1}x_{1}+\beta_{2}x_{2}+u$$
+	el subíndice $i$ va de $i = 1$ a $i = n$ (última observación). $y$
+	es la variable dependiente; $x_1$ y $x_2$ son la variable independiente; $\beta_{0}$ es el intercepto, constante o coeficiente no asociado con variables; $\beta_{1}$ es la pendiente o coeficiente relacionado con $x_{1}$, $\beta_{2}$ es la pendiente o coeficiente relacionado con $x_{2}$ y $u$ es el término de error.
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Regresión Lineal Poblacional}
+	La línea de regresión poblacional es la relación que se mantiene entre $y$ y $x$ en promedio en la población.
+	$$E(y|x_{1}, x_{2}) = \beta_{0}+\beta_{1}x_1+\beta_{2}x_2$$
+	Los valores predichos $\widehat{y}$ y residuales $\widehat{uº}$ por MCO son
+	\begin{align*}
+		\hat{u} & = y - \hat{y}\\
+				& \equiv y - (\hat{\beta}_{0}+\hat{\beta}_{1}x_{1}+\hat{\beta}_{2}x_{2})
+	\end{align*}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{MCO}
+	Como sabemos, obtener estimaciones de MCO implica minimizar la suma de cuadrados
+	$$L = \sum_{i=1}{n}(y_{i}-\hat{y}_{i})^2$$
+	O equivalentemente
+	$$ \min_{\beta_{0},\beta_{1}, \beta_{2}} L = \sum_{i=1}^{n} (y_{i}+\beta_{0}-\beta_{1}x_{1}-\beta_{2}x_{2})^2$$
+	$\hat{\beta}_{0}$, $\hat{\beta}_{1}$ y $\hat{\beta}_{2}$ son la solución al problema anterior de minimización (de cuadrados). El proceso se denomina estimación de mínimos cuadrados ordinarios (MCO).
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Estimación (1)}
+	Es la generalización del modelo de regresión simple:
+	$$y=\beta_{0}+\beta_{1}x_1+\beta_{2}x_2+...+\beta_{k}x_k+u$$
+	Donde:
+	\begin{itemize}
+		\item $y=X\widehat{\beta}+e$
+		\item $\sum e_i^2=e'e$
+		\item El criterio de optimización es el mismo sólo que ahora se tienen $k+1$ condiciones de primer orden:
+		\bigskip
+		\begin{itemize}
+			\item $\sum e_i=e'1=0$
+			\item $\sum e_i x_{1i}=e'x_1=0$
+			\item $\sum e_i x_{2i}=e'x_2=0$, etc
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Estimación (2)}
+	Las $k+1$ ecuaciones pueden expresarse matricialmente de la siguiente forma:
+	\begin{align*}
+		e'X & = [0, 0, \ldots ,0] \\
+		X'e & = [0, 0, \ldots ,0]' \\ 
+		X'(y-X\widehat{\beta}) &= [0,0,...,0]' \\
+		\widehat{\beta}&= (X'X)^{-1}X'y  \\
+	\end{align*}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Estimación (3)}
+	Alternativamente, cómo el objetivo es minimizar $\sum e_i^2=e'e=$
+	\begin{align*}
+		(y-X\beta)'(y-X\beta) & = y'y-y'X\beta-\beta'x'y+\beta'X'X\beta \\
+		& = y'y-2y'X\beta+\beta'X'X\beta
+	\end{align*}
+	Condiciones de optimización:
+	\bigskip
+	\begin{description}
+		\item[CPO:] $\frac{\partial e'e}{\partial\widehat{\beta}}=0-2X'y+2X'X\widehat{\beta}=0$
+		\item[CSO:] $\frac{\partial^2 e'e}{\partial\widehat{\beta}^2}=2X'X$, (Definida positiva)
+	\end{description}
+\end{frame}

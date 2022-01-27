@@ -1,0 +1,110 @@
+%====================================================================================
+\section{Prueba de restricciones lineales múltiples: la prueba F}
+%====================================================================================
+
+%------------------------------------------------------------------------------------
+\subsection{Prueba F}
+%------------------------------------------------------------------------------------
+\begin{frame}{Inferencia 2: prueba de hipótesis conjunta}
+	Consideremos nuevamente el siguiente modelo (o PGD) con una constante y más de un regresor
+		$$Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2X_{2i} + u_i$$
+	en particular, podemos estar interesados en probar la importancia conjunta de $\beta_1$ y $\beta_2$. Por ejemplo
+		\begin{align*}
+			H_0 & : \beta_1 = 0; \beta_2 = 0\\
+			H_a & : \beta_j \neq 0 \textup{ al menos un } j
+		\end{align*}
+	¿Por qué podemos estar interesado en probar la significancia de coeficiente smúltiples al mismo tiempo?
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Inferencia 2: prueba de hipótesis conjunta}
+	Aquí la respuesta:
+		\begin{itemize}
+			\item Variables de interés; ocurrencia conjunta de variables aleatorias.
+			\item Importancia del modelo. En el caso de una prueba de significancia global: un modelo con constante versus un modelo con regresores.
+			\item Una prueba de significancia multivariante teniendo en cuenta la correlación entre variables aleatorias.
+		\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Prueba F}
+	\begin{itemize}
+		\item La prueba F permite determinar, si en conjunto, todas las variables incluidas en el modelo explican a la variable analizada.
+		\item Más concretamente, dada la regresión:\\ $y=\hat{\beta_{0}}+\hat{\beta_{1}}x_{1}+\hat{\beta_{2}}x_{2}+...+\hat{\beta_{k}}x_{k}+\hat{u}$
+		\item La Hipótesis nula que se plantea es $\beta_{1}=\beta_{2}=...=\beta_{k}=0$
+		\item Es decir, que todos los parámetros poblacionales, excepto el intercepto, tienen un valor poblacional de cero.
+		\item En términos sencillos lo que se pregunta la prueba F es si incluir un conjunto de variables explicativas le gana a una regresión ingenua $(y=\hat{\beta_{0}}+\hat{u})$		
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Inferencia II:¿Z o t-student? ¡NO!, ¡Distribución F!}
+	En este caso, usamos la distribución F. El estadístico es:
+		$$F_{cal} = \frac{(SCR_{R}-SCR_{NR})}{SCR_{NR}}\frac{N-k}{q}$$
+	Por ejemplo, en el caso de una prueba de significancia global, el modelo restringido tiene en cuenta la restricción bajo la hipotesis nula
+		\begin{gather}
+			Y_i = \widehat{\gamma}_0 + \widehat{\epsilon}_i \tag{restringido}
+		\end{gather}
+	El modelo no restringido es el original
+		\begin{gather}
+			Y_i = \widehat{\beta}_0 + \widehat{\beta}_1 X_{1i} +\widehat{\beta}_2 X_{2i} \widehat{u}_i \tag{no restringido}
+		\end{gather}
+	$k$es el número de restricciones impuestas en el modelo original. Luego contrastamos esa F "realmente calculada" con valores críticos o simplemente calculamos el valor p asociado a esa prueba (es decir, $PR(F > F_{cal})$)
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Inferencia II: expresión alternativa}
+	En el caso de una prueba de hipotesis global, podemos re-expresar la expresión de la prueba $F$ como lo siguiente:
+		$$F_{cal} = \frac{R_{NR}^2-R_{r}^2}{1-R_{NR}^2}\cdot \frac{N-k}{q}$$
+	En el caso de probar todos los coeficientes que aceptan la constante son cero (en términos estadísticos), tenemos la siguiente expresión
+		$$F_{cal} = \frac{R_{NR}^2}{1 - R_{NR}^2}\cdot \frac{N-k}{q}$$
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Ejemplo I}
+	Tenemos el siguiente modelo
+		$$T = \widehat{\beta}_0 + \widehat{\beta}_1 STR + \widehat{\beta}_2 EXP + \widehat{\beta}_3 PctEL + \widehat{u} \quad R^2=0.4366$$
+	Evaluamos la siguiente hipotesis
+	\begin{align*}
+		H_0 &: \beta_1 = 0, \beta_2 = 0\\
+		H_1 &: \beta_j \neq 0 \textup{ almenos un \textit{j}}
+	\end{align*}
+	Eso implica estimar el siguiente modelo restringido:
+		$$TS = \widehat{\gamma}_0 + \widehat{\gamma}_3 PctEl + \widehat{\epsilon} \quad R^2 = 0.4149$$
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Ejemplo I}
+	Calculamos el $F_{cal}$
+		\begin{align*}
+			F_{cal} & = \frac{0.4366 - 0.4149}{1 - 0.4366} \cdot \frac{420 - 4}{2} \\
+			& = 8.0114
+		\end{align*}
+	luego contrastamos que $F$ \textit{``calculado realmente''} con valores críticos, en este caso el valor crítico del 5\% viene dado por $F (n_1, n_2) \equiv F (q, N - k) = F (2, 438) = 3.00$. Por tanto, rechazamos la hipótesis nula de que ambos coeficientes son cero en términos estadísticos.
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Ejemplo II}
+	Tenemos la siguiente estimación de una función de producción
+		$$ln Q_i = \widehat{\beta}_0 + \widehat{\beta}_1 ln K_i + \widehat{\beta}_2 ln L_i + \widehat{u}_i \quad R^2=0.8$$
+	realizamos una prueba de significancia conjunta sobre las elasticidades del capital y el trabajo, es decir, $H_0: \widehat{\beta}_1 = \widehat{\beta}_2 = 0$ y $H_1: \widehat{\beta}_j \neq 0$ al menos una j. Calculamos el estadístico F
+	\begin{align*}
+		F_{cal} & = \frac{0.8}{1-0.8}\cdot \frac{51 - 3}{2}\\
+				& = 96
+	\end{align*}
+	luego contrastamos que F \textit{``calculado realmente''} con valores críticos, en este caso el valor crítico del 1\% viene dado por $F (n_1, n_2) \equiv F (q, N - k) = F (2, 48) \approx 5.20$. Por tanto, rechazamos la hipótesis nula de que ambos coeficientes son cero en términos estadísticos.
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{prueba F: resumen de pasos}
+	\begin{itemize}
+		\item Calcular las estimaciones de MCO.
+		\item Enuncie la hipótesis a probar.
+		\item Calcular el SSR o $R^2$ de modelos restringidos y no restringidos.
+		\item Calcular la estadística F o F. "calculada realmente".
+		\item Calcular el valor P o simplemente concluya utilizando valores críticos en algún nivel de significancia.
+		\item La interpretación es muy importante, ¡no te pierdas ese paso !.
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{P-value}
+%------------------------------------------------------------------------------------
+\begin{frame}{P-value}
+	\begin{itemize}
+		\item Así como el estadístico T, la prueba F también tiene asociado un P-Value, el cual tiene la misma interpretación práctica: si es menor que 0.05 se rechaza la hipótesis nula de que las variables explicativas no sirven para explicar a $y$
+	\end{itemize}
+\end{frame}
+

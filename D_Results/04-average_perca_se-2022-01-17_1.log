@@ -1,0 +1,235 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/04-average_perca_se-2022-01-17_1.log
+  log type:  text
+ opened on:  17 Jan 2022, 21:40:58
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Cleaning database
+. ********************************************************************************
+. 
+. *** 2.1 Cleaning
+.         use "${data_3_1}/GDP_POP_SPE.dta", clear
+
+.         drop if classification != "Social expenditure"
+(5,040 observations deleted)
+
+.         drop if country == "Latin America" | country=="Caribbean"
+(60 observations deleted)
+
+. 
+. *** 2.2 Declare time series
+.         xtset  country_id year
+
+Panel variable: country_id (strongly balanced)
+ Time variable: year, 1990 to 2019
+         Delta: 1 unit
+
+.         xtdes
+
+country_id:  1, 2, ..., 28                                   n =         26
+    year:  1990, 1991, ..., 2019                             T =         30
+           Delta(year) = 1 unit
+           Span(year)  = 30 periods
+           (country_id*year uniquely identifies each observation)
+
+Distribution of T_i:   min      5%     25%       50%       75%     95%     max
+                        30      30      30        30        30      30      30
+
+     Freq.  Percent    Cum. |  Pattern
+ ---------------------------+--------------------------------
+       26    100.00  100.00 |  111111111111111111111111111111
+ ---------------------------+--------------------------------
+       26    100.00         |  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+. 
+. ********************************************************************************
+. *** PART 3: Graphs
+. ********************************************************************************
+. 
+. *** 3.1 HBAR: it shows us the ASEpr average
+.         preserve
+
+.                 gen ASEpr = (((expenditure/100)*NY_GDP_MKTP_CD)/SP_POP_TOTL)
+(200 missing values generated)
+
+.                 drop if year != 2016
+(754 observations deleted)
+
+.                 drop if ASEpr==.
+(3 observations deleted)
+
+. 
+.                 graph hbar ASEpr, over(country) bar(1, color(red) fintensity(inten20))             ///
+>                                   title("Average social expenditure per capita") subtitle("2016")  ///
+>                                   ytitle(" ") ysize(4) xsize(8) scale(*.6) ylabel(150(150)2700)    ///
+>                                   exclude0 note("Fuente: CEPALSTAT & World Bank")
+
+.                 gr_edit plotregion1.bars[7].EditCustomStyle , style(shadestyle(color(blue)))
+
+.                 gr_edit plotregion1.bars[7].EditCustomStyle , style(linestyle(color(blue)))
+
+. 
+.                 graph export "${outputf_4_1}/ASEpr_hbar.pdf", replace
+file C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\F_Figures/04-graphs/ASEpr_hbar.pdf saved as PDF format
+
+.         restore
+
+. 
+. *** 3.2 Lines
+.        preserve
+
+.                 xtbalance , range(2000 2019) miss(expenditure NY_GDP_MKTP_CD)
+
+(260 observations deleted due to out of range) 
+
+(65 observations deleted due to missing) 
+
+(115 observations deleted due to discontinues) 
+
+.                 drop if country=="Latin America & Caribbean"
+(20 observations deleted)
+
+.                 tsset
+
+Panel variable: country_id (strongly balanced)
+ Time variable: year, 2000 to 2019
+         Delta: 1 unit
+
+. 
+.                 gen ASEpr = (((expenditure/100)*NY_GDP_MKTP_CD)/SP_POP_TOTL)
+
+. 
+.                 bys year: egen NY_GDP_MKTP_CD_sum = total(NY_GDP_MKTP_CD)
+
+.                 gen Wei_1 = NY_GDP_MKTP_CD/NY_GDP_MKTP_CD_sum
+
+.                 gen ASEpr_Wei_1 = ASEpr*Wei_1
+
+.                 
+.                 collapse (sum) ASEpr_Wei_1, by(year)
+
+.                 gen country_new="Latin America & Caribbean"
+
+. 
+.                 tempfile local_latan_carib
+
+.                 save `local_latan_carib'
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_000003.tmp saved as .dta format
+
+. 
+.         restore
+
+. 
+.         xtbalance , range(2000 2019) miss(expenditure NY_GDP_MKTP_CD)
+
+(260 observations deleted due to out of range) 
+
+(65 observations deleted due to missing) 
+
+(115 observations deleted due to discontinues) 
+
+.         drop if country=="Latin America & Caribbean"
+(20 observations deleted)
+
+.         tsset
+
+Panel variable: country_id (strongly balanced)
+ Time variable: year, 2000 to 2019
+         Delta: 1 unit
+
+. 
+.         gen ASEpr = (((expenditure/100)*NY_GDP_MKTP_CD)/SP_POP_TOTL)
+
+. 
+.         local countries `" "Argentina" "Bahamas" "Brazil" "Chile" "Colombia" "Costa Rica" "Dominican Republic" "Ecuador" "El Salvador" "Guatemala" "H
+> onduras" "Jamaica" "Mexico" "Nicaragua" "Paraguay" "Uruguay" "'
+
+.         local numbers `" "1" "2" "5" "7" "8" "9" "11" "12" "13" "14" "17" "18" "21" "22" "24" "27" "'
+
+.         local h = 1
+
+. 
+.         forval n = 1/16 {
+  2.                 local a: word `n' of `countries'
+  3.                 local b: word `n' of `numbers'
+  4. 
+.                 preserve     
+  5.                         bys year: egen NY_GDP_MKTP_CD_sum = total(NY_GDP_MKTP_CD)
+  6.                         gen Wei_1 = NY_GDP_MKTP_CD/NY_GDP_MKTP_CD_sum
+  7.                         gen ASEpr_Wei_1 = ASEpr*Wei_1
+  8. 
+.                         collapse (sum) ASEpr_Wei_1 if country_id==`b', by(year)
+  9.                         gen country_new="`a'"
+ 10. 
+.                         tempfile local_`h'
+ 11.                         save `local_`h''
+ 12. 
+.                         local h = `h' + 1
+ 13.                 restore
+ 14.         }
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_000005.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_000007.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_000009.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000b.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000d.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000f.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000h.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000j.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000l.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000n.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000p.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000r.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000t.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000v.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_00000x.tmp saved as .dta format
+file C:\Users\JOEL\AppData\Local\Temp\ST_1bcc_000011.tmp saved as .dta format
+
+. 
+.         use `local_1', clear
+
+.         forval h = 2/16{
+  2.                 append using `local_`h''
+  3.         }
+(variable country_new was str9, now str10 to accommodate using data's values)
+(variable country_new was str10, now str18 to accommodate using data's values)
+
+.         append using `local_latan_carib'
+(variable country_new was str18, now str25 to accommodate using data's values)
+
+. 
+.         twoway  (line ASEpr_Wei_1 year if country_new=="Argentina") (line ASEpr_Wei_1 year if country_new=="Bahamas")            ///
+>                 (line ASEpr_Wei_1 year if country_new=="Brazil")    (line ASEpr_Wei_1 year if country_new=="El Salvador")        ///
+>                 (line ASEpr_Wei_1 year if country_new=="Colombia")  (line ASEpr_Wei_1 year if country_new=="Costa Rica")         ///
+>                 (line ASEpr_Wei_1 year if country_new=="Uruguay")   (line ASEpr_Wei_1 year if country_new=="Ecuador")            ///
+>                 (line ASEpr_Wei_1 year if country_new=="Chile")     (line ASEpr_Wei_1 year if country_new=="Guatemala")          ///
+>                 (line ASEpr_Wei_1 year if country_new=="Honduras")  (line ASEpr_Wei_1 year if country_new=="Jamaica")            ///
+>                 (line ASEpr_Wei_1 year if country_new=="Mexico")    (line ASEpr_Wei_1 year if country_new=="Nicaragua")          ///
+>                 (line ASEpr_Wei_1 year if country_new=="Paraguay")  (line ASEpr_Wei_1 year if country_new=="Dominican Republic") ///
+>                 (line ASEpr_Wei_1 year if country_new=="Latin America & Caribbean") (scatter ASEpr_Wei_1 year if year==2019, mlabel(country_new)), //
+> /
+>                         title("Average social expenditure per capita") subtitle("by countries") ytitle("Y title") xtitle(" ")     ///
+>                         legen(off) ysize(4) xsize(8) scale(*.6) xlabel(2000(1)2021)  ///
+>                         note("Fuente: CEPALSTAT & World Bank")
+
+. 
+.         graph export "${outputf_4_1}/ASEpr_line.pdf", replace
+file C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\F_Figures/04-graphs/ASEpr_line.pdf saved as PDF format
+
+. 
+. ********************************************************************************
+. *** PART 4: Closing log file
+. ********************************************************************************
+.     log close
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Desktop\research assistant\Project_02\DataWork\D_Results/04-average_perca_se-2022-01-17_1.log
+  log type:  text
+ closed on:  17 Jan 2022, 21:41:01
+-------------------------------------------------------------------------------------------------------------------------------------------------------

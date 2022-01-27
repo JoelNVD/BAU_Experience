@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
+\beamer@sectionintoc {2}{Error component model}{13}{0}{2}
+\beamer@sectionintoc {3}{The model}{16}{0}{3}
+\beamer@subsectionintoc {3}{1}{Within-Group estimator}{26}{0}{3}
+\beamer@subsectionintoc {3}{2}{Between-Group estimator}{69}{0}{3}
+\beamer@subsectionintoc {3}{3}{Random Efects model}{74}{0}{3}
+\beamer@subsectionintoc {3}{4}{Estimating in STATA}{108}{0}{3}
+\beamer@sectionintoc {4}{References}{113}{0}{4}

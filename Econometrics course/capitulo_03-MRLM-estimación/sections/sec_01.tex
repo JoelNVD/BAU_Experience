@@ -1,0 +1,11 @@
+%===============================================================================
+\section[MRLS]{Modelo de regresión lineal simple}
+%===============================================================================
+\begin{frame}{Condiciones de primer orden}
+	$y_i=\widehat{\beta}_0+\widehat{\beta}_1 x_i+e_i$, resultado de
+	minimizar la función $\sum e_i^2$ se tiene que las CPO son: 
+	\begin{align*}
+		\frac{\partial\sum e_i^2}{\partial \widehat{\beta}_0} &= \sum(y_i-\beta_0-\widehat{\beta}_1 x_i)(-1)=0 \\
+		\frac{\partial\sum e_i^2}{\partial \widehat{\beta}_1} &= \sum(y_i-\widehat{\beta}_0-\beta_1 x_i)(-x_i)=0
+	\end{align*}
+\end{frame}

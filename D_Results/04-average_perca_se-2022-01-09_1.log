@@ -1,0 +1,148 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/04-average_perca_se-2022-01-09_1.log
+  log type:  text
+ opened on:   9 Jan 2022, 09:14:22
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Cleaning database
+. ********************************************************************************
+. 
+. *** 2.1 Cleaning
+.         use "${data_3_1}/GDP_POP_SPE.dta", clear
+
+.         drop if classification != "Social expenditure"
+(5,040 observations deleted)
+
+.         drop if country == "Latin America" | country=="Caribbean"
+(60 observations deleted)
+
+. 
+. *** 2.2 Declare time series
+.         xtset  country_id year
+
+Panel variable: country_id (strongly balanced)
+ Time variable: year, 1990 to 2019
+         Delta: 1 unit
+
+.         xtdes
+
+country_id:  1, 2, ..., 28                                   n =         26
+    year:  1990, 1991, ..., 2019                             T =         30
+           Delta(year) = 1 unit
+           Span(year)  = 30 periods
+           (country_id*year uniquely identifies each observation)
+
+Distribution of T_i:   min      5%     25%       50%       75%     95%     max
+                        30      30      30        30        30      30      30
+
+     Freq.  Percent    Cum. |  Pattern
+ ---------------------------+--------------------------------
+       26    100.00  100.00 |  111111111111111111111111111111
+ ---------------------------+--------------------------------
+       26    100.00         |  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+. 
+. ********************************************************************************
+. *** PART 3: Graphs
+. ********************************************************************************
+. 
+. *** 3.2 New variable
+.         gen ASEpr = (((expenditure/100)*NY_GDP_MKTP_CD)/SP_POP_TOTL)
+(200 missing values generated)
+
+. 
+. *** 3.3 Lines
+.        preserve
+
+.                 /*
+>                 local balance `" 2012, 2013, 2014 "'
+>                 keep if inlist(year, `balance')
+>                 tsset
+>                 */
+.                 
+.                 xtbalance , range(1990 2019) miss(expenditure NY_GDP_MKTP_CD)
+
+(200 observations deleted due to missing) 
+
+(340 observations deleted due to discontinues) 
+
+.                 tsset
+
+Panel variable: country_id (strongly balanced)
+ Time variable: year, 1990 to 2019
+         Delta: 1 unit
+
+.                 *https://ideas.repec.org/c/boc/bocode/s457094.html
+. 
+.                 bys year: egen NY_GDP_MKTP_CD_sum = total(NY_GDP_MKTP_CD)
+
+.                 gen Wei_1 = NY_GDP_MKTP_CD/NY_GDP_MKTP_CD_sum
+
+.                 gen ASEpr_Wei_1 = ASEpr*Wei_1
+
+.                 
+.                 collapse (sum) ASEpr_Wei_1, by(year)
+
+. 
+.                 /*
+>                 egen Wei_2 = wtmean(NY_GDP_MKTP_CD), by(year country_id) weight(ASEpr)
+>                 gen ASEpr_Wei_2=ASEpr*Wei_2
+>                 collapse (sum) ASEpr_Wei_2, by(year)
+>                         * http://fmwww.bc.edu/RePEc/bocode/_/_gwtmean.ado
+>                 */
+. 
+.                 *label var ASEpr "Average social expenditure per capita"
+.                 *label var Wei_2 "Weight: CVQ_YAY's method"
+. 
+.                 line ASEpr_Wei_1 year, title("Average social expenditure per capita") ytitle(" ") ysize(4) xsize(8)     ///
+>                                        scale(*.6) xlabel(1990(2)2020) xtitle(" ") note("Fuente: CEPALSTAT & World Bank")
+
+.                 graph export "${outputf_4_1}/ASEpr_line.pdf", replace
+file C:\Users\JOEL\Dropbox\Project_02\DataWork\F_Figures/04-graphs/ASEpr_line.pdf saved as PDF format
+
+.         restore
+
+. 
+. *** 3.4 HBAR: it shows us the ASEpr average
+.         preserve
+
+.                 drop if year != 2016
+(754 observations deleted)
+
+.                 drop if ASEpr==.
+(3 observations deleted)
+
+. 
+.                 graph hbar ASEpr, over(country) bar(1, color(red) fintensity(inten20))             ///
+>                                   title("Average social expenditure per capita") subtitle("2016")  ///
+>                                   ytitle(" ") ysize(4) xsize(8) scale(*.6) ylabel(150(150)2700)    ///
+>                                   exclude0 note("Fuente: CEPALSTAT & World Bank")
+
+.                 gr_edit plotregion1.bars[7].EditCustomStyle , style(shadestyle(color(blue)))
+
+.                 gr_edit plotregion1.bars[7].EditCustomStyle , style(linestyle(color(blue)))
+
+. 
+.                 graph export "${outputf_4_1}/ASEpr_hbar.pdf", replace
+file C:\Users\JOEL\Dropbox\Project_02\DataWork\F_Figures/04-graphs/ASEpr_hbar.pdf saved as PDF format
+
+.         restore
+
+. 
+. ********************************************************************************
+. *** PART 4: Closing log file
+. ********************************************************************************
+.     log close
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/04-average_perca_se-2022-01-09_1.log
+  log type:  text
+ closed on:   9 Jan 2022, 09:14:27
+-----------------------------------------------------------------------------------------------------------------------------------------------------

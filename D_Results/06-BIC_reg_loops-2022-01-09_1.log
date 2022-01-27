@@ -1,0 +1,464 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\JOEL\Dropbox\Project_02\DataWork\D_Results/06-BIC_reg_loops-2022-01-09_1.log
+  log type:  text
+ opened on:   9 Jan 2022, 15:03:11
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: 
+. ********************************************************************************
+. 
+. *** 2.1
+.         use "${rawdata_2_1}/main-data_all-countries_15Oct2020 165731.dta", clear
+
+.         gl Subregiongl "" /* 5 regions */
+
+.         gl Regiongl "" /* 4 regions */
+
+.         local xvardepx "lgdppc"
+
+.         gl extrlines "drop if dum_smallc==1" /*ONLY all regressions*/
+
+. 
+.         if "$Subregiongl"!="" {
+.                         keep if Subregion=="$Subregiongl"
+.                 }
+
+. 
+.         if "$Regiongl"!="" {
+.                         keep if Region=="$regiongl"
+.                 }
+
+. 
+.         isid country year
+
+.         isid country_code year
+
+.         xtset country_code year
+
+Panel variable: country_code (unbalanced)
+ Time variable: year, 1960 to 2024
+         Delta: 1 unit
+
+. 
+. *** 2.2 ALTERNATIVE VERSION
+.         gen dum_epidem=1 if (dum_sars==1 | dum_mers==1 | dum_ebola==1 | dum_zika==1 | dum_flu==1) // H1N1 with dummy 2009
+(13,446 missing values generated)
+
+.         replace dum_epidem=0 if dum_epidem==.
+(13,446 real changes made)
+
+. 
+.         gen dum_systemic=1 if dum_bankcrises==1 | dum_sobdet_crisis_==1 //| dum_curr_crisis_==1
+(13,321 missing values generated)
+
+.         replace dum_systemic=0 if dum_systemic==.
+(13,321 real changes made)
+
+. 
+. ***************************************************************************************************
+. 
+. ********************************************************************************
+. *** PART 3: TIME EFFECTS
+. ********************************************************************************
+. 
+. *** 3.1 
+.         sum year
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+        year |     13,570    1991.823     18.6749       1960       2024
+
+.         local yrmin "`r(min)'" 
+
+.         local yrmax "`r(max)'" 
+
+.         display in ye "`yrmin'"
+1960
+
+.         display in ye "`yrmax'"
+2024
+
+. 
+. 
+.         local ix=`yrmin'
+
+.         while `ix'<=`yrmax' {
+  2.                         capture drop yr`ix'
+  3.                         gen yr`ix'=(year==`ix')
+  4.                         label var yr`ix' "time effect year `ix'"
+  5.                         local ++ix
+  6.                 }
+
+. 
+. ********************************************************************************
+. *** PART 4: Additional variables (construction only)
+. ********************************************************************************
+. 
+. *** 4.1 
+.         gen lcost=dama_gdp if dum_naturaldis_ref>0
+(13,171 missing values generated)
+
+.         gen vlcost=(lcost!=.)
+
+.         replace vlcost=lcost if vlcost==1
+(399 real changes made)
+
+. 
+.         gen linsur_cost=dama_gdp-ins_dama_gdp if dum_naturaldis_ref>0  /*NOTICE -ins_dama_gdp*/
+(13,171 missing values generated)
+
+.         gen vlinsur_cost=(linsur_cost!=.)
+
+.         replace vlinsur_cost=linsur_cost if vlinsur_cost==1
+(399 real changes made)
+
+. 
+. *** 4.2 
+.         assert dama_gdp!=. & ins_dama_gdp!=. if dum_naturaldis_ref>0
+
+. 
+. ********************************************************************************
+. *** PART 5: Additional variables (construction only)
+. ********************************************************************************
+. 
+. *** 5.1 
+.         rename ANE_TRD_GNFS_ZS trade_gdp
+
+.         rename ANE_CON_GOVT_ZS govcons_gdp
+
+.         rename AGC_TAX_TOTL_GD_ZS taxrev_gdp
+
+.         rename AFP_CPI_TOTL_ZG inflation
+
+. 
+.         gen deficit1=govcons_gdp-taxrev_gdp
+(9,918 missing values generated)
+
+.         gen gkf_gdp=v_i/v_gdp
+(3,490 missing values generated)
+
+. 
+.         by country_code: ipolate APV_EST year, gen(APV_EST_IPO)
+(9076 missing values generated)
+
+.         gen asianfc=(year==1997 & (country_code==536 | country_code==542 | country_code==548 | country_code==566 | country_code==576 | country_code
+> ==578) & dum_systemic!=1 )
+
+. 
+.         if "$spec_region"=="UNESCAP" {
+.                 encode Subregion, gen(Subregion_n)
+.                 local hh=1
+.                         while `hh'<= 5 {
+  2.                                 gen rdum_`hh'=(Subregion_n==`hh')
+  3.                                 local ++hh
+  4.                         }
+.                 }
+
+.         else {
+.                 encode Incomegroup, gen(Incomegroup_n)
+.                 local hh=1
+.                         while `hh'<= 4 {
+  2.                                 gen rdum_`hh'=(Incomegroup_n==`hh')
+  3.                                 local ++hh
+  4.                         }
+.                 }
+
+. 
+.         ${extrlines}
+(3,305 observations deleted)
+
+.           
+.         gen lgdppc=log(ANY_GDP_MKTP_KN/ASP_POP_TOTL) 
+(2,567 missing values generated)
+
+.         gen lc=log(q_c)
+(2,405 missing values generated)
+
+.         gen li=log(q_i)
+(2,408 missing values generated)
+
+.         gen lg=log(q_g)
+(2,405 missing values generated)
+
+.         gen gini=gini_mkt
+(5,383 missing values generated)
+
+.         gen lhc=log(hc)
+(3,265 missing values generated)
+
+.         gen lhdi=log(hdi)
+(6,066 missing values generated)
+
+.         gen lgdppcppp=log(ANY_GDP_PCAP_PP_KD)
+(5,847 missing values generated)
+
+.         gen lgdppcus=log(ANY_GDP_PCAP_KD)
+(2,656 missing values generated)
+
+. 
+. *** 5.2 
+.         local resil_vy "rrindex"
+
+.         sum `resil_vy', detail
+
+                  Reinhart and Rogoff Index
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            1              1
+ 5%            1              1
+10%            1              1       Obs               6,932
+25%            2              1       Sum of wgt.       6,932
+
+50%            7                      Mean           6.502741
+                        Largest       Std. dev.      4.855359
+75%           11             15
+90%           14             15       Variance       23.57451
+95%           15             15       Skewness       .3183881
+99%           15             15       Kurtosis        1.66535
+
+.         gen aux=(`resil_vy'>=r(p50)) if `resil_vy'!=.
+(3,333 missing values generated)
+
+.         drop `resil_vy'
+
+.         rename aux `resil_vy'
+
+. 
+.         rename vlinsur_cost linc
+
+.         local resil_vyT "linc"
+
+.         local vdummy2 "naturaldis_ref"
+
+. 
+.         gen dum_`vdummy2'_`resil_vyT'=dum_`vdummy2'*`resil_vyT'
+
+. 
+.         gen dum_tot_ref_`resil_vy'=dum_tot_ref*`resil_vy'
+(7,138 missing values generated)
+
+.         gen dum_natur_ref_linc_`resil_vy'=dum_naturaldis_ref_linc*`resil_vy'
+(3,333 missing values generated)
+
+.         gen dum_epidem_`resil_vy'=dum_epidem*`resil_vy'
+(3,333 missing values generated)
+
+.         gen dum_systemic_`resil_vy'=dum_systemic*`resil_vy'
+(3,333 missing values generated)
+
+. 
+. ********************************************************************************
+. *** PART 6: MODEL
+. ********************************************************************************
+. 
+.                         gl exoge "l(0/1).inflation l(0/1).trade_gdp civwar dum_usa l.dum_usa l2.dum_usa asianfc lgdppc rdum_* dum_SS"
+
+.                         local xgx=0 // 
+
+.                         #delimit;
+delimiter now ;
+.                                 gen aux`xgx'=(f`xgx'.`xvardepx'-l.`xvardepx')*100;
+(2,725 missing values generated)
+
+.                                 gen daux`xgx'=(`xvardepx'-l.`xvardepx')*100;
+(2,725 missing values generated)
+
+.                                 xtscc aux`xgx' l(1/1).daux0  // OJO:l(1/n), n = 1,2,3,4  → loop 1 | este empieza en 1 2 3 4
+>                                 l(0/0).dum_epidem  // l(0/0) 0/1 0/2 0/3 0/n → loop 2
+>                                 l(0/0).dum_epidem_`resil_vy' // l(0/0) 0/1 0/2 0/3 0/n → loop 3
+>                                 l(0/0).`resil_vy' // l(0/n).`resil_vy'
+>                                 yr* ${exoge} `des_tN', fe /*robust*/  /* line 4*/;
+
+Regression with Driscoll-Kraay standard errors   Number of obs     =      4229
+Method: Fixed-effects regression                 Number of groups  =       116
+Group variable (i): country_code                 F( 66,    54)     =  1.05e+08
+maximum lag: 3                                   Prob > F          =    0.0000
+                                                 within R-squared  =    0.0919
+
+------------------------------------------------------------------------------------
+                   |             Drisc/Kraay
+              aux0 | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-------------------+----------------------------------------------------------------
+             daux0 |
+               L1. |   .0547546   .0928997     0.59   0.558    -.1314981    .2410074
+                   |
+        dum_epidem |  -.6855854   .8905607    -0.77   0.445    -2.471052    1.099881
+dum_epidem_rrindex |   .5288145   .3849316     1.37   0.175     -.242927    1.300556
+           rrindex |  -.3781799   .2694294    -1.40   0.166    -.9183533    .1619934
+            yr1960 |          0  (omitted)
+            yr1961 |          0  (omitted)
+            yr1962 |          0  (omitted)
+            yr1963 |  -1.157261    .213455    -5.42   0.000    -1.585212   -.7293091
+            yr1964 |  -1.101895   .1531093    -7.20   0.000    -1.408861   -.7949293
+            yr1965 |  -1.127786   .1754422    -6.43   0.000    -1.479527   -.7760458
+            yr1966 |  -1.897914   .2035654    -9.32   0.000    -2.306038    -1.48979
+            yr1967 |   -2.33881   .2575582    -9.08   0.000    -2.855183   -1.822437
+            yr1968 |  -1.333416   .2180578    -6.11   0.000    -1.770595   -.8962364
+            yr1969 |  -.8173361   .2462327    -3.32   0.002    -1.311003   -.3236692
+            yr1970 |          0  (omitted)
+            yr1971 |          0  (omitted)
+            yr1972 |   1.239992   .2077613     5.97   0.000     .8234558    1.656528
+            yr1973 |   -1.46327   .2962643    -4.94   0.000    -2.057245    -.869296
+            yr1974 |  -1.316899   .1926382    -6.84   0.000    -1.703115   -.9306824
+            yr1975 |  -2.056726   .1676349   -12.27   0.000    -2.392814   -1.720638
+            yr1976 |   1.837266   .3654189     5.03   0.000     1.104645    2.569887
+            yr1977 |  -1.781783   .2872023    -6.20   0.000    -2.357589   -1.205977
+            yr1978 |   -1.79431    .360477    -4.98   0.000    -2.517023   -1.071597
+            yr1979 |  -2.163195    .396867    -5.45   0.000    -2.958865   -1.367524
+            yr1980 |  -3.298538   .2192323   -15.05   0.000    -3.738072   -2.859004
+            yr1981 |  -1.361414   .1866656    -7.29   0.000    -1.735656   -.9871716
+            yr1982 |          0  (omitted)
+            yr1983 |  -.6880258   .2923895    -2.35   0.022    -1.274231   -.1018201
+            yr1984 |  -.5683129   .5066485    -1.12   0.267    -1.584082    .4474562
+            yr1985 |  -2.225472    .531391    -4.19   0.000    -3.290847   -1.160097
+            yr1986 |  -2.529642   .4890791    -5.17   0.000    -3.510187   -1.549098
+            yr1987 |  -2.207241   .5164216    -4.27   0.000    -3.242604   -1.171878
+            yr1988 |  -1.828932   .5029905    -3.64   0.001    -2.837368   -.8204973
+            yr1989 |  -2.409357   .4938574    -4.88   0.000    -3.399481   -1.419232
+            yr1990 |  -2.294681   .3143593    -7.30   0.000    -2.924934   -1.664429
+            yr1991 |  -1.253688    .382553    -3.28   0.002     -2.02066   -.4867149
+            yr1992 |  -.7136616   .5419406    -1.32   0.193    -1.800187    .3728638
+            yr1993 |  -3.738897   .5617656    -6.66   0.000    -4.865169   -2.612625
+            yr1994 |  -3.117917   .6538754    -4.77   0.000    -4.428858   -1.806975
+            yr1995 |  -2.139376   .5904672    -3.62   0.001    -3.323192   -.9555608
+            yr1996 |  -2.207507   .4954036    -4.46   0.000    -3.200732   -1.214283
+            yr1997 |  -2.156542   .5045248    -4.27   0.000    -3.168054   -1.145031
+            yr1998 |  -3.074835   .5096586    -6.03   0.000    -4.096639   -2.053031
+            yr1999 |  -3.368745   .5617557    -6.00   0.000    -4.494997   -2.242492
+            yr2000 |  -2.358898   .5997008    -3.93   0.000    -3.561226    -1.15657
+            yr2001 |  -2.891625    .348088    -8.31   0.000    -3.589499    -2.19375
+            yr2002 |  -1.023074   .4407981    -2.32   0.024    -1.906821   -.1393266
+            yr2003 |  -.0033729    .398742    -0.01   0.993    -.8028025    .7960567
+            yr2004 |  -.4595935   .5909895    -0.78   0.440    -1.644456    .7252691
+            yr2005 |  -1.561787   .5053229    -3.09   0.003    -2.574898   -.5486753
+            yr2006 |  -.8853414   .5646134    -1.57   0.123    -2.017323    .2466403
+            yr2007 |  -1.138215   .5548642    -2.05   0.045    -2.250651    -.025779
+            yr2008 |  -2.583132   .3936716    -6.56   0.000    -3.372396   -1.793868
+            yr2009 |  -5.245088   .3667833   -14.30   0.000    -5.980444   -4.509731
+            yr2010 |   2.091888   .7201003     2.90   0.005      .648174    3.535603
+            yr2011 |   -.987118   .5705688    -1.73   0.089     -2.13104    .1568036
+            yr2012 |   -2.29776   .6436416    -3.57   0.001    -3.588184   -1.007337
+            yr2013 |  -3.324963   .6828979    -4.87   0.000    -4.694091   -1.955835
+            yr2014 |   -3.20821   .7066092    -4.54   0.000    -4.624876   -1.791544
+            yr2015 |  -3.640925   .7468848    -4.87   0.000    -5.138339   -2.143511
+            yr2016 |  -3.438217   .7177636    -4.79   0.000    -4.877247   -1.999188
+            yr2017 |          0  (omitted)
+            yr2018 |          0  (omitted)
+            yr2019 |          0  (omitted)
+            yr2020 |          0  (omitted)
+            yr2021 |          0  (omitted)
+            yr2022 |          0  (omitted)
+            yr2023 |          0  (omitted)
+            yr2024 |          0  (omitted)
+                   |
+         inflation |
+               --. |  -.0011582   .0005115    -2.26   0.028    -.0021838   -.0001327
+               L1. |  -.0008848   .0004992    -1.77   0.082    -.0018856    .0001161
+                   |
+         trade_gdp |
+               --. |   .0062085   .0130366     0.48   0.636    -.0199283    .0323452
+               L1. |   .0064436   .0163424     0.39   0.695     -.026321    .0392081
+                   |
+            civwar |  -.5804051   .2647564    -2.19   0.033     -1.11121   -.0496004
+                   |
+           dum_usa |
+               --. |  -.1781693   .2242873    -0.79   0.430    -.6278383    .2714997
+               L1. |  -1.780042   .1803526    -9.87   0.000    -2.141627   -1.418457
+               L2. |   -2.31624   .1978101   -11.71   0.000    -2.712825   -1.919655
+                   |
+           asianfc |   .0521344   .4670229     0.11   0.912    -.8841902     .988459
+            lgdppc |   .1386768   .5674193     0.24   0.808    -.9989303    1.276284
+            rdum_1 |          0  (omitted)
+            rdum_2 |          0  (omitted)
+            rdum_3 |          0  (omitted)
+            rdum_4 |          0  (omitted)
+            dum_SS |  -1.990688   .4813692    -4.14   0.000    -2.955775   -1.025601
+             _cons |   2.502297   5.676053     0.44   0.661    -8.877503     13.8821
+------------------------------------------------------------------------------------
+
+
+.                                 predict y_tN, xb;
+(6,036 missing values generated)
+
+.                                 capture noisily drop des_tN;
+variable des_tN not found
+
+.                                 gen des_tN=aux`xgx'-y_tN;
+(6,036 missing values generated)
+
+.                                 capture noisily drop y_tN;
+
+.                                 local des_tN "des_tN";
+
+.                          #delimit cr
+delimiter now cr
+. 
+. 
+. 
+. /*
+> BIC
+> 1. Calcular el BIC por cada loop con los rezagos "l(1/n)" que sería → OJO 256 es resultado
+> 2. Escojer el que tenga menor BIC
+> 3. En cada regresión, el N# (número de observaciones) debe ser constante
+> 4. Del propio Stata tendremos problemas, sugerencia leer un libro de econometría
+> 
+> 
+> 
+> 
+> ******** Webscrapping ********
+> forvalues repeat=1(1)1 {
+> 
+> #delimit ;    
+> foreach video in 2PXEUsz6wHs Am9pavV7q2g 9Z4s-bktMrY RDqrr9GapCk b5BqxjAmJ1M AE3QyMf900I Sm5Ai0WRLXw 5nCIZCdkOaY ovDcJ_MNNkE tOGNNS9s6kA Jbc_gCzzit
+> E UDaWVM1jEXc qhPe8imp1XM Ga8Wfy-dTCQ
+>                  mz6qQALSzSA oXmo946xIYA vUO1RDgkVgE 6xqPKUx1WOI xAeusyp9wj0 2BWX2lWY584 dqve5hStevY QEeta0MRv4s us4byQZ3wtE eSRYWDyybqg OLGskr4Gza
+> k SNJ48sQWpMw 8gGQPbS036U OofH9leYhxY
+>                  ZO_M5bBQedI LsCcQ-9-jIM PheVrDBDTL4 unIB1_mdzc4 ci8HQFF6d5A vBYUpkCAF-M iOrffWPE3g8 nmWMdr_Vwj8 NBJx3MK-9zY BGbqxCI5kIA YtxOzQEH6W
+> U TdVkHOMvZDc tdjifiWQcu8 sHojJ3strP0
+>                  "-RC_f4oEzHc" dgA3PoNiwbY j6_Y77uWtGw 970T1Sd1thc NbC3VOOo1mo IfMuhob6EAU 9uNpkeMlQE0 2Ut97j6-lsE lJ4TMfyeyhk hkPOkWbiqMg hxiQ6M77
+> qN0 DlEdeyd3Pic uqmSV2Wma9U T8goE0yjw2c
+>                   {;    
+>                           
+> #delimit cr                          
+>                             di "https://www.youtube.com/watch?v=`video'"
+>                             cap copy "https://www.youtube.com/watch?v=`video'" "`video'.txt", replace
+> 
+>                             
+>                             import delimited using "`video'.txt",  stringcols(_all) delimiter("þ") varn(noname) clear
+> 
+>                             keep if strpos(v1, "watch-view-count")
+>                             gen vues = substr(v1, strpos(v1,"watch-view-count"),.)
+>                                                         
+>                             drop v1
+>                             keep vues
+>                             gen video = "`video'"
+>                             gen time = c(current_time)
+>                             gen date = c(current_date)
+>                         
+>                             
+>                             append using "VA_`c(current_date)'"
+>                             order time video vues
+>                             save "VA_`c(current_date)'", replace
+>                             
+>                 }
+>                             
+>                             replace t = _n
+>                         
+>                             save "VA_`c(current_date)'", replace
+>                             save "U:\Myfile\VA_`c(current_date)'", replace
+>                             }
+> exit, STATA
+
+end of do-file
+
+. save c:\users\joel\appdata\local\temp\emergency_close_stata_st.dta, replace
+(file c:\users\joel\appdata\local\temp\emergency_close_stata_st.dta not found)
+file c:\users\joel\appdata\local\temp\emergency_close_stata_st.dta saved

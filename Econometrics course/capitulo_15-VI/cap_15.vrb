@@ -1,0 +1,12 @@
+\frametitle{Educación y salud\footnote{Adaptado de Lee (2005), \emph{Micro-Econometrics for Policy, Program, and Treatment Effects}. Pág. 129.}}
+	\begin{itemize}
+		\item Imagine un programama de salud que ofrece educación ($z$) sobre los beneficios de los ejercicios.
+		\item Imagine que estamos interesados en los efectos del ejercicio ($d$) sobre la la salud ($y$), y no de los efectos de $z$ sobre $y$.
+		\item Se tiene entonces una situación donde:
+		\begin{equation*}
+			z \rightarrow d \rightarrow y
+		\end{equation*}
+		\item La educación por si misma es improbable que afecte directamente a la salud.
+		\item La variable $z$ que afecta a $d$ pero no a $y$ directamente es llamada un
+		\emph{instrumento}.
+	\end{itemize}

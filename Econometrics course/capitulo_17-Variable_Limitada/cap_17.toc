@@ -1,0 +1,46 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Principio de máxima verosimilitud}{5}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{1}{Definición}{6}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{2}{Formalidad}{8}{0}{1}
+\beamer@subsectionintoc {1}{2}{Pruebas asintóticas}{13}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{1}{Test LR}{14}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{2}{Test de Wald}{16}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{3}{Test Multiplicadores de Lagrange (LM)}{17}{0}{1}
+\beamer@subsectionintoc {1}{3}{MCO Vs MV}{18}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{1}{Modelo de regresión lineal simple}{19}{0}{1}
+\beamer@subsubsectionintoc {1}{3}{2}{Comparación}{25}{0}{1}
+\beamer@sectionintoc {2}{Modelos logit y probit para respuesta binaria}{26}{0}{2}
+\beamer@subsubsectionintoc {2}{0}{1}{Logro de la sesión}{27}{0}{2}
+\beamer@subsubsectionintoc {2}{0}{2}{Motivación}{28}{0}{2}
+\beamer@subsectionintoc {2}{1}{Problema Binomial}{29}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{1}{Modelo de probabilidad lineal}{30}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{2}{Modelos no lineales}{31}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{3}{Interpretación}{35}{0}{2}
+\beamer@subsectionintoc {2}{2}{Estimación}{38}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{1}{Logit nulo, ingenuo o baseline}{40}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{2}{Generalización}{41}{0}{2}
+\beamer@subsectionintoc {2}{3}{Curvas ROC}{43}{0}{2}
+\beamer@subsubsectionintoc {2}{3}{1}{Evaluación del modelo}{49}{0}{2}
+\beamer@sectionintoc {3}{El modelo Tobit para las respuestas de la solución Corner}{50}{0}{3}
+\beamer@subsectionintoc {3}{1}{Motivación}{51}{0}{3}
+\beamer@subsectionintoc {3}{2}{Algunas propiedades}{53}{0}{3}
+\beamer@subsectionintoc {3}{3}{El modelo de regresión truncado}{62}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{1}{Definición}{63}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{2}{Efectos marginales}{73}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{3}{Estimación}{74}{0}{3}
+\beamer@subsectionintoc {3}{4}{El modelo de regresión censurado}{75}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{1}{Definición}{76}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{2}{Efectos marginales}{79}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{3}{Estimación}{81}{0}{3}
+\beamer@subsectionintoc {3}{5}{Modelo de Heckman (Heckit)}{85}{0}{3}
+\beamer@subsectionintoc {3}{6}{Supuestos}{88}{0}{3}
+\beamer@subsectionintoc {3}{7}{Problema}{90}{0}{3}
+\beamer@subsectionintoc {3}{8}{Solución}{92}{0}{3}
+\beamer@sectionintoc {4}{El modelo de regresión de Poisson}{99}{0}{4}
+\beamer@sectionintoc {5}{Modelos de regresión censurados y truncados}{108}{0}{5}
+\beamer@sectionintoc {6}{Correcciones de selección de muestra}{122}{0}{6}
+\beamer@subsectionintoc {6}{1}{?`Cuando OLS en la muestra es consistente?}{125}{0}{6}
+\beamer@subsectionintoc {6}{2}{?`Cuando OLS en una muestra es inconsistente?}{129}{0}{6}
+\beamer@subsectionintoc {6}{3}{Incidental truncation}{131}{0}{6}
+\beamer@sectionintoc {7}{Referencias}{135}{0}{7}

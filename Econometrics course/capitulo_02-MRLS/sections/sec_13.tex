@@ -1,0 +1,38 @@
+%===============================================================================
+\section{Derivación de estimaciones de mínimos cuadrados ordinarios}
+%===============================================================================
+
+%-------------------------------------------------------------------------------	
+\subsection{Valores ajustados y residuales}
+%-------------------------------------------------------------------------------
+\begin{frame}{Beta vs Beta \textit{sombrero}}
+	\begin{itemize}
+		\item $\beta_{0}$ y $\beta_{1}$ son los parámetros poblacionales (los verdadero parámetros del \textit{Proceso Generador de Datos o PGD})
+		\item $\widehat{\beta}_{0}$ y $\widehat{\beta}_{1}$ son los estimadores de esos parámetros poblacionales ("Los \textit{betas} hechos por los mortales")
+		\item Nos gustaría conocer los verdaderos parámetros (¡realmente lo haríamos!) Pero solo nosotros podemos hablar de estimaciones
+		\item Recuerde que nos gustaría tener un estimador insesgado y eficiente.
+	\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Propiedades algebraicas de las estadísticas MCO}
+%-------------------------------------------------------------------------------
+\begin{frame}{Propiedades algebraicas}
+	\begin{itemize}
+		\item $\sum_{i=1}^{n}\hat{u_{i}}=0 \Leftrightarrow \frac{\sum_{i=1}^{n}\hat{u_{i}}}{n}=0$
+		\item $\sum_{i=1}^{n}x_{i}\hat{u_{i}}=0$
+		\item $\overline{y}=\hat{\beta_{o}}+\hat{\beta_{1}}\overline{x}$
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}{Suma Cuadrada}
+	Cada observación se puede descomponer de una parte explicada y otra no explicada: $y{i}=\hat{y_{i}}+\hat{u_{i}}$. A partir de esto definimos:
+	\begin{description}
+		\item[STC] Suma total de cuadrados $\sum_{i=1}^{n}(y_{i}-\overline{y})^{2}$
+		\item[SEC] Suma explicada al cuadrado $\sum_{i=1}^{n}(\hat{y_{i}}-\overline{y})^{2}$
+		\item[SRC] Suma de residuos al cuadrado $\sum_{i=1}^{n}(\hat{u_{i}})^{2}$
+		\item[Finalmente] \textcolor{red}{STC=SEC+SRC} Probar!
+		\item[$R^{2}$] Es el indicador de ajuste más popular empleado para medir que tan bien el modelo se ajusta a los datos:\\
+		$R^{2}=\frac{SEC}{STC}=1-\frac{SRC}{STC}$
+	\end{description}
+\end{frame}

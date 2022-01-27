@@ -1,0 +1,69 @@
+\section[Varianza]{¿Varianza con heterocedasticidad?}
+
+\begin{frame}{Varianza con heterocedasticidad}
+	\begin{itemize}
+		\item Para ilustrar la idea usemos el modelo de regresión lineal simple en el cual se cumple: $\hat{\beta_{1}}=\beta_{1}+\frac{\sum(x_{i}-\overline{x})u_{i}}{\sum(x_{i}-\overline{x})^{2}}$ del cual se deriva:
+		\pause
+		\item $Var(\hat{\beta_{1}})=\frac{\sum(x_{i}-\overline{x})^{2}\sigma_{i}^{2}}{SCT_{x}^{2}}$, donde $SCT_{x}=\sum(x_{i}-\overline{x})^{2}$
+		\pause
+		\item White (1980) demostró empleando teoría asintótica que una estimación válida de lo anterior cuando $\sigma_{i}^{2}\neq \sigma^{2}$ es $\frac{\sum(x_{i}-\overline{x})^{2}\hat{u}_{i}^{2}}{SCT_{x}^{2}}$, donde $\hat{u}_{i}$ son los residuos obtenidos de la regresión.
+		\pause
+		\item La raíz cuadrada de esta última expresión se conoce como error estándar robusto a la heterocedasticidad de $\beta_{1}$
+		\pause
+		\item Finalmente: $t=\frac{\hat\beta_1}{\sqrt{Var(\hat\beta_1)}}$
+		\pause
+		\item Así como se puede obtener un nuevo 't' bajo la misma filosofía es posible derivar un estadístico F robusto a la heterocedasticidad.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{T y F robustos a la heterocedasticidad}
+	\begin{Stata code}{Stata code}
+		\texttt{\textcolor{codeblue}{reg} price rep78 trunk}
+	\end{Stata code}
+		\vspace{0.5cm}
+	\scriptsize{
+		\begin{verbatim}
+	Source   |       SS           df       MS           Number of obs   =        69
+	-------------+----------------------------------    F(2, 66)        =      3.99
+	Model    |  62200533.8         2  31100266.9        Prob > F        =    0.0232
+	Residual |   514596425        66  7796915.53        R-squared       =    0.1078
+	-------------+----------------------------------    Adj R-squared   =    0.0808
+	Total    |   576796959        68  8482308.22        Root MSE        =    2792.3
+	
+	------------------------------------------------------------------------------
+	price |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+	-------------+----------------------------------------------------------------
+	rep78 |   173.0812   346.3682     0.50   0.619    -518.4653    864.6276
+	trunk |   222.9437   78.94888     2.82   0.006     65.31713    380.5702
+	_cons |   2451.508   1766.794     1.39   0.170    -1076.009    5979.026
+	------------------------------------------------------------------------------
+			
+		\end{verbatim}
+	}
+\end{frame}
+
+\begin{frame}[fragile] {T y F robustos a la heterocedasticidad}
+	\begin{Stata code}{Stata code}
+		\texttt{\textcolor{codeblue}{reg} price rep78 trunk, robust}
+	\end{Stata code}
+		\vspace{0.5cm}	
+	\scriptsize{
+		\begin{verbatim}
+Linear regression                               Number of obs     =         69
+                                                F(2, 66)          =       7.91
+                                                Prob > F          =     0.0008
+                                                R-squared         =     0.1078
+                                                Root MSE          =     2792.3
+
+------------------------------------------------------------------------------
+      |               Robust
+price |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+rep78 |   173.0812   290.9098     0.59   0.554     -407.739    753.9013
+trunk |   222.9437   57.38124     3.89   0.000     108.3783     337.509
+_cons |   2451.508   1268.618     1.93   0.058     -81.3697    4984.386
+------------------------------------------------------------------------------
+			
+		\end{verbatim}
+	}
+\end{frame}

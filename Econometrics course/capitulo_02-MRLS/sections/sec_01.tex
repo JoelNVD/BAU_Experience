@@ -1,0 +1,88 @@
+%===============================================================================
+\section{Definición}
+%===============================================================================
+
+%-------------------------------------------------------------------------------
+\subsection{Terminología}
+%-------------------------------------------------------------------------------
+\begin{frame}{Terminología}
+	\begin{description}
+		\item[El modelo] $y=\beta_{0}+\beta_{1}x+u$
+		\pause
+		\item[$y$] Variable dependiente, variable explicada.
+		\pause
+		\item[$x$] Variable independiente, regresor, variable explicativa, variable de control o covariado.
+		\pause
+		\item[$u$] Término de error poblacional.
+		\pause
+		\item[$\beta_{0}$] Intercepto, constante o coeficiente no asociado con variables.
+		\pause
+		\item[$\beta_{1}$] Pendiente o coeficiente relacionado a $x$.
+	\end{description}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Terminología}
+	El MRLS es {\large $$ Y_{i} = \beta_{0} + \beta_{1}X_{i}+u_{i}$$}El subíndice $i$ va desde $i = 1$ a $i = n$ (última observación). $Y$ es la variable dependiente; $X$ es la variable dependiente; $\beta_{0}$ es el intercepto, constante o coeficiente no asociado con variables; $\beta_{1}$ es la pendiente o el coeficiente relacionado a $X_{i}$ y $u_{i}$ es el témino error. $Y$ y $X$ son datos.\\
+
+	También, podemos denotar $\bar{Y}$ y $\bar{X}$ como el promedio muestral de las variables $Y$ y $X$ respectivamente. En término matriciales, tenemos
+		$$ \underrightarrow{Y} = \left [ \begin{array}{c}
+											50		\\
+											30		\\
+											20		\\
+											\vdots	\\
+											100
+										 \end{array}
+								 \right] 
+		\quad \textup{y} \quad
+			\underrightarrow{X} = \left [ \begin{array}{c}
+											2		\\
+											4		\\
+											1		\\
+											\vdots	\\
+											6
+										 \end{array}
+								  \right]$$
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Supuestos del MCO}
+%-------------------------------------------------------------------------------
+\begin{frame}{Supuestos del MCO}
+	\begin{itemize}
+		\item El valor promedio del término de error poblacional es cero. Es decir:\pause
+		$$E(u)=0$$ \pause
+		\item $x$ no contiene información relevante para $u$. Es decir: \pause
+		$$E(u/x)=0 \Leftrightarrow E(ux)=0 (L.E.I: E(Z)=E[E(Z/I)])$$ \pause
+		\item Por lo tanto: \pause
+		$$E(y/x)=\beta_{0}+\beta_{1}x$$
+	\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Los estimadores}
+%-------------------------------------------------------------------------------
+\begin{frame}{La relación entre $Y$ y $X$}
+	Comencemos con el modelo que explica (en términos estadísticos) los determinantes de las calificaciones en nuestra clase de econometría.
+			$$Y_i = \beta_0 + \beta_1X_i + u_i$$
+	Observe a $\beta_{1}$, acompaña a la variable de interés y nos dice qué tanto cambia $Y$ ante cambios en $X$; es decir  $$\Delta Y = \beta_{1} \cdot \Delta X$$Por lo tanto $$\beta_{1} \rightarrow \textup{ es el objetivo}$$Pero no conocemos al verdadero valor de  $\beta_{1}$ (solo Dios lo sabe); sin embargo, podemos encontrar un estimador $\hat{\beta}_{1}$ (los economistas lo saben) que nos acerque al verdadero valor de $\beta_{1}$\
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Beta vs Beta \textit{sombrero}}
+	\begin{itemize}
+		\item $\beta_{0}$ y $\beta_{1}$ son los parámetros poblacionales (los verdadero parámetros del \textit{Proceso Generador de Datos o PGD})
+		\item $\widehat{\beta}_{0}$ y $\widehat{\beta}_{1}$ son los estimadores de esos parámetros poblacionales ("Los \textit{betas} hechos por los mortales")
+		\item Nos gustaría conocer los verdaderos parámetros (¡realmente lo haríamos!) Pero solo nosotros podemos hablar de estimaciones
+		\item Recuerde que nos gustaría tener un estimador insesgado y eficiente.
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Eligiendo un estimador}
+	El modelo de regresión se caracteriza por tener una buena identificación cuando obtiene un estimador de $\beta$ que reduce el error de estimación. Este estimador deberá ser insesgado y eficiente.\\
+	\bigskip
+	Necesitamos encontrar un estimador de $\beta_0$ y $\beta_1$. \textcolor{red}{¿Qúe criterio usaremos para eso?} [\textit{Sugerencia: un estimador es una función de los datos}]
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\subsection{Formas funcionales}
+%-------------------------------------------------------------------------------
+z

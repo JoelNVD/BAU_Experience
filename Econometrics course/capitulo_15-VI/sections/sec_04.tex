@@ -1,0 +1,88 @@
+%====================================================================================
+\section{Estimación}
+%====================================================================================
+
+%------------------------------------------------------------------------------------
+\subsection{Modelo simple}
+%------------------------------------------------------------------------------------
+\begin{frame}{Estimación en dos etapas: Versión Mickey Mouse}
+	En el modelo de regresión lineal simple: $y_i=\beta_0+\beta_1 x_i+\mu_i$ se sabe que $x$ es endógena y se instrumentaliza esto con $z$. Entonces se plantea el \textbf{procedimiento en dos etapas}:
+		\begin{enumerate}
+			\item Se estima el modelo $x=\gamma_0+\gamma_1 z+v$. Si $z$ no está correlacionado con $\mu$, entonces $\hat x=\hat\gamma_0+\hat\gamma_1 z$ tampoco.
+			\item Se estima el modelo: $y_i=\beta_0+\beta_1 \hat x_i+\varepsilon_i$
+		\end{enumerate}
+	$\beta_1$ se le conoce como el estimador MC2E (Mínimos cuadrados
+	en dos etapas)
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Estimación en dos etapas: Versión Mickey Mouse (Cont.)}
+	Alternativamente se puede emplear la lógica del método de momentos:
+		\begin{align*}
+			y_i           & = \beta_0+\beta_1 x_i+\mu_i \\
+			Cov(y_i,z_i)  & = Cov(\beta_0,z_i)+Cov(\beta_1 x_i, z_i)+cov(z_i, \mu_i) \\
+			Cov(y_i,z_i)  & =       0         +\beta_1Cov(x_i z_i)+        0 \\
+			\beta_1       & =  \frac{Cov(y_i,z_i)}{Cov(x_i z_i)}
+		\intertext{Finalmente, por el método de momentos:}
+			\hat\beta_1^{MC2E}  & =  \frac{\hat\sigma_{yz}}{\hat\sigma_{xz}}
+		\end{align*}
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{Modelo multivariado (m=k)}
+%------------------------------------------------------------------------------------
+\begin{frame}{Estimación en dos etapas: Enfoque matricial (Sistema exactamente identificado)}
+	Sea el objetivo: $Y = XB+\mu.$ $\color{red}[(nx1)=(nxk)(kx1)+(nx1)]$
+		\begin{description}
+			\item[\color{blue}1era etapa:] $x_j=Z\gamma+\nu$ $\color{red}[(nx1)=(nxk)(kx1)+(nx1)]$, de donde se tiene: $\widehat x_j$, con lo cual: $\left[\widehat x_1, \widehat x_2,\widehat x_3... \right]=\widehat X $
+			\item[\color{blue}2da etapa:] $Y=\widehat X \beta+\epsilon$
+		\end{description}
+	Resolviendo se tiene que:
+		\begin{enumerate}
+			\item {\color{blue}De la primera etapa:} $\widehat\gamma=(z'z)^{-1}z'x_1$, por lo tanto $\widehat x_1=z(z'z)^{-1}z'x_1$, con lo cual $\widehat X=z(z'z)^{-1}z'X$
+			\item {\color{blue}De la segunda etapa:} $\widehat\beta=(\widehat X'\widehat X)^{-1}\widehat X' y$
+		\end{enumerate}
+	Reemplazando, ${\color{red}\widehat\beta=(\widehat z'\widehat X)^{-1}\widehat z'y}$
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{Modelo multivariado (m>k)}
+%------------------------------------------------------------------------------------
+\begin{frame}{Estimación en dos etapas: Enfoque matricial (Sistema sobreidentificado)}
+	Cuando $k<m$ un método alternativo de estimación es \textbf{GMM}, el cual minimiza la forma cuadrática de: $\frac{1}{N}\sum_{i=1}^N(z_i(y_i-x_i'\beta) = 0$:
+		\begin{align*}
+			Q(\beta) & = \left[\frac{1}{N}\sum_{i=1}^N(z_i(y_i-x_i'\beta)\right]'  W_N  \left[\frac{1}{N}\sum_{i=1}^N(z_i(y_i-x_i'\beta)\right] \\
+			& = (Z'u)' W (Z'u)
+		\end{align*}
+\end{frame}
+
+%------------------------------------------------------------------------------------
+\subsection{Aplicación matemática}
+%------------------------------------------------------------------------------------
+\begin{frame}
+	Sea el siguiente proceso generador de datos:
+		\begin{align}
+			Cops_{t} & = \alpha + \beta X_{t} + \phi I_{t} + \epsilon_{t} \notag\\
+			X_{t} & = \psi + \gamma Cops_{t} + v_t
+		\end{align}
+	El proceso subyacente es el siguiente:
+		\begin{align}
+			Cops_{t} & = \frac{\alpha + \beta \psi}{1 -\beta \gamma} + \frac{\phi I_{t}}{1 -\beta \gamma} + \frac{\beta v_{t}}{1 -\beta \gamma} + \frac{\epsilon_{t}}{1 -\beta \gamma} \\
+			X_{t} & = \frac{\psi + \gamma \alpha}{1 -\beta \gamma} + \frac{\gamma \phi}{1 -\beta \gamma}I_{t} + \frac{\gamma\epsilon_{t} + v_{t}}{1 -\beta \gamma} \notag
+		\end{align}
+	Entonces,
+		$$E[(Cops_{t} - E(Cops_{t}))(v_t - E(v_t))]=\frac{\beta\sigma_{u}^{2}}{1 -\beta \gamma}$$
+	la estimación de variables instrumentales requiere o implica los siguientes pasos:
+		$$E(Cops_{t} | I_{t}) = \frac{\alpha + \beta \psi}{1 -\beta \gamma} + \frac{\phi I_{t}}{1 -\beta \gamma}$$
+	y $\cdots$
+
+\end{frame}
+
+\begin{frame}
+		$$X_{t} = \widehat{\eta}_{0} + \widehat{\eta}_{1}E(Cops_{t}|I_{t}) + \widehat{\epsilon}_{t}$$
+	donde
+		\begin{align*}
+			\widehat{\eta}_{0} & = \frac{\sum (E(Cops_{t}|I_{t})-E(Cops_{t}))(X_{t} - \overline{X})}{\sum (E(Cops_{t}|I_{t}) - E(Cops_{t}))^2}\\
+			\widehat{\eta}_{1} & = \frac{\sum \frac{\phi I_{t}}{1 -\beta \gamma} \frac{\gamma \phi}{1 -\beta \gamma}I_{t}}{\sum \left( \frac{\phi I_{t}}{1 -\beta \gamma} \right)^2 } \equiv \frac{\frac{\phi}{1 -\beta \gamma} \frac{\gamma \phi}{1 -\beta \gamma} \sum I_{t}^{2}}{\left(\frac{\phi}{1 -\beta \gamma} \right)^2 \sum (I_{t})^2 } \equiv \gamma
+		\end{align*}
+	Por simplicidad $E(|I_{t}) = 0$.
+\end{frame}

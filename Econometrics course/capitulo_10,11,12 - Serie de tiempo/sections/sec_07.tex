@@ -1,0 +1,23 @@
+%====================================================================================
+\section{Elegir el modelo adecuado}
+%====================================================================================
+\begin{frame}{Elegir el modelo adecuado (1)}
+	\begin{itemize}
+		\item Los correlogramas deben darnos una primera impresión del proceso que esta detrás de cada serie.
+		\item De ser necesario diferenciar la serie.
+		\item De todos los candidatos elegir los más ``parsimoniosos''
+		\item Por parsimonia se entiende aquellos que expliquen lo mismo usando menos (recuerde los términos calidad y cantidad)
+	\end{itemize}
+\end{frame}
+%---------------------------------------------------
+\begin{frame}{Elegir el modelo adecuado (2)}
+	\begin{itemize}
+		\item Criterios de parsimonía:
+		\item \textcolor{red}Error cuadrático medio $= \sum \frac{e^2}{T-k}$
+		\item Si hace memoria este es un componente del $R^2$ ajustado.
+		\item Criterio de información de Akaike $= e^{\frac{2k}{T}}\sum \frac{e^2}{T}$
+		\item Criterio de información de Scharz $=T\left( \frac{K}{T}\right)\sum \frac{e^2}{T}$
+		\item En los tres casos lo que queremos es menor error (calidad) con el menor número de explicativas (cantidad)
+		\item Por lo que a menor valor mejor es el modelo.
+	\end{itemize}
+\end{frame}

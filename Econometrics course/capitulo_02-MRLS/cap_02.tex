@@ -1,0 +1,108 @@
+%====================================================================================
+% Preamble
+%------------------------------------------------------------------------------------
+\documentclass[10pt]{beamer}
+
+% Essential Packages
+\input{packages/packs}
+
+% Apartado de configuración del Beamer
+\mode<presentation> {
+	\usetheme{Frankfurt}
+	\setbeameroption{show notes}
+	\setbeamercolor{item projected}{fg=white,bg=red}
+	\setbeamertemplate{footline}[frame number]
+	\usefonttheme[onlylarge]{structuresmallcapsserif}
+	\usefonttheme[onlysmall]{structurebold}
+	\usecolortheme{beaver}
+	\setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+}
+	
+	% Apartado transparencia de contenido
+	\AtBeginSection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	\AtBeginSubsection[]
+	{
+		\begin{frame}<beamer>{Contenido}
+			\tableofcontents[currentsection,currentsubsection]
+		\end{frame}
+	}
+	
+	% Apartado de logo
+	\logo{\includegraphics[scale=.06]{fig/logo-USAT.png}}
+
+%====================================================================================
+% Body
+%====================================================================================
+% Title Page
+%-----------
+\title[Capítulo 02]{Econometría Básica}
+
+\subtitle{Capítulo 02: Modelo de Regresión Lineal Simple}
+
+\author[José Valderrama \& Freddy Rojas]{José Valderrama \& Freddy Rojas \\
+	\texttt{jtvalderrama@gmail.com \& frojasca@gmail.com} \faIcon{envelope}\\
+	Universidad Católica Santo Toribio de Mogrovejo}
+
+\date[Septiembre de 2021]{Septiembre de 2021}
+
+%------------------------------------------------------------------------------------
+% Open
+%---------
+\begin{document}
+	\rmfamily
+		\begin{frame}
+			\maketitle
+		\end{frame}
+%------------------------------------------------------------------------------------
+% Sections
+%---------
+	\begin{frame}{Contenido}
+		\tableofcontents
+	\end{frame}
+
+%%1) Definición -------------------------------------
+%	\include{sections/sec_01}
+%%2) Derivación por MCO -----------------------------
+%	\include{sections/sec_02}
+%%3) Propiedades del MCO ----------------------------
+%	\include{sections/sec_03}
+%%4) Teorema de Gauss-Markov ------------------------
+%	\include{sections/sec_04}
+
+	
+%1) Definición del modelo de regresión simple-------
+	\include{sections/sec_11}
+%2) Derivación de estimaciones de mínimos cuadrados
+%	ordinarios -------------------------------------
+	\include{sections/sec_12}
+%3) Propiedades de OLS en cualquier muestra de datos
+	\include{sections/sec_13}
+%4) Unidades de medida y forma funcional------------
+	\include{sections/sec_14}
+%5) Valores esperados y varianzas de los estimadores
+%	de MCO -----------------------------------------
+	\include{sections/sec_15}
+%6) Regresión por el origen y Regresión sobre una 
+%	constante --------------------------------------
+	\include{sections/sec_16}
+%X) Referencias ------------------------------------
+	\include{sections/sec}
+%---------------------------------------------------
+	\note[itemize]{
+		\item Agregar alguna nota
+	}
+%------------------------------------------------------------------------------------
+% End
+%----
+	\begin{frame}
+		\maketitle
+	\end{frame}
+%------------------------------------------------------------------------------------
+\end{document}		
+%====================================================================================
